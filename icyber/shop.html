@@ -4,7 +4,7 @@
   /* Layout: single mobile-first column (link-in-bio shop), brand system of The Wealth Roadmap. Single light look by choice. */
   :root{
     color-scheme:light;
-    --turq:#4682B4; --turq-br:#35B7B7; --teal:#2C4A66; --teal-dk:#1E3550; --turq-tint:#E9F0F7; --ring:#1A9E9E;
+    --turq:#1A9E9E; --turq-br:#35B7B7; --teal:#134E4E; --teal-dk:#0e3b3b; --turq-tint:#E7F5F5; --ring:#1A9E9E;
     --bord:#9E1B5E; --bord-dk:#6B1440; --bord-tint:#F7E7EF; --pink:#ff86c4;
     --ink:#20303a; --body:#3f4d55; --cream:#F5F4EF; --paper:#FBFAF7; --mut:#54636b; --line:#E4E0DA;
     --dark:#101722; --navy:#223042; --white:#ffffff;
@@ -33,13 +33,13 @@
 
   /* product cards */
   .cards{display:grid;gap:14px;}
-  .card{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:0 10px 28px rgba(44,74,102,.10);}
+  .card{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:0 10px 28px rgba(19,78,78,.08);}
   .card.paid{border:2px solid var(--bord);}
   .crow{display:grid;grid-template-columns:96px minmax(0,1fr);gap:14px;align-items:center;}
   .thumb{width:96px;height:96px;border-radius:14px;display:grid;place-items:center;text-align:center;padding:8px;font:700 13px/1.2 var(--serif);color:var(--white);}
   .thumb.p{background:linear-gradient(150deg,var(--teal),var(--teal-dk));}
   .thumb.p span{display:block;color:var(--pink);font-style:italic;font-size:15px;}
-  .thumb.f{background:linear-gradient(150deg,var(--ring),var(--turq));font-family:var(--sans);font-weight:800;letter-spacing:1.5px;font-size:16px;}
+  .thumb.f{background:linear-gradient(150deg,var(--turq),var(--teal));font-family:var(--sans);font-weight:800;letter-spacing:1.5px;font-size:16px;}
   .thumb.f small{display:block;font-size:11.5px;letter-spacing:1px;margin-top:3px;}
   .card h2{font-size:19px;line-height:1.2;color:var(--teal);}
   .card p{margin:5px 0 0;font-size:13.6px;color:var(--mut);line-height:1.45;}
