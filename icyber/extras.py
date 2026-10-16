@@ -345,3 +345,13 @@ def agenda(items):
     return ('  <p class="kick">Your agenda</p>\n  <h2 class="big">Every stage, page by page</h2>\n  <div class="rule"></div>\n'
             '  <p class="lead" style="margin:0">Every stage has the same parts: the steps, deep dives, a tool to fill in and a checklist that unlocks the next stage.</p>\n'
             '  <div class="agenda">' + ''.join(cards) + '</div>')
+
+CSS += '''
+  .page{isolation:isolate;}
+  .page::before{content:"iCyber";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%) rotate(-32deg);font:italic 800 210px/1 var(--serif);color:rgba(19,78,78,.05);pointer-events:none;z-index:-1;white-space:nowrap;}
+  .page.cover::before{color:rgba(255,255,255,.035);}
+'''
+COPY = ('<p><b>Copyright.</b> © 2026 iCyber. All rights reserved. The Wealth Roadmap and TRUST Tracker Pro are licensed for the personal use of the purchaser only. '
+        'Copying, sharing, reselling, redistributing or publishing them, in full or in part, is not permitted without my written permission.</p>'
+        '<p><b>How this was made.</b> All ideas, the 7-stage structure, the KEEP and TRUST methods, the frameworks and the stories in these products are my own original work. '
+        'Some text and design elements were created with the help of AI tools, then reviewed, edited and approved by me.</p>')

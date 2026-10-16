@@ -509,6 +509,7 @@ pages[31] = _drop(pages[31], '<div class="ifthen')
 pages[47] = pages[47].replace('Five traps for busy people', 'Seven traps for busy people')
 pages[48] = pages[48].replace('</table></div>', X.glossary_rows() + '</table></div>', 1)
 
+pages[49] = rep(pages[49], [("<p>© cybercnslt.com · Liliane. For the purchaser's personal use only. Please don't copy, resell or share.</p>", X.COPY)])
 # agenda page after the map
 def _txt(x): return re.sub(r'<[^>]+>', '', x).strip()
 pages.insert(6, 'AGENDA')
@@ -541,7 +542,7 @@ for p in pages:
         n += 1
         num = f'{n:02d}'
         p = re.sub(r'<div class="pfoot"><span>The Wealth Roadmap · iCyber</span><span>\d+</span>(?:</span>)*</div>',
-                   f'<div class="pfoot"><span>The Wealth Roadmap · iCyber</span><span>{num}</span></div>', p)
+                   f'<div class="pfoot"><span>The Wealth Roadmap · © 2026 iCyber · Personal use only</span><span>{num}</span></div>', p)
     out.append(p)
 html = head.replace('<title>The Wealth Roadmap</title>', '<title>The Wealth Roadmap</title>') + '\n\n'.join(out) + '\n'
 html = html.replace('.checklist{', '.lines{height:0;}\n  .budget.fill td{height:30px;}' + X.CSS + '\n  .checklist{')

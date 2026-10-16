@@ -120,6 +120,9 @@ about=[
  ("c","Financial freedom isn't about quitting your 9–5. It's about using your career as the engine to fuel your financial independence, build multiple income streams, and create the freedom to spend more time with the people you love."),
  ("s","Build your options without quitting your 9–5.  Know your money. Build your wealth. Reclaim your time.\n— Liliane · iCyber · @cyber_cnslt · cybercnslt.com"),
  ("d","Educational information only, not individualised financial or investment advice. TRUST Tracker Pro helps you organise and understand your finances; it doesn't guarantee financial outcomes. Your financial information stays in your own copy of the workbook unless you choose to share it."),
+ ("h","COPYRIGHT & HOW THIS WAS MADE"),
+ ("p","© 2026 iCyber. All rights reserved. TRUST Tracker Pro and The Wealth Roadmap are licensed for the personal use of the purchaser only. Copying, sharing, reselling, redistributing or publishing them, in full or in part, is not permitted without written permission."),
+ ("p","All ideas, the 7-stage structure, the KEEP and TRUST methods, the frameworks and the stories are my own original work. Some text and design elements were created with the help of AI tools, then reviewed, edited and approved by me.")
 ]
 r=5
 for kind,t in about:
@@ -154,7 +157,8 @@ rows=[
 ("Black text","Calculated: please don't overwrite"),
 ("Bordeaux text","Money going out or still owed (debt)"),
 ("",None),
-("","© cybercnslt.com · Liliane · @cyber_cnslt · For personal use by the purchaser only, please don't resell or share."),
+("Copyright","© 2026 iCyber. All rights reserved. TRUST Tracker Pro and The Wealth Roadmap are licensed for the personal use of the purchaser only. Copying, sharing, reselling, redistributing or publishing them, in full or in part, is not permitted without written permission."),
+("How this was made","All ideas, the 7-stage structure, the KEEP and TRUST methods, the frameworks and the stories are my own original work. Some text and design elements were created with the help of AI tools, then reviewed, edited and approved by me."),
 ]
 r=5
 for a,b in rows:
@@ -449,6 +453,15 @@ order=["About Me","How to Use","7 Stages","T · Track","R · Reclaim","U · Unde
 wb.remove(wb["Lists"])
 wb._sheets=[wb[n] for n in order]
 wb.active=wb.sheetnames.index("About Me")
+# ---------- COPYRIGHT LINE + PRINT FOOTER ON EVERY TAB ----------
+for _ws in wb.worksheets:
+    _c=_ws["B1"]; _c.value="© 2026 iCyber · For the purchaser's personal use only · Copying or reselling is not permitted"
+    _c.font=Font(name=F,size=8,italic=True,color=MUTE); _c.alignment=Alignment(vertical="center")
+    _ws.row_dimensions[1].height=16
+    _ws.oddFooter.center.text="© 2026 iCyber · Personal use only · Copying or reselling is not permitted"
+    _ws.oddFooter.center.size=8
+    _ws.oddHeader.right.text="iCyber"; _ws.oddHeader.right.size=9
+
 # ---------- AUTO-FIT: no cut-off text (measured with Arial-metric fonts, +12% for Apple Numbers) ----------
 import math as _m, re as _re, copy as _cp
 from functools import lru_cache as _lru
@@ -520,3 +533,4 @@ for ws in wb.worksheets:
                 last=rows[-1]; ws.row_dimensions[last].height=round((ws.row_dimensions[last].height or 15)+(need-have),1)
 
 wb.save(sys.argv[1])
+import tracker_wm; tracker_wm.add_background(sys.argv[1])
