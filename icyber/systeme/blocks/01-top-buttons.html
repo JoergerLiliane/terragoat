@@ -39,10 +39,11 @@ html[data-theme="dark"] #lj-shoptop .lj-amazon{color:#ffffff;}
 </div>
 </div>
 <script>
-/* Light / dark mode, same switch and same saved choice ('lj-theme') as the journey website */
+/* Light / dark mode switch. The page always opens in white mode; dark mode only lasts for the current visit */
 (function(){
   var r=document.documentElement;
-  try{ if(localStorage.getItem('lj-theme')==='dark') r.setAttribute('data-theme','dark'); }catch(e){}
+  r.removeAttribute('data-theme');
+  try{ localStorage.removeItem('lj-theme'); }catch(e){}
   if(!document.getElementById('lj-pagebg')){
     var s=document.createElement('style');s.id='lj-pagebg';
     s.textContent='html,body{background:#EDF3F2 !important;transition:background .3s ease;}html[data-theme="dark"],html[data-theme="dark"] body{background:#0e1621 !important;}';
@@ -56,8 +57,8 @@ html[data-theme="dark"] #lj-shoptop .lj-amazon{color:#ffffff;}
     });
   };
   window.toggleTheme=function(){
-    if(r.getAttribute('data-theme')==='dark'){r.removeAttribute('data-theme');try{localStorage.setItem('lj-theme','light');}catch(e){}}
-    else{r.setAttribute('data-theme','dark');try{localStorage.setItem('lj-theme','dark');}catch(e){}}
+    if(r.getAttribute('data-theme')==='dark'){r.removeAttribute('data-theme');}
+    else{r.setAttribute('data-theme','dark');}
     window.ljLabel();
   };
   window.ljLabel();
