@@ -65,6 +65,21 @@
   .trust b{width:34px;height:34px;border-radius:9px;display:grid;place-items:center;background:var(--bord);color:var(--white);font:800 16px/1 var(--serif);}
   .trust span{font-size:13.6px;color:var(--body);line-height:1.45;}
   .trust em{font-style:normal;font-weight:800;color:var(--teal);margin-right:6px;}
+  .cwrap{margin-top:16px;background:var(--white);border:1px solid var(--line);border-radius:14px;padding:16px 18px 10px;}
+  .cwrap .nl{font:800 11px/1.3 var(--sans);letter-spacing:1.5px;text-transform:uppercase;color:var(--bord-dk);margin:0 0 8px;}
+  .legend{display:flex;flex-wrap:wrap;gap:14px;font-size:12.5px;color:var(--body);margin-bottom:4px;}
+  .legend i,.tip i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:-1px;}
+  .cbox{position:relative;}
+  .cchart{width:100%;height:auto;display:block;}
+  .cchart .grid{stroke:#ECE9E4;stroke-width:1;}
+  .cchart .ax{font:11px var(--sans);fill:var(--mut);}
+  .cchart .lab{font:700 12px var(--sans);fill:var(--ink);}
+  .cchart .val{font:12px var(--sans);fill:var(--mut);font-variant-numeric:tabular-nums;}
+  .cchart .xh{stroke:#b9c6c6;stroke-width:1;stroke-dasharray:3 3;}
+  .tip{position:absolute;top:8px;background:var(--white);border:1px solid var(--line);border-radius:10px;padding:8px 11px;font-size:12px;color:var(--ink);box-shadow:0 6px 18px rgba(0,0,0,.1);pointer-events:none;min-width:165px;}
+  .tip div{display:flex;align-items:center;gap:2px;margin-top:3px;} .tip span{margin-left:auto;padding-left:10px;font-variant-numeric:tabular-nums;font-weight:700;}
+  .ctab td:not(:first-child){font-variant-numeric:tabular-nums;}
+  .cnote{font-size:11.5px;color:var(--mut);line-height:1.5;margin-top:14px;}
   .sign{margin-top:18px;font:italic 19px/1.4 var(--serif);color:var(--teal);}
 
   /* JOURNEY */
@@ -223,7 +238,7 @@
   <p>And underneath all those questions is something much more important:</p>
   <div class="pull">How do I build a financially secure future without missing out on the people and moments that matter most today?</div>
   <p><b>I know that feeling.</b> I started my career as a flight attendant, working toward my dream of becoming a pilot, until COVID changed those plans. I rebuilt my professional path in cybersecurity consulting, a demanding, traditionally male-dominated industry.</p>
-  <p>But even as my career progressed and my income grew, financial security didn't automatically follow. I was earning more, yet I wasn't intentional enough about what I kept, where it went, or what it could help me build. I eventually paid off €20,000 in debt, not by first increasing my income, but by understanding my finances and making deliberate changes.</p>
+  <p>But even as my career progressed and my income grew, financial security didn't automatically follow. In my 20s I had taken on loans for my study fees, made wrong financial decisions, and I even fell for an online scam. I was earning more, yet I wasn't intentional enough about what I kept, where it went, or what it could help me build. I eventually paid off €20,000 in debt, not by first increasing my income, but by understanding my finances and making deliberate changes. Now, in my 30s, this is everything I wish someone had told me in my 20s.</p>
   <p>That experience changed how I think about money. Financial independence isn't simply about earning more. It's about understanding what you have, making intentional decisions, building resilience, growing your money over time, and creating options that give you more control over your life.</p>
   <div class="why">
     <p class="nl">Why I really built this</p>
@@ -431,7 +446,7 @@
     <li><b>Watch the costs</b><span>Fees look tiny and compound massively. Always ask: what do I pay per year, in total, in percent?</span></li>
     <li><b>Choose a risk you can sleep with</b><span>Could you watch your investment fall 30% and not sell? If not, take less risk. Your nerves are part of the plan.</span></li>
     <li><b>Automate, then leave it</b><span>A fixed monthly amount, on payday, reviewed once a year. Checking daily helps nobody.</span></li>
-    <li><b>Check who you're dealing with</b><span>Use only regulated providers and advisers (in Germany, check the BaFin register). Guaranteed high returns are a red flag.</span></li>
+    <li><b>Check who you're dealing with</b><span>Use only regulated providers and advisers (in Germany, check the BaFin register). Guaranteed high returns are a red flag. I fell for an online scam in my 20s, so please take this one seriously.</span></li>
   </ol>
   <div class="calc">
     <p class="nl">Why fees matter · illustration only</p>
@@ -448,6 +463,46 @@
   </div>
   <div class="pfoot"><span>The Wealth Roadmap · iCyber</span><span>10</span></div>
 </section>
+
+<!-- COMPOUNDING -->
+<section class="page">
+  <div class="stagehead"><span class="badge">Deep dive</span><span class="chip lvl">Stage 4</span></div>
+  <h2 class="stitle">Time is the strongest ingredient</h2>
+  <p class="pillar">What I wish someone had shown me in my 20s</p>
+  <p class="lead" style="margin-top:14px">Compound growth means your returns start earning returns of their own. In the early years it looks like nothing happens. Then the curve bends upwards, and most of the growth arrives in the last decades. That's why <b>when</b> you start matters more than <b>how much</b> you start with.</p>
+  <div class="cwrap">
+    <p class="nl">€100 a month, 5% a year, value at each age until 65</p>
+    <div class="legend"><span><i style="background:#1A9E9E"></i>Start at 25</span><span><i style="background:#9E1B5E"></i>Start at 35</span><span><i style="background:#C99A2E"></i>Start at 45</span></div>
+    <div class="cbox"><svg class="cchart" viewBox="0 0 700 380" role="img" aria-label="Value of €100 a month invested at 5% a year, by age, for starting at 25, 35 and 45"><line x1="62" x2="550" y1="336.0" y2="336.0" class="grid"/><text x="52" y="340.0" text-anchor="end" class="ax">€0k</text><line x1="62" x2="550" y1="257.0" y2="257.0" class="grid"/><text x="52" y="261.0" text-anchor="end" class="ax">€40k</text><line x1="62" x2="550" y1="178.0" y2="178.0" class="grid"/><text x="52" y="182.0" text-anchor="end" class="ax">€80k</text><line x1="62" x2="550" y1="99.0" y2="99.0" class="grid"/><text x="52" y="103.0" text-anchor="end" class="ax">€120k</text><line x1="62" x2="550" y1="20.0" y2="20.0" class="grid"/><text x="52" y="24.0" text-anchor="end" class="ax">€160k</text><text x="62.0" y="358" text-anchor="middle" class="ax">25</text><text x="123.0" y="358" text-anchor="middle" class="ax">30</text><text x="184.0" y="358" text-anchor="middle" class="ax">35</text><text x="245.0" y="358" text-anchor="middle" class="ax">40</text><text x="306.0" y="358" text-anchor="middle" class="ax">45</text><text x="367.0" y="358" text-anchor="middle" class="ax">50</text><text x="428.0" y="358" text-anchor="middle" class="ax">55</text><text x="489.0" y="358" text-anchor="middle" class="ax">60</text><text x="550.0" y="358" text-anchor="middle" class="ax">65</text><text x="306.0" y="376" text-anchor="middle" class="ax">Age</text><polyline points="62.0,336.0 74.2,333.6 86.4,331.0 98.6,328.3 110.8,325.5 123.0,322.6 135.2,319.5 147.4,316.2 159.6,312.7 171.8,309.1 184.0,305.3 196.2,301.3 208.4,297.1 220.6,292.7 232.8,288.1 245.0,283.2 257.2,278.1 269.4,272.7 281.6,267.0 293.8,261.1 306.0,254.8 318.2,248.2 330.4,241.3 342.6,234.1 354.8,226.4 367.0,218.4 379.2,209.9 391.4,201.1 403.6,191.7 415.8,181.9 428.0,171.6 440.2,160.8 452.4,149.4 464.6,137.4 476.8,124.8 489.0,111.6 501.2,97.7 513.4,83.1 525.6,67.7 537.8,51.6 550.0,34.6" fill="none" stroke="#1A9E9E" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="550.0" cy="34.6" r="5" fill="#1A9E9E" stroke="#FBFAF7" stroke-width="2"/><polyline points="184.0,336.0 196.2,333.6 208.4,331.0 220.6,328.3 232.8,325.5 245.0,322.6 257.2,319.5 269.4,316.2 281.6,312.7 293.8,309.1 306.0,305.3 318.2,301.3 330.4,297.1 342.6,292.7 354.8,288.1 367.0,283.2 379.2,278.1 391.4,272.7 403.6,267.0 415.8,261.1 428.0,254.8 440.2,248.2 452.4,241.3 464.6,234.1 476.8,226.4 489.0,218.4 501.2,209.9 513.4,201.1 525.6,191.7 537.8,181.9 550.0,171.6" fill="none" stroke="#9E1B5E" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="550.0" cy="171.6" r="5" fill="#9E1B5E" stroke="#FBFAF7" stroke-width="2"/><polyline points="306.0,336.0 318.2,333.6 330.4,331.0 342.6,328.3 354.8,325.5 367.0,322.6 379.2,319.5 391.4,316.2 403.6,312.7 415.8,309.1 428.0,305.3 440.2,301.3 452.4,297.1 464.6,292.7 476.8,288.1 489.0,283.2 501.2,278.1 513.4,272.7 525.6,267.0 537.8,261.1 550.0,254.8" fill="none" stroke="#C99A2E" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="550.0" cy="254.8" r="5" fill="#C99A2E" stroke="#FBFAF7" stroke-width="2"/><text x="562.0" y="32.6" class="lab">Start at 25</text><text x="562.0" y="48.6" class="val">€152,600</text><text x="562.0" y="169.6" class="lab">Start at 35</text><text x="562.0" y="185.6" class="val">€83,200</text><text x="562.0" y="252.8" class="lab">Start at 45</text><text x="562.0" y="268.8" class="val">€41,100</text><line class="xh" x1="0" x2="0" y1="20" y2="336" style="display:none"/><rect class="hit" x="62" y="20" width="488" height="316" fill="transparent"/></svg><div class="tip" hidden></div></div>
+  </div>
+  <div class="tablewrap">
+  <table class="budget ctab">
+    <tr><th>You start at</th><th>Years investing</th><th>You pay in</th><th>Value at 65</th><th>Growth on top</th></tr>
+    <tr><td>25</td><td>40</td><td>€48,000</td><td>€152,600</td><td>€104,600</td></tr>
+    <tr><td>35</td><td>30</td><td>€36,000</td><td>€83,200</td><td>€47,200</td></tr>
+    <tr><td>45</td><td>20</td><td>€24,000</td><td>€41,100</td><td>€17,100</td></tr>
+  </table>
+  </div>
+  <div class="two">
+    <div class="box"><div class="when">The 10-year head start</div><p style="margin:0;font-size:13.6px;color:var(--body)">Starting at 25 instead of 35 adds about <b style="color:var(--teal)">€69,400</b> at 65, for only €12,000 more paid in. Those first ten years of €100 a month do almost as much as the next thirty.</p></div>
+    <div class="box heavy"><div class="when">Already past 25?</div><p style="margin:0;font-size:13.6px;color:var(--body)">So am I. The best time to start was earlier. The second best is now. Starting at 35 still more than doubles what you pay in. Don't let regret cost you another ten years.</p></div>
+  </div>
+  <p class="cnote">Illustration only, not a forecast or a recommendation. Assumes a fixed 5% a year, compounded monthly, no fees, taxes or inflation. Real returns go up and down, aren't guaranteed, and you can lose money. Only invest money you won't need for many years, after your emergency fund is in place.</p>
+  <div class="pfoot"><span>The Wealth Roadmap · iCyber</span><span>11</span></div>
+</section>
+<script>
+(function(){
+  var D={"Start at 25": [0, 1228, 2519, 3875, 5301, 6801, 8376, 10033, 11774, 13604, 15528, 17551, 19676, 21911, 24260, 26729, 29324, 32052, 34920, 37935, 41103, 44434, 47935, 51616, 55484, 59551, 63826, 68319, 73042, 78007, 83226, 88712, 94478, 100540, 106912, 113609, 120650, 128050, 135829, 144006, 152602], "Start at 35": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1228, 2519, 3875, 5301, 6801, 8376, 10033, 11774, 13604, 15528, 17551, 19676, 21911, 24260, 26729, 29324, 32052, 34920, 37935, 41103, 44434, 47935, 51616, 55484, 59551, 63826, 68319, 73042, 78007, 83226], "Start at 45": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1228, 2519, 3875, 5301, 6801, 8376, 10033, 11774, 13604, 15528, 17551, 19676, 21911, 24260, 26729, 29324, 32052, 34920, 37935, 41103]};var C={"Start at 25":"#1A9E9E","Start at 35":"#9E1B5E","Start at 45":"#C99A2E"};
+  var svg=document.querySelector('.cchart');if(!svg)return;var tip=svg.parentNode.querySelector('.tip');var xh=svg.querySelector('.xh');
+  var L=62,PW=488;
+  function show(e){var r=svg.getBoundingClientRect();var sx=(700/r.width);var x=(e.clientX-r.left)*sx;var age=Math.round(25+(x-L)/PW*40);age=Math.max(25,Math.min(65,age));
+    var px=L+(age-25)/40*PW;xh.setAttribute('x1',px);xh.setAttribute('x2',px);xh.style.display='';
+    var h='<b>Age '+age+'</b>';for(var k in D){h+='<div><i style="background:'+C[k]+'"></i>'+k+'<span>€'+D[k][age-25].toLocaleString('en')+'</span></div>';}
+    tip.innerHTML=h;tip.hidden=false;var left=(px/sx);tip.style.left=Math.min(left+12,r.width-180)+'px';}
+  function hide(){tip.hidden=true;xh.style.display='none';}
+  var hit=svg.querySelector('.hit');hit.addEventListener('pointermove',show);hit.addEventListener('pointerleave',hide);
+})();
+</script>
 
 <!-- STAGE 5 -->
 <section class="page">
@@ -478,7 +533,7 @@
     <div class="note heavy"><p class="nl">Heavy-week version</p><p>Cancel the block, don't feel guilty, and write down one idea for next week. Paused isn't failed.</p></div>
     <div class="note tracker"><p class="nl">In your tracker</p><p>Income Streams: status, hours, € per hour, share of needs covered. Level 5 lights up at 25%.</p></div>
   </div>
-  <div class="pfoot"><span>The Wealth Roadmap · iCyber</span><span>11</span></div>
+  <div class="pfoot"><span>The Wealth Roadmap · iCyber</span><span>12</span></div>
 </section>
 
 <!-- STAGE 6 -->
@@ -502,7 +557,7 @@
     <div class="note tracker"><p class="nl">In your tracker</p><p>T · Time: unplanned hours, family time gained per year, value of the work hours you want back.</p></div>
   </div>
   <div class="quickwin"><p class="nl">10-minute quick win</p><p>Look at “Family time gained / year” in T · Time. Write down what you'll do with the first of those hours.</p></div>
-  <div class="pfoot"><span>The Wealth Roadmap · iCyber</span><span>12</span></div>
+  <div class="pfoot"><span>The Wealth Roadmap · iCyber</span><span>13</span></div>
 </section>
 
 <!-- 12 MONTHS -->
@@ -525,7 +580,7 @@
     <div class="mo"><span class="m">Month 11</span><b>Day-90 decision</b><span>Keep, change or stop the stream. Track € per hour.</span></div>
     <div class="mo hl"><span class="m">Month 12</span><b>Time map</b><span>Real week vs goal week. Price the gap. Plan year two.</span></div>
   </div>
-  <div class="pfoot"><span>The Wealth Roadmap · iCyber</span><span>13</span></div>
+  <div class="pfoot"><span>The Wealth Roadmap · iCyber</span><span>14</span></div>
 </section>
 
 <!-- TRAPS -->
@@ -540,7 +595,7 @@
     <div class="trap"><div class="t"><p class="nl">Trap</p><p><b>Lifestyle creep.</b> The raise or first side income vanishes into nicer everyday spending.</p></div><div class="f"><p class="nl">Fix</p><p>Give every new euro a job the day it arrives: buffer, debt, investing or time.</p></div></div>
     <div class="trap"><div class="t"><p class="nl">Trap</p><p><b>Trading family time for “future freedom”.</b> You build the life and miss the people it was for.</p></div><div class="f"><p class="nl">Fix</p><p>Family hours are planned first, side hours second. T · Time keeps you honest.</p></div></div>
   </div>
-  <div class="pfoot"><span>The Wealth Roadmap · iCyber</span><span>14</span></div>
+  <div class="pfoot"><span>The Wealth Roadmap · iCyber</span><span>15</span></div>
 </section>
 
 <!-- CTA -->
