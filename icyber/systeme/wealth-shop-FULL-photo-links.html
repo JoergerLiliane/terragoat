@@ -1,0 +1,373 @@
+<!-- iCyber · Wealth shop · whole page in ONE systeme.io "Custom HTML/CSS/JS" element -->
+<!-- iCyber · Top buttons (Main Page · Amazon · Tools · All journeys · Dark/White mode) · put this FIRST on the page · paste into a systeme.io "Custom HTML/CSS/JS" element -->
+<div id="lj-shoptop">
+<style>
+#lj-shoptop{--bg:#EDF3F2;--card:#ffffff;--cardbd:#E3ECEB;--ink:#3c4f50;--head:#0F4C4C;--mut:#64777a;--turq:#1A9E9E;--turqbr:#35B7B7;--green:#1B4D36;--mag:#8E1F45;--magdk:#5E1530;--soft:#F6F9F9;--hl:#F7E6EE;
+  font-family:"Avenir Next","Segoe UI","Helvetica Neue",-apple-system,Arial,sans-serif;-webkit-font-smoothing:antialiased;
+  max-width:900px;margin:0 auto;padding:0 2px;color:var(--ink);line-height:1.5;text-align:left;}
+html[data-theme="dark"] #lj-shoptop{--bg:#0e1621;--card:#16202c;--cardbd:#273543;--ink:#c6d5d5;--head:#ffffff;--mut:#93a6a6;--soft:#1c2836;--hl:#2a1d27;--magtxt:#E0577F;}
+#lj-shoptop *,#lj-shoptop *::before,#lj-shoptop *::after{box-sizing:border-box;margin:0;padding:0;border:0;background:none;box-shadow:none;text-shadow:none;letter-spacing:normal;text-transform:none;list-style:none;}
+#lj-shoptop a{text-decoration:none;}
+#lj-shoptop .lj-topbar{display:flex;justify-content:space-between;align-items:center;gap:10px;max-width:900px;margin:0 auto;width:100%;padding:18px 10px 0;}
+#lj-shoptop .lj-back,#lj-shoptop .lj-amazon,#lj-shoptop .lj-free,#lj-shoptop .welcome-pill,#lj-shoptop .themebtn{display:inline-flex;align-items:center;justify-content:center;width:152px;height:29px;padding:0 8px;border-radius:15px;
+  font:800 10px/1 "Avenir Next",Arial;letter-spacing:.3px;white-space:nowrap;cursor:pointer;
+  transition:transform .22s cubic-bezier(.2,.75,.25,1),box-shadow .22s ease,filter .15s;}
+#lj-shoptop .lj-back{color:var(--head);background:var(--card);border:1.5px solid var(--cardbd);box-shadow:0 6px 16px rgba(0,0,0,.14);}
+#lj-shoptop .lj-amazon{color:#131A22;background:linear-gradient(135deg,#FEBD69,#FF9900);border:1.5px solid #E88A00;box-shadow:0 6px 16px rgba(0,0,0,.20);}
+html[data-theme="dark"] #lj-shoptop .lj-amazon{color:#ffffff;}
+#lj-shoptop .lj-free{color:#fff;background:linear-gradient(135deg,#245F46,#0F3324);border:1.5px solid #0F3324;box-shadow:0 6px 16px rgba(15,51,36,.30);}
+#lj-shoptop .welcome-pill{color:#fff;letter-spacing:1.4px;text-transform:uppercase;background:linear-gradient(135deg,#8E1F45,#5E1530);box-shadow:0 6px 16px rgba(94,21,48,.28);}
+#lj-shoptop .themebtn{color:var(--head);background:var(--card);border:1.5px solid var(--cardbd);box-shadow:0 6px 18px rgba(0,0,0,.18);}
+#lj-shoptop .themebtn .tb-ic{margin-right:5px;line-height:1;}
+#lj-shoptop .lj-back:hover,#lj-shoptop .lj-amazon:hover,#lj-shoptop .lj-free:hover,#lj-shoptop .welcome-pill:hover,#lj-shoptop .themebtn:hover{transform:translateY(-3px) scale(1.04);filter:brightness(1.05);}
+#lj-shoptop .lbl-short{display:none;}
+@media (max-width:640px){#lj-shoptop .lj-topbar{gap:6px;padding:14px 0 0;}
+  #lj-shoptop .lj-back,#lj-shoptop .lj-amazon,#lj-shoptop .lj-free,#lj-shoptop .welcome-pill,#lj-shoptop .themebtn{width:auto;flex:1 1 0;min-width:0;padding:0 4px;font-size:10px;}
+  #lj-shoptop .lbl-full{display:none;}#lj-shoptop .lbl-short{display:inline;}}
+</style>
+<div class="lj-topbar">
+  <a class="lj-back" href="https://www.cybercnslt.com/"><span class="lbl-full">Main Page</span><span class="lbl-short">Home</span></a>
+  <a class="lj-amazon" href="https://amzn.to/3QzHB0n" target="_blank" rel="noopener nofollow">&#128722;&nbsp;<span class="lbl-full">My Amazon Store</span><span class="lbl-short">Amazon</span></a>
+  <a class="lj-free" href="https://www.cybercnslt.com/#tools"><span class="lbl-full">Tools and Resources</span><span class="lbl-short">Tools</span></a>
+  <a class="welcome-pill" href="https://www.cybercnslt.com/#journeys"><span class="lbl-full">All journeys</span><span class="lbl-short">Journeys</span></a>
+  <button class="themebtn" type="button" onclick="toggleTheme()" title="Dark Mode / White Mode" aria-label="Switch dark or white mode"><span class="tb-ic">&#127769;</span><span class="lbl-full">Dark Mode</span><span class="lbl-short">Dark</span></button>
+</div>
+</div>
+<script>
+/* Light / dark mode, same switch and same saved choice ('lj-theme') as the journey website */
+(function(){
+  var r=document.documentElement;
+  try{ if(localStorage.getItem('lj-theme')==='dark') r.setAttribute('data-theme','dark'); }catch(e){}
+  if(!document.getElementById('lj-pagebg')){
+    var s=document.createElement('style');s.id='lj-pagebg';
+    s.textContent='html,body{background:#EDF3F2 !important;transition:background .3s ease;}html[data-theme="dark"],html[data-theme="dark"] body{background:#0e1621 !important;}';
+    document.head.appendChild(s);
+  }
+  window.ljLabel=function(){
+    var dark=r.getAttribute('data-theme')==='dark';
+    document.querySelectorAll('.themebtn').forEach(function(b){
+      b.innerHTML=dark?'<span class="tb-ic">&#9728;&#65039;</span><span class="lbl-full">White Mode</span><span class="lbl-short">White</span>'
+                      :'<span class="tb-ic">&#127769;</span><span class="lbl-full">Dark Mode</span><span class="lbl-short">Dark</span>';
+    });
+  };
+  window.toggleTheme=function(){
+    if(r.getAttribute('data-theme')==='dark'){r.removeAttribute('data-theme');try{localStorage.setItem('lj-theme','light');}catch(e){}}
+    else{r.setAttribute('data-theme','dark');try{localStorage.setItem('lj-theme','dark');}catch(e){}}
+    window.ljLabel();
+  };
+  window.ljLabel();
+  document.addEventListener('DOMContentLoaded',window.ljLabel);
+  window.addEventListener('load',window.ljLabel);
+})();
+</script>
+<div style="padding:0 16px">
+<!-- iCyber · Hero with your portrait · put this right under the top buttons · paste into a systeme.io "Custom HTML/CSS/JS" element -->
+<div id="lj-hero">
+<style>
+#lj-hero{--bg:#EDF3F2;--card:#ffffff;--cardbd:#E3ECEB;--ink:#3c4f50;--head:#0F4C4C;--mut:#64777a;--turq:#1A9E9E;--turqbr:#35B7B7;--green:#1B4D36;--mag:#8E1F45;--magdk:#5E1530;--soft:#F6F9F9;--hl:#F7E6EE;
+  font-family:"Avenir Next","Segoe UI","Helvetica Neue",-apple-system,Arial,sans-serif;-webkit-font-smoothing:antialiased;
+  max-width:900px;margin:0 auto;padding:0 2px;color:var(--ink);line-height:1.5;text-align:left;}
+html[data-theme="dark"] #lj-hero{--bg:#0e1621;--card:#16202c;--cardbd:#273543;--ink:#c6d5d5;--head:#ffffff;--mut:#93a6a6;--soft:#1c2836;--hl:#2a1d27;--magtxt:#E0577F;}
+#lj-hero *,#lj-hero *::before,#lj-hero *::after{box-sizing:border-box;margin:0;padding:0;border:0;background:none;box-shadow:none;text-shadow:none;letter-spacing:normal;text-transform:none;list-style:none;}
+#lj-hero a{text-decoration:none;}
+#lj-hero{text-align:center;padding:44px 16px 10px;}
+#lj-hero .ey{display:block;font:800 13px/1 "Avenir Next",Arial;letter-spacing:3px;text-transform:uppercase;color:var(--turq);margin-bottom:18px;}
+html[data-theme="dark"] #lj-hero .ey{color:#35B7B7;}
+#lj-hero h1{font:800 52px/1.02 "Avenir Next",Arial;letter-spacing:-1px;color:var(--head);margin:0;}
+#lj-hero h1 .acc{color:var(--acc,#E6117F);}
+html[data-theme="dark"] #lj-hero h1 .acc{color:#ff62ad;}
+#lj-hero .sub{max-width:580px;margin:12px auto 0;color:var(--mut);font-size:16.5px;line-height:1.5;font-weight:500;}
+html[data-theme="dark"] #lj-hero .sub{color:#cfe0df;}
+#lj-hero .sub b{color:var(--head);font-weight:800;}
+#lj-hero .eternity{display:flex;justify-content:center;align-items:center;margin:22px 0 0;perspective:1100px;}
+#lj-hero .ering{display:block;border-radius:50%;padding:7px;background:linear-gradient(160deg,#8E1F45 0%,#5E1530 45%,#1A9E9E 100%);box-shadow:0 18px 44px rgba(0,0,0,.35);
+  animation:ljhSpin 1.15s cubic-bezier(.3,.7,.3,1) both,ljhFloat 5.5s ease-in-out 1.3s infinite;}
+#lj-hero .ecirc{display:block;width:190px;height:190px;object-fit:cover;border-radius:50%;border:6px solid #fff;background:#0c1119;}
+#lj-hero .by{margin-top:16px;font:700 14px/1.5 "Avenir Next",Arial;color:var(--turq);}
+html[data-theme="dark"] #lj-hero .by{color:#9fd0d0;}
+#lj-hero .by-n{display:block;font-size:17px;font-weight:800;}
+#lj-hero .by-t{display:block;font-size:14px;font-weight:600;margin-top:2px;}
+#lj-hero h1,#lj-hero .sub,#lj-hero .eternity,#lj-hero .by{animation:ljhUp .85s both;}
+#lj-hero .sub{animation-delay:.12s;}#lj-hero .eternity{animation-delay:.24s;}#lj-hero .by{animation-delay:.38s;}
+@keyframes ljhSpin{from{transform:rotateY(0deg);}to{transform:rotateY(360deg);}}
+@keyframes ljhFloat{0%,100%{transform:translateY(0);}50%{transform:translateY(-9px);}}
+@keyframes ljhUp{from{opacity:0;transform:translateY(26px);}to{opacity:1;transform:none;}}
+@media (prefers-reduced-motion:reduce){#lj-hero *{animation:none !important;}}
+@media (max-width:600px){#lj-hero{padding-top:32px;}#lj-hero h1{font-size:38px;}#lj-hero .sub{font-size:15.5px;}#lj-hero .ecirc{width:160px;height:160px;}}
+</style>
+<span class="ey">The Wealth Roadmap</span>
+<h1>Build your <span class="acc">wealth</span><br>without quitting your 9&#8211;5.</h1>
+<p class="sub"><b>Know your numbers. Leverage your career. Reclaim your time.</b> Financial literacy for people in demanding jobs.</p>
+<div class="eternity"><span class="ering"><img class="ecirc" src="PASTE-YOUR-PHOTO-URL-HERE" alt="Liliane" width="190" height="190"></span></div>
+<p class="by"><span class="by-n">Liliane</span><span class="by-t">cybersecurity consultant, solo-preneur, daughter, creator</span></p>
+</div>
+
+<div style="height:28px"></div>
+<!-- iCyber · Bundle card · add your systeme.io "Get the bundle" button directly below it · paste into a systeme.io "Custom HTML/CSS/JS" element -->
+<div id="lj-bundle">
+<style>
+#lj-bundle{--bg:#EDF3F2;--card:#ffffff;--cardbd:#E3ECEB;--ink:#3c4f50;--head:#0F4C4C;--mut:#64777a;--turq:#1A9E9E;--turqbr:#35B7B7;--green:#1B4D36;--mag:#8E1F45;--magdk:#5E1530;--soft:#F6F9F9;--hl:#F7E6EE;
+  font-family:"Avenir Next","Segoe UI","Helvetica Neue",-apple-system,Arial,sans-serif;-webkit-font-smoothing:antialiased;
+  max-width:440px;margin:0 auto;padding:0 2px;color:var(--ink);line-height:1.5;text-align:left;}
+html[data-theme="dark"] #lj-bundle{--bg:#0e1621;--card:#16202c;--cardbd:#273543;--ink:#c6d5d5;--head:#ffffff;--mut:#93a6a6;--soft:#1c2836;--hl:#2a1d27;--magtxt:#E0577F;}
+#lj-bundle *,#lj-bundle *::before,#lj-bundle *::after{box-sizing:border-box;margin:0;padding:0;border:0;background:none;box-shadow:none;text-shadow:none;letter-spacing:normal;text-transform:none;list-style:none;}
+#lj-bundle a{text-decoration:none;}
+#lj-bundle .stop{background:var(--card);border:1px solid var(--cardbd);border-top:4px solid var(--turq);border-radius:18px;padding:24px 26px;box-shadow:0 8px 22px rgba(10,20,25,.08);}
+#lj-bundle .stop-top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px;}
+#lj-bundle .stop-ic{font-size:28px;line-height:1;}
+#lj-bundle .stop-badge{display:inline-block;font:800 10.5px/1 "Avenir Next",Arial;letter-spacing:1px;text-transform:uppercase;padding:6px 12px;border-radius:20px;}
+#lj-bundle .stop-badge.paid{color:var(--magtxt,var(--mag));border:1.5px solid var(--magtxt,var(--mag));}
+#lj-bundle .stop-badge.free{color:var(--green);border:1.5px solid var(--green);}
+html[data-theme="dark"] #lj-bundle .stop-badge.free{color:#6fcf9c;border-color:#6fcf9c;}
+#lj-bundle .stop-sub{display:block;margin:0 0 6px;font:800 12px/1.3 "Avenir Next",Arial;letter-spacing:1.4px;text-transform:uppercase;color:var(--turq);}
+#lj-bundle h3{font:800 19px/1.24 "Avenir Next",Arial;color:var(--head);margin:0 0 7px;letter-spacing:-.3px;}
+#lj-bundle p{margin:0 0 14px;font-size:13.8px;color:var(--mut);line-height:1.5;font-weight:500;}
+#lj-bundle .stop-cta{display:table;margin:4px auto 0;text-align:center;font:800 12.5px/1 "Avenir Next",Arial;padding:11px 18px;border-radius:10px;letter-spacing:.2px;color:#fff;transition:transform .22s cubic-bezier(.2,.75,.25,1),box-shadow .22s ease,filter .15s;}
+#lj-bundle .stop-cta:hover{transform:translateY(-3px) scale(1.04);}
+#lj-bundle .stop-cta.free{background:linear-gradient(135deg,#245F46,#0F3324);box-shadow:0 8px 18px rgba(27,77,54,.28);}
+@media (max-width:420px){#lj-bundle .stop{padding:20px 18px;}#lj-bundle h3{font-size:18px;}}
+#lj-bundle .stop{border-top-color:var(--mag);}
+#lj-bundle .price{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin:0 0 14px;}
+#lj-bundle .now{font:800 30px/1 "Avenir Next",Arial;color:var(--head);letter-spacing:-.5px;}
+#lj-bundle .was{font:600 16px/1 "Avenir Next",Arial;color:var(--mut);text-decoration:line-through;}
+#lj-bundle .note{font:700 12px/1.2 "Avenir Next",Arial;color:var(--magtxt,var(--mag));}
+#lj-bundle ul{background:var(--soft);border:1px solid var(--cardbd);border-radius:12px;padding:12px 14px;}
+#lj-bundle li{display:flex;justify-content:space-between;gap:12px;font-size:13.5px;font-weight:600;color:var(--ink);padding:6px 0;border-bottom:1px dashed var(--cardbd);}
+#lj-bundle li:last-child{border-bottom:0;}
+#lj-bundle li span:first-child::before{content:"\2713";color:var(--turq);font-weight:800;margin-right:8px;}
+#lj-bundle li span:last-child{white-space:nowrap;color:var(--mut);font-weight:700;}
+#lj-bundle li.tot span{color:var(--head);font-weight:800;}
+#lj-bundle li.tot span:first-child::before{content:"";margin:0;}
+#lj-bundle .fine{margin:12px 0 0;font-size:12px;color:var(--mut);text-align:center;}
+</style>
+<div class="stop">
+  <div class="stop-top"><div class="stop-ic">&#128176;</div><span class="stop-badge paid">Founding price</span></div>
+  <span class="stop-sub">Paid bundle</span>
+  <h3>The Wealth Roadmap + TRUST Tracker</h3>
+  <p>Build your wealth without quitting your 9&#8211;5. A 25-page step-by-step roadmap plus the spreadsheet that tracks every euro, every hour and every income stream.</p>
+  <div class="price"><span class="now">&#8364;39</span><span class="was">&#8364;59</span><span class="note">You save &#8364;20</span></div>
+  <ul>
+    <li><span>The Wealth Roadmap (25 pages)</span><span>&#8364;49</span></li>
+    <li><span>TRUST Tracker, Freedom Edition</span><span>&#8364;39</span></li>
+    <li><span>Raise scripts &amp; templates</span><span>included</span></li>
+    <li><span>90-day income test</span><span>included</span></li>
+    <li class="tot"><span>Total value</span><span>&#8364;88</span></li>
+  </ul>
+  <p class="fine">Instant download &#183; PDF + Excel / Google Sheets</p>
+</div>
+</div>
+<div style="text-align:center;margin:14px 0 0"><a href="https://www.cybercnslt.com/wealth-roadmap-checkout" style="display:inline-block;background:#8E1F45;color:#fff;font:800 15px/1 'Avenir Next','Segoe UI',Arial,sans-serif;padding:14px 26px;border-radius:12px;text-decoration:none;box-shadow:0 8px 18px rgba(142,31,69,.28)">Get the bundle</a></div>
+<div style="height:28px"></div>
+<!-- iCyber · Free TRUST Sheet – Financial Tracker card · paste into a systeme.io "Custom HTML/CSS/JS" element -->
+<div id="lj-freecard">
+<style>
+#lj-freecard{--bg:#EDF3F2;--card:#ffffff;--cardbd:#E3ECEB;--ink:#3c4f50;--head:#0F4C4C;--mut:#64777a;--turq:#1A9E9E;--turqbr:#35B7B7;--green:#1B4D36;--mag:#8E1F45;--magdk:#5E1530;--soft:#F6F9F9;--hl:#F7E6EE;
+  font-family:"Avenir Next","Segoe UI","Helvetica Neue",-apple-system,Arial,sans-serif;-webkit-font-smoothing:antialiased;
+  max-width:440px;margin:0 auto;padding:0 2px;color:var(--ink);line-height:1.5;text-align:left;}
+html[data-theme="dark"] #lj-freecard{--bg:#0e1621;--card:#16202c;--cardbd:#273543;--ink:#c6d5d5;--head:#ffffff;--mut:#93a6a6;--soft:#1c2836;--hl:#2a1d27;--magtxt:#E0577F;}
+#lj-freecard *,#lj-freecard *::before,#lj-freecard *::after{box-sizing:border-box;margin:0;padding:0;border:0;background:none;box-shadow:none;text-shadow:none;letter-spacing:normal;text-transform:none;list-style:none;}
+#lj-freecard a{text-decoration:none;}
+#lj-freecard .stop{background:var(--card);border:1px solid var(--cardbd);border-top:4px solid var(--turq);border-radius:18px;padding:24px 26px;box-shadow:0 8px 22px rgba(10,20,25,.08);}
+#lj-freecard .stop-top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px;}
+#lj-freecard .stop-ic{font-size:28px;line-height:1;}
+#lj-freecard .stop-badge{display:inline-block;font:800 10.5px/1 "Avenir Next",Arial;letter-spacing:1px;text-transform:uppercase;padding:6px 12px;border-radius:20px;}
+#lj-freecard .stop-badge.paid{color:var(--magtxt,var(--mag));border:1.5px solid var(--magtxt,var(--mag));}
+#lj-freecard .stop-badge.free{color:var(--green);border:1.5px solid var(--green);}
+html[data-theme="dark"] #lj-freecard .stop-badge.free{color:#6fcf9c;border-color:#6fcf9c;}
+#lj-freecard .stop-sub{display:block;margin:0 0 6px;font:800 12px/1.3 "Avenir Next",Arial;letter-spacing:1.4px;text-transform:uppercase;color:var(--turq);}
+#lj-freecard h3{font:800 19px/1.24 "Avenir Next",Arial;color:var(--head);margin:0 0 7px;letter-spacing:-.3px;}
+#lj-freecard p{margin:0 0 14px;font-size:13.8px;color:var(--mut);line-height:1.5;font-weight:500;}
+#lj-freecard .stop-cta{display:table;margin:4px auto 0;text-align:center;font:800 12.5px/1 "Avenir Next",Arial;padding:11px 18px;border-radius:10px;letter-spacing:.2px;color:#fff;transition:transform .22s cubic-bezier(.2,.75,.25,1),box-shadow .22s ease,filter .15s;}
+#lj-freecard .stop-cta:hover{transform:translateY(-3px) scale(1.04);}
+#lj-freecard .stop-cta.free{background:linear-gradient(135deg,#245F46,#0F3324);box-shadow:0 8px 18px rgba(27,77,54,.28);}
+@media (max-width:420px){#lj-freecard .stop{padding:20px 18px;}#lj-freecard h3{font-size:18px;}}
+#lj-freecard .stop{border-top-color:var(--green);}
+#lj-freecard .thumb{width:84px;height:84px;border-radius:16px;background:linear-gradient(150deg,#3A9A9A,#1F5E5E);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;box-shadow:0 8px 18px rgba(15,76,76,.25);}
+#lj-freecard .thumb b{display:block;font:800 19px/1 "Avenir Next",Arial;letter-spacing:1.5px;}
+#lj-freecard .thumb small{display:block;font:800 10.5px/1.15 "Avenir Next",Arial;letter-spacing:1.2px;margin-top:5px;}
+#lj-freecard .price{display:flex;align-items:baseline;gap:10px;margin:0 0 14px;}
+#lj-freecard .now{font:800 30px/1 "Avenir Next",Arial;color:var(--head);letter-spacing:-.5px;}
+#lj-freecard .note{font:700 12px/1.2 "Avenir Next",Arial;color:var(--mut);}
+</style>
+<div class="stop">
+  <div class="stop-top"><div class="thumb"><b>TRUST</b><small>FREE<br>SHEET</small></div><span class="stop-badge free">Free</span></div>
+  <span class="stop-sub">Start free</span>
+  <h3>TRUST Sheet &#8211; Financial Tracker</h3>
+  <p>You work hard for your money. Know where it goes, and how much you actually keep.</p>
+  <div class="price"><span class="now">&#8364;0</span><span class="note">Google Sheets &amp; Excel</span></div>
+  <a class="stop-cta free" href="https://www.cybercnslt.com/free-financial-trust-sheet">Get the free sheet</a>
+</div>
+</div>
+
+<div style="height:28px"></div>
+
+<div style="height:28px"></div>
+<!-- iCyber · "Hey, I'm Liliane" story card · paste into a systeme.io "Custom HTML/CSS/JS" element -->
+<div id="lj-about">
+<style>
+#lj-about{--bg:#EDF3F2;--card:#ffffff;--cardbd:#E3ECEB;--ink:#3c4f50;--head:#0F4C4C;--mut:#64777a;--turq:#1A9E9E;--turqbr:#35B7B7;--green:#1B4D36;--mag:#8E1F45;--magdk:#5E1530;--soft:#F6F9F9;--hl:#F7E6EE;
+  font-family:"Avenir Next","Segoe UI","Helvetica Neue",-apple-system,Arial,sans-serif;-webkit-font-smoothing:antialiased;
+  max-width:760px;margin:0 auto;padding:0 2px;color:var(--ink);line-height:1.5;text-align:left;}
+html[data-theme="dark"] #lj-about{--bg:#0e1621;--card:#16202c;--cardbd:#273543;--ink:#c6d5d5;--head:#ffffff;--mut:#93a6a6;--soft:#1c2836;--hl:#2a1d27;--magtxt:#E0577F;}
+#lj-about *,#lj-about *::before,#lj-about *::after{box-sizing:border-box;margin:0;padding:0;border:0;background:none;box-shadow:none;text-shadow:none;letter-spacing:normal;text-transform:none;list-style:none;}
+#lj-about a{text-decoration:none;}
+#lj-about .stop{background:var(--card);border:1px solid var(--cardbd);border-top:4px solid var(--turq);border-radius:18px;padding:24px 26px;box-shadow:0 8px 22px rgba(10,20,25,.08);}
+#lj-about .stop-top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px;}
+#lj-about .stop-ic{font-size:28px;line-height:1;}
+#lj-about .stop-badge{display:inline-block;font:800 10.5px/1 "Avenir Next",Arial;letter-spacing:1px;text-transform:uppercase;padding:6px 12px;border-radius:20px;}
+#lj-about .stop-badge.paid{color:var(--magtxt,var(--mag));border:1.5px solid var(--magtxt,var(--mag));}
+#lj-about .stop-badge.free{color:var(--green);border:1.5px solid var(--green);}
+html[data-theme="dark"] #lj-about .stop-badge.free{color:#6fcf9c;border-color:#6fcf9c;}
+#lj-about .stop-sub{display:block;margin:0 0 6px;font:800 12px/1.3 "Avenir Next",Arial;letter-spacing:1.4px;text-transform:uppercase;color:var(--turq);}
+#lj-about h3{font:800 19px/1.24 "Avenir Next",Arial;color:var(--head);margin:0 0 7px;letter-spacing:-.3px;}
+#lj-about p{margin:0 0 14px;font-size:13.8px;color:var(--mut);line-height:1.5;font-weight:500;}
+#lj-about .stop-cta{display:table;margin:4px auto 0;text-align:center;font:800 12.5px/1 "Avenir Next",Arial;padding:11px 18px;border-radius:10px;letter-spacing:.2px;color:#fff;transition:transform .22s cubic-bezier(.2,.75,.25,1),box-shadow .22s ease,filter .15s;}
+#lj-about .stop-cta:hover{transform:translateY(-3px) scale(1.04);}
+#lj-about .stop-cta.free{background:linear-gradient(135deg,#245F46,#0F3324);box-shadow:0 8px 18px rgba(27,77,54,.28);}
+@media (max-width:420px){#lj-about .stop{padding:20px 18px;}#lj-about h3{font-size:18px;}}
+#lj-about .stop{border-top-color:var(--mag);padding:30px 32px;}
+#lj-about .kick{display:block;font:800 12px/1.2 "Avenir Next",Arial;letter-spacing:2.4px;text-transform:uppercase;color:var(--mut);margin:0 0 8px;}
+#lj-about h2{font:800 30px/1.15 "Avenir Next",Arial;color:var(--head);letter-spacing:-.6px;margin:0;}
+#lj-about h2 .nm{color:var(--magtxt,var(--mag));}
+#lj-about .rule{width:110px;height:5px;border-radius:5px;background:linear-gradient(90deg,var(--turq),var(--mag));margin:14px 0 20px;}
+#lj-about .who{background:var(--hl);border-left:5px solid var(--mag);border-radius:0 12px 12px 0;padding:14px 18px;margin:0 0 16px;}
+#lj-about .who p{margin:0;color:var(--ink);font-size:15px;font-weight:600;}
+#lj-about .jimg{margin:0 0 26px;padding-bottom:22px;border-bottom:1px solid var(--cardbd);}
+#lj-about .jimg img{display:block;width:100%;height:auto;}
+#lj-about .tn{position:relative;height:58px;margin-top:2px;}
+#lj-about .tn span{position:absolute;top:0;transform:translateX(-50%);text-align:center;white-space:nowrap;font:800 12px/1.3 "Avenir Next",Arial;letter-spacing:1.6px;text-transform:uppercase;color:var(--turq);}
+html[data-theme="dark"] #lj-about .tn span{color:#35B7B7;}
+#lj-about .tn span:first-child{left:27%;}#lj-about .tn span:last-child{left:73.5%;}
+#lj-about .tn small{display:block;margin-top:3px;font:600 13px/1.35 "Avenir Next",Arial;letter-spacing:.2px;text-transform:none;color:var(--mut);}
+#lj-about .jcap{margin:10px 0 0;text-align:center;font:600 13.5px/1.5 "Avenir Next",Arial;color:var(--mut);font-style:italic;}
+@media (max-width:480px){#lj-about .tn{height:52px;}#lj-about .tn span{font-size:11px;letter-spacing:1px;}#lj-about .tn small{font-size:11px;}}
+#lj-about p{font-size:15px;color:var(--ink);margin:0 0 12px;line-height:1.6;}
+#lj-about p b{color:var(--head);font-weight:800;}
+#lj-about .by{margin:18px 0 0;padding-top:14px;border-top:1px solid var(--cardbd);font:700 12.5px/1.5 "Avenir Next",Arial;color:var(--turq);}
+@media (max-width:420px){#lj-about .stop{padding:24px 20px;}#lj-about h2{font-size:26px;}#lj-about p,#lj-about .who p{font-size:14.5px;}}
+</style>
+<div class="stop">
+  <figure class="jimg"><img src="PASTE-JOURNEY-IMAGE-URL" alt="Liliane then as a flight attendant, and now as a cybersecurity consultant" width="1920" height="1080">
+    <div class="tn"><span>Then<small>Flight attendant wanting<br>to become a pilot</small></span><span>Now<small>Cybersecurity consultant<br>in the financial sector</small></span></div>
+    <p class="jcap">From the cabin to cybersecurity in the financial sector</p></figure>
+  <span class="kick">Why I built this</span>
+  <h2>Hey, I'm <span class="nm">Liliane</span>.</h2>
+  <div class="rule"></div>
+  <div class="who"><p>I'm a full-time cybersecurity consultant at a Big Four firm, working in the financial sector. Alongside my 9&#8211;5, I support my mum, who is 83 and receives care at home after her cerebral haemorrhage.</p></div>
+  <p>In my 20s I took out loans for my study fees, made financial decisions I'd make very differently today, traded without really understanding it, and even fell for an online scam. <b>I paid off &#8364;30,000 of debt</b>, not by first earning more, but by understanding my finances and making deliberate changes.</p>
+  <p>Most financial advice told me to quit my job, hustle harder or get rich fast. None of it was made for someone with a demanding career and a mum who needs them. <b>So I decided to build the plan I wish I'd had, step by step.</b></p>
+  <p class="by">Liliane &#183; cybersecurity consultant, solo-preneur, daughter, creator &#183; @cyber_cnslt</p>
+</div>
+</div>
+
+<div style="height:28px"></div>
+
+<div style="height:28px"></div>
+<!-- iCyber · The 3 roads + road cards (same layout as your journey hub) · put this after the offers · paste into a systeme.io "Custom HTML/CSS/JS" element -->
+<div id="lj-roads">
+<style>
+#lj-roads{--bg:#EDF3F2;--card:#ffffff;--cardbd:#E3ECEB;--ink:#3c4f50;--head:#0F4C4C;--mut:#64777a;--turq:#1A9E9E;--turqbr:#35B7B7;--green:#1B4D36;--mag:#8E1F45;--magdk:#5E1530;--soft:#F6F9F9;--hl:#F7E6EE;
+  font-family:"Avenir Next","Segoe UI","Helvetica Neue",-apple-system,Arial,sans-serif;-webkit-font-smoothing:antialiased;
+  max-width:900px;margin:0 auto;padding:0 2px;color:var(--ink);line-height:1.5;text-align:left;}
+html[data-theme="dark"] #lj-roads{--bg:#0e1621;--card:#16202c;--cardbd:#273543;--ink:#c6d5d5;--head:#ffffff;--mut:#93a6a6;--soft:#1c2836;--hl:#2a1d27;--magtxt:#E0577F;}
+#lj-roads *,#lj-roads *::before,#lj-roads *::after{box-sizing:border-box;margin:0;padding:0;border:0;background:none;box-shadow:none;text-shadow:none;letter-spacing:normal;text-transform:none;list-style:none;}
+#lj-roads a{text-decoration:none;}
+#lj-roads{max-width:none;padding:0;}
+#lj-roads .ljr-wrap{width:100%;overflow:hidden;}
+#lj-roads .ljr{width:900px;margin:0 auto;}
+#lj-roads .startnote{text-align:center;padding:6px 24px 0;}
+#lj-roads .startnote p{margin:0 auto;max-width:620px;font-size:14px;line-height:1.55;color:var(--mut);font-weight:500;}
+#lj-roads .startnote p b{display:block;margin-bottom:4px;font:800 18px/1.3 "Avenir Next",Arial;color:var(--head);}
+#lj-roads .fork{position:relative;width:900px;max-width:100%;margin:0 auto;}
+#lj-roads .forksvg{display:block;width:100%;height:auto;}
+#lj-roads .road{stroke:#2b3139;} html[data-theme="dark"] #lj-roads .road{stroke:#3a4450;}
+#lj-roads .dash,#lj-roads .node{stroke:#ffffff;fill:none;} #lj-roads .node{fill:#ffffff;stroke:none;}
+html[data-theme="dark"] #lj-roads .dash{stroke:#d3dce4;} html[data-theme="dark"] #lj-roads .node{fill:#d3dce4;}
+#lj-roads .sign-lbl{font-family:"Avenir Next","Helvetica Neue",Arial,sans-serif;font-weight:800;font-size:15px;letter-spacing:1.4px;fill:#fff;}
+#lj-roads .sign-hint{font-family:"Avenir Next","Helvetica Neue",Arial,sans-serif;font-weight:800;font-size:11px;letter-spacing:2px;fill:var(--mut);}
+#lj-roads .signpost{cursor:pointer;} #lj-roads .signpost:hover rect{filter:brightness(1.08);}
+#lj-roads .car{animation:ljrBob 3s ease-in-out infinite;}
+@keyframes ljrBob{0%,100%{transform:translate(450px,205px);}50%{transform:translate(450px,197px);}}
+@media (prefers-reduced-motion:reduce){#lj-roads .car{animation:none;transform:translate(450px,205px);}}
+#lj-roads .pick{position:relative;z-index:3;width:900px;max-width:100%;margin:0 auto;padding:0 26px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;}
+#lj-roads .pcard{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--cardbd);border-top:5px solid var(--turq);border-radius:20px;padding:30px 24px 28px;
+  text-align:center;box-shadow:0 8px 22px rgba(10,20,25,.08);transition:transform .5s cubic-bezier(.2,.75,.25,1),box-shadow .25s ease;}
+#lj-roads .pcard:hover{transform:translateY(-8px) scale(1.04);box-shadow:0 26px 54px rgba(10,20,25,.24);z-index:2;}
+#lj-roads .pcard.cyber{border-top-color:#1A9E9E;}#lj-roads .pcard.biz{border-top-color:#8E1F45;}#lj-roads .pcard.fin{border-top-color:#1B4D36;}
+#lj-roads .pic{font-size:32px;line-height:1;margin-bottom:10px;}
+#lj-roads h3{display:flex;align-items:center;justify-content:center;min-height:2.3em;font:800 24px/1.15 "Avenir Next",Arial;color:var(--head);margin:0 0 10px;letter-spacing:-.4px;}
+#lj-roads p{margin:0 0 18px;font-size:14px;color:var(--mut);line-height:1.5;font-weight:500;}
+#lj-roads .pcta{display:flex;align-items:center;justify-content:center;width:100%;min-height:46px;margin-top:auto;font:800 13px/1.25 "Avenir Next",Arial;padding:10px 12px;border-radius:12px;color:#fff;letter-spacing:.2px;}
+#lj-roads .cyber .pcta{background:linear-gradient(135deg,#1A9E9E,#0F4C4C);box-shadow:0 8px 18px rgba(26,158,158,.30);}
+#lj-roads .biz .pcta{background:var(--mag);box-shadow:0 8px 18px rgba(142,31,69,.28);}
+#lj-roads .fin .pcta{background:var(--green);box-shadow:0 8px 18px rgba(27,77,54,.28);}
+#lj-roads .t-short{display:none;}
+/* phone / tablet: the 900px canvas is zoomed to fit, with the journey site's phone type sizes */
+#lj-roads .ljr.is-scaled .startnote p{font-size:19px;max-width:700px;}
+#lj-roads .ljr.is-scaled .startnote p b{font-size:22px;}
+#lj-roads .ljr.is-scaled .sign-lbl{font-size:22px;}
+#lj-roads .ljr.is-scaled .sign-hint{font-size:17px;}
+#lj-roads .ljr.is-scaled .pick{padding-left:56px;padding-right:56px;gap:14px;}
+#lj-roads .ljr.is-scaled .pcard{padding:20px 14px 16px;}
+#lj-roads .ljr.is-scaled .pic{font-size:46px;}
+#lj-roads .ljr.is-scaled h3{font-size:20px;line-height:1.2;min-height:2.4em;margin-bottom:8px;}
+#lj-roads .ljr.is-scaled p{font-size:14px;line-height:1.45;margin-bottom:18px;}
+#lj-roads .ljr.is-scaled .pcta{min-height:0;height:52px;font-size:16px;padding:0 10px;}
+#lj-roads .ljr.is-scaled .pcta .t-full{display:none;}#lj-roads .ljr.is-scaled .pcta .t-short{display:inline;}
+</style>
+<div class="ljr-wrap"><div class="ljr">
+<section class="startnote"><p><b>Start Your Journey Today.</b>Pick the road that fits your personal journey &#8212;<br>you can always come back and try another one.</p></section>
+<div class="fork"><svg class="forksvg" viewBox="0 -60 900 440" width="900" height="440" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMin meet" role="img" aria-label="Three roads: Cybersecurity, Business, Finances">
+  <defs>
+    <linearGradient id="ljr-prog" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="350"><stop offset="0" stop-color="#35B7B7"/><stop offset="0.5" stop-color="#1A9E9E"/><stop offset="1" stop-color="#8E1F45"/></linearGradient>
+    <linearGradient id="ljr-cyber" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1A9E9E"/><stop offset="1" stop-color="#0F4C4C"/></linearGradient>
+    <linearGradient id="ljr-biz" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8E1F45"/><stop offset="1" stop-color="#5E1530"/></linearGradient>
+    <linearGradient id="ljr-fin" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#245F46"/><stop offset="1" stop-color="#0F3324"/></linearGradient>
+    <clipPath id="ljr-clip"><circle r="40"/></clipPath>
+  </defs>
+  <path class="road" d="M 450 80 C 450 205, 150 205, 150 350" fill="none" stroke-width="46" stroke-linecap="butt"/>
+  <path class="road" d="M 450 80 C 450 205, 750 205, 750 350" fill="none" stroke-width="46" stroke-linecap="butt"/>
+  <path class="road" d="M 450 80 L 450 350" fill="none" stroke-width="46" stroke-linecap="butt"/>
+  <path class="road" d="M 450 0 L 450 80" fill="none" stroke-width="46" stroke-linecap="round"/>
+  <path class="dash" d="M 450 80 C 450 205, 150 205, 150 350" fill="none" stroke-width="4" stroke-linecap="round" stroke-dasharray="2 30" opacity="0.85"/>
+  <path class="dash" d="M 450 80 C 450 205, 750 205, 750 350" fill="none" stroke-width="4" stroke-linecap="round" stroke-dasharray="2 30" opacity="0.85"/>
+  <path class="dash" d="M 450 80 L 450 350" fill="none" stroke-width="4" stroke-linecap="round" stroke-dasharray="2 30" opacity="0.85"/>
+  <path class="dash" d="M 450 0 L 450 80" fill="none" stroke-width="4" stroke-linecap="round" stroke-dasharray="2 30" opacity="0.85"/>
+  <path d="M 450 0 L 450 200" fill="none" stroke="url(#ljr-prog)" stroke-width="12" stroke-linecap="round"/>
+  <text class="sign-hint" x="300" y="44" text-anchor="end">TURN LEFT</text>
+  <text class="sign-hint" x="600" y="44" text-anchor="start">TURN RIGHT</text>
+  <circle class="node" cx="450" cy="80" r="9" opacity=".9"/>
+  <a class="signpost" href="https://www.cybercnslt.com/#cybersecurity"><g transform="translate(150,310)"><rect x="-135" y="-26" width="270" height="52" rx="13" fill="url(#ljr-cyber)" stroke="#ffffff" stroke-width="3"/><text class="sign-lbl" x="0" y="0" text-anchor="middle" dominant-baseline="central">CYBERSECURITY</text></g></a>
+  <a class="signpost" href="https://www.cybercnslt.com/#business"><g transform="translate(450,310)"><rect x="-135" y="-26" width="270" height="52" rx="13" fill="url(#ljr-biz)" stroke="#ffffff" stroke-width="3"/><text class="sign-lbl" x="0" y="0" text-anchor="middle" dominant-baseline="central">BUSINESS</text></g></a>
+  <a class="signpost" href="https://www.cybercnslt.com/#finances"><g transform="translate(750,310)"><rect x="-135" y="-26" width="270" height="52" rx="13" fill="url(#ljr-fin)" stroke="#ffffff" stroke-width="3"/><text class="sign-lbl" x="0" y="0" text-anchor="middle" dominant-baseline="central">FINANCES</text></g></a>
+  <g class="car">
+    <circle r="48" fill="rgba(53,183,183,.22)"><animate attributeName="r" values="43;56;43" dur="1.6s" repeatCount="indefinite"/></circle>
+    <circle r="41" fill="#0f151c"/>
+    <image href="data:image/webp;base64,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" x="-40" y="-40" width="80" height="80" clip-path="url(#ljr-clip)"/>
+    <circle r="40" fill="none" stroke="#ffffff" stroke-width="4"/>
+    <circle r="43.5" fill="none" stroke="#35B7B7" stroke-width="3.5"/>
+  </g>
+</svg></div>
+<section class="pick">
+  <a class="pcard cyber" href="https://www.cybercnslt.com/#cybersecurity"><div class="pic">&#128737;&#65039;</div><h3>Grow Your Career</h3><p>From a non-tech background to your first cyber role.</p><span class="pcta"><span class="t-full">Start Your Cyber Journey</span><span class="t-short">Start Here</span></span></a>
+  <a class="pcard biz" href="https://www.cybercnslt.com/#business"><div class="pic">&#128640;</div><h3>Grow Your Business</h3><p>Build income beside your 9-5, the strategic way.</p><span class="pcta"><span class="t-full">Start Your Business Journey</span><span class="t-short">Start Here</span></span></a>
+  <a class="pcard fin" href="https://www.cybercnslt.com/#finances"><div class="pic">&#128176;</div><h3>Grow Your Wealth</h3><p>See exactly how much money you actually keep.</p><span class="pcta"><span class="t-full">Start Your Finance Journey</span><span class="t-short">Start Here</span></span></a>
+</section>
+</div></div>
+</div>
+<script>
+/* scale the 900px road canvas to the available width, exactly like the journey website */
+(function(){
+  var root=document.getElementById('lj-roads'); if(!root) return;
+  var wrap=root.querySelector('.ljr-wrap'), c=root.querySelector('.ljr');
+  function fit(){
+    var w=wrap.clientWidth||900, z=Math.min(w/900,1);
+    c.style.zoom=z; c.classList.toggle('is-scaled', z<0.999);
+  }
+  fit(); window.addEventListener('resize',fit);
+  if(window.ResizeObserver) new ResizeObserver(fit).observe(wrap);
+})();
+</script>
+
+</div>
+<div style="height:60px"></div>
