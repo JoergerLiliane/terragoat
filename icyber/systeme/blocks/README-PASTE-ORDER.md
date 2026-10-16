@@ -7,8 +7,8 @@ Paste each file into its own **Custom HTML/CSS/JS** element, in this order. Set 
 3. `03-bundle-card.html`: then add your systeme.io **"Get the bundle"** button right below it (bordeaux `#8E1F45`)
 4. `04-free-trust-sheet-card.html`: TRUST Sheet – Financial Tracker (links to /free-financial-trust-sheet)
 5. `05-about-liliane-card.html`: "Hey, I'm Liliane"
-6. `06-journey-image.html`: upload `liliane-journey.webp` (or the `.png`), then replace `PASTE-JOURNEY-IMAGE-URL` with its link
-7. `07-three-road-cards.html`: Career · Business · Wealth
+   (Upload `liliane-journey.webp` and put its link where block 5 says `PASTE-JOURNEY-IMAGE-URL`.)
+6. `06-three-road-cards.html`: Start Your Journey Today, the fork road and Career · Business · Wealth (same layout as your journey hub)
 
 
 ## Links (already filled in)

@@ -1,4 +1,4 @@
-<!-- iCyber · The 3 road cards (Career · Business · Wealth) · put this after the offers · paste into a systeme.io "Custom HTML/CSS/JS" element -->
+<!-- iCyber · The 3 roads + road cards (same layout as your journey hub) · put this after the offers · paste into a systeme.io "Custom HTML/CSS/JS" element -->
 <div id="lj-roads">
 <style>
 #lj-roads{--bg:#EDF3F2;--card:#ffffff;--cardbd:#E3ECEB;--ink:#3c4f50;--head:#0F4C4C;--mut:#64777a;--turq:#1A9E9E;--turqbr:#35B7B7;--green:#1B4D36;--mag:#8E1F45;--magdk:#5E1530;--soft:#F6F9F9;--hl:#F7E6EE;
@@ -7,62 +7,75 @@
 html[data-theme="dark"] #lj-roads{--bg:#0e1621;--card:#16202c;--cardbd:#273543;--ink:#c6d5d5;--head:#ffffff;--mut:#93a6a6;--soft:#1c2836;--hl:#2a1d27;--magtxt:#E0577F;}
 #lj-roads *,#lj-roads *::before,#lj-roads *::after{box-sizing:border-box;margin:0;padding:0;border:0;background:none;box-shadow:none;text-shadow:none;letter-spacing:normal;text-transform:none;list-style:none;}
 #lj-roads a{text-decoration:none;}
-#lj-roads .secband{display:block;width:fit-content;max-width:100%;margin:0 auto 26px;text-align:center;border-radius:16px;padding:13px 34px;box-shadow:0 10px 24px rgba(0,0,0,.14);
-  background:linear-gradient(135deg,#1A9E9E,#0F4C4C);color:#fff;}
-#lj-roads .sb-t{display:block;font:800 22px/1.1 "Avenir Next",Arial;letter-spacing:-.3px;color:#fff;}
-#lj-roads .sb-s{display:block;font-size:13px;opacity:.94;margin-top:4px;font-weight:600;color:#fff;}
-#lj-roads{container-type:inline-size;}
-#lj-roads .fork{position:relative;width:100%;margin:0 auto 6px;}
-#lj-roads .forksvg{display:block;width:100%;height:auto;overflow:visible;}
+#lj-roads{max-width:none;padding:0;}
+#lj-roads .ljr-wrap{width:100%;overflow:hidden;}
+#lj-roads .ljr{width:900px;margin:0 auto;}
+#lj-roads .startnote{text-align:center;padding:6px 24px 0;}
+#lj-roads .startnote p{margin:0 auto;max-width:620px;font-size:14px;line-height:1.55;color:var(--mut);font-weight:500;}
+#lj-roads .startnote p b{display:block;margin-bottom:4px;font:800 18px/1.3 "Avenir Next",Arial;color:var(--head);}
+#lj-roads .fork{position:relative;width:900px;max-width:100%;margin:0 auto;}
+#lj-roads .forksvg{display:block;width:100%;height:auto;}
+#lj-roads .road{stroke:#2b3139;} html[data-theme="dark"] #lj-roads .road{stroke:#3a4450;}
+#lj-roads .dash,#lj-roads .node{stroke:#ffffff;fill:none;} #lj-roads .node{fill:#ffffff;stroke:none;}
+html[data-theme="dark"] #lj-roads .dash{stroke:#d3dce4;} html[data-theme="dark"] #lj-roads .node{fill:#d3dce4;}
 #lj-roads .sign-lbl{font-family:"Avenir Next","Helvetica Neue",Arial,sans-serif;font-weight:800;font-size:15px;letter-spacing:1.4px;fill:#fff;}
 #lj-roads .sign-hint{font-family:"Avenir Next","Helvetica Neue",Arial,sans-serif;font-weight:800;font-size:11px;letter-spacing:2px;fill:var(--mut);}
-#lj-roads .signpost rect{transition:filter .2s;}
-#lj-roads .signpost:hover rect{filter:brightness(1.12);}
-#lj-roads .road{stroke:#2b3139;} html[data-theme="dark"] #lj-roads .road{stroke:#3a4450;}
-#lj-roads .dash{stroke:#ffffff;} html[data-theme="dark"] #lj-roads .dash{stroke:#d3dce4;}
+#lj-roads .signpost{cursor:pointer;} #lj-roads .signpost:hover rect{filter:brightness(1.08);}
 #lj-roads .car{animation:ljrBob 3s ease-in-out infinite;}
-@keyframes ljrBob{0%,100%{transform:translate(450px,222px);}50%{transform:translate(450px,214px);}}
-@media (prefers-reduced-motion:reduce){#lj-roads .car{animation:none;transform:translate(450px,222px);}}
-@container (max-width:600px){#lj-roads .sign-lbl{font-size:25px;letter-spacing:.6px;}#lj-roads .sign-hint{display:none;}}
-#lj-roads .pick{display:grid;grid-template-columns:1fr;gap:24px;max-width:440px;margin:0 auto;}
-@container (min-width:760px){#lj-roads .pick{grid-template-columns:repeat(3,1fr);max-width:none;gap:28px;}}
+@keyframes ljrBob{0%,100%{transform:translate(450px,205px);}50%{transform:translate(450px,197px);}}
+@media (prefers-reduced-motion:reduce){#lj-roads .car{animation:none;transform:translate(450px,205px);}}
+#lj-roads .pick{position:relative;z-index:3;width:900px;max-width:100%;margin:0 auto;padding:0 26px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;}
 #lj-roads .pcard{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--cardbd);border-top:5px solid var(--turq);border-radius:20px;padding:30px 24px 28px;
   text-align:center;box-shadow:0 8px 22px rgba(10,20,25,.08);transition:transform .5s cubic-bezier(.2,.75,.25,1),box-shadow .25s ease;}
-#lj-roads .pcard:hover{transform:translateY(-8px) scale(1.04);box-shadow:0 26px 54px rgba(10,20,25,.24);}
+#lj-roads .pcard:hover{transform:translateY(-8px) scale(1.04);box-shadow:0 26px 54px rgba(10,20,25,.24);z-index:2;}
 #lj-roads .pcard.cyber{border-top-color:#1A9E9E;}#lj-roads .pcard.biz{border-top-color:#8E1F45;}#lj-roads .pcard.fin{border-top-color:#1B4D36;}
 #lj-roads .pic{font-size:32px;line-height:1;margin-bottom:10px;}
 #lj-roads h3{display:flex;align-items:center;justify-content:center;min-height:2.3em;font:800 24px/1.15 "Avenir Next",Arial;color:var(--head);margin:0 0 10px;letter-spacing:-.4px;}
-#lj-roads p{margin:0 0 18px;font-size:13.8px;color:var(--mut);line-height:1.5;font-weight:500;}
+#lj-roads p{margin:0 0 18px;font-size:14px;color:var(--mut);line-height:1.5;font-weight:500;}
 #lj-roads .pcta{display:flex;align-items:center;justify-content:center;width:100%;min-height:46px;margin-top:auto;font:800 13px/1.25 "Avenir Next",Arial;padding:10px 12px;border-radius:12px;color:#fff;letter-spacing:.2px;}
 #lj-roads .cyber .pcta{background:linear-gradient(135deg,#1A9E9E,#0F4C4C);box-shadow:0 8px 18px rgba(26,158,158,.30);}
 #lj-roads .biz .pcta{background:var(--mag);box-shadow:0 8px 18px rgba(142,31,69,.28);}
 #lj-roads .fin .pcta{background:var(--green);box-shadow:0 8px 18px rgba(27,77,54,.28);}
-@media (max-width:420px){#lj-roads .secband{padding:12px 20px;}#lj-roads .sb-t{font-size:20px;}}
+#lj-roads .t-short{display:none;}
+/* phone / tablet: the 900px canvas is zoomed to fit, with the journey site's phone type sizes */
+#lj-roads .ljr.is-scaled .startnote p{font-size:19px;max-width:700px;}
+#lj-roads .ljr.is-scaled .startnote p b{font-size:22px;}
+#lj-roads .ljr.is-scaled .sign-lbl{font-size:22px;}
+#lj-roads .ljr.is-scaled .sign-hint{font-size:17px;}
+#lj-roads .ljr.is-scaled .pick{padding-left:56px;padding-right:56px;gap:14px;}
+#lj-roads .ljr.is-scaled .pcard{padding:20px 14px 16px;}
+#lj-roads .ljr.is-scaled .pic{font-size:46px;}
+#lj-roads .ljr.is-scaled h3{font-size:20px;line-height:1.2;min-height:2.4em;margin-bottom:8px;}
+#lj-roads .ljr.is-scaled p{font-size:14px;line-height:1.45;margin-bottom:18px;}
+#lj-roads .ljr.is-scaled .pcta{min-height:0;height:52px;font-size:16px;padding:0 10px;}
+#lj-roads .ljr.is-scaled .pcta .t-full{display:none;}#lj-roads .ljr.is-scaled .pcta .t-short{display:inline;}
 </style>
-<div class="secband"><span class="sb-t">Pick your road</span><span class="sb-s">Career, business or wealth: start where you are.</span></div>
-<div class="fork"><svg class="forksvg" viewBox="0 -10 900 390" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Three roads: Cybersecurity, Business, Finances">
+<div class="ljr-wrap"><div class="ljr">
+<section class="startnote"><p><b>Start Your Journey Today.</b>Pick the road that fits your personal journey &#8212;<br>you can always come back and try another one.</p></section>
+<div class="fork"><svg class="forksvg" viewBox="0 -60 900 440" width="900" height="440" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMin meet" role="img" aria-label="Three roads: Cybersecurity, Business, Finances">
   <defs>
-    <linearGradient id="ljr-prog" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="350"><stop offset="0" stop-color="#35B7B7"/><stop offset="1" stop-color="#1A9E9E"/></linearGradient>
+    <linearGradient id="ljr-prog" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="350"><stop offset="0" stop-color="#35B7B7"/><stop offset="0.5" stop-color="#1A9E9E"/><stop offset="1" stop-color="#8E1F45"/></linearGradient>
     <linearGradient id="ljr-cyber" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1A9E9E"/><stop offset="1" stop-color="#0F4C4C"/></linearGradient>
     <linearGradient id="ljr-biz" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8E1F45"/><stop offset="1" stop-color="#5E1530"/></linearGradient>
     <linearGradient id="ljr-fin" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#245F46"/><stop offset="1" stop-color="#0F3324"/></linearGradient>
     <clipPath id="ljr-clip"><circle r="40"/></clipPath>
   </defs>
-  <path class="road" d="M 450 80 C 450 205, 150 205, 150 370" fill="none" stroke-width="46"/>
-  <path class="road" d="M 450 80 C 450 205, 750 205, 750 370" fill="none" stroke-width="46"/>
-  <path class="road" d="M 450 80 L 450 370" fill="none" stroke-width="46"/>
-  <path class="road" d="M 450 -10 L 450 80" fill="none" stroke-width="46"/>
-  <path class="dash" d="M 450 80 C 450 205, 150 205, 150 370" fill="none" stroke-width="4" stroke-linecap="round" stroke-dasharray="2 30" opacity=".85"/>
-  <path class="dash" d="M 450 80 C 450 205, 750 205, 750 370" fill="none" stroke-width="4" stroke-linecap="round" stroke-dasharray="2 30" opacity=".85"/>
-  <path class="dash" d="M 450 80 L 450 370" fill="none" stroke-width="4" stroke-linecap="round" stroke-dasharray="2 30" opacity=".85"/>
-  <path d="M 450 -10 L 450 222" fill="none" stroke="url(#ljr-prog)" stroke-width="12" stroke-linecap="round"/>
+  <path class="road" d="M 450 80 C 450 205, 150 205, 150 350" fill="none" stroke-width="46" stroke-linecap="butt"/>
+  <path class="road" d="M 450 80 C 450 205, 750 205, 750 350" fill="none" stroke-width="46" stroke-linecap="butt"/>
+  <path class="road" d="M 450 80 L 450 350" fill="none" stroke-width="46" stroke-linecap="butt"/>
+  <path class="road" d="M 450 0 L 450 80" fill="none" stroke-width="46" stroke-linecap="round"/>
+  <path class="dash" d="M 450 80 C 450 205, 150 205, 150 350" fill="none" stroke-width="4" stroke-linecap="round" stroke-dasharray="2 30" opacity="0.85"/>
+  <path class="dash" d="M 450 80 C 450 205, 750 205, 750 350" fill="none" stroke-width="4" stroke-linecap="round" stroke-dasharray="2 30" opacity="0.85"/>
+  <path class="dash" d="M 450 80 L 450 350" fill="none" stroke-width="4" stroke-linecap="round" stroke-dasharray="2 30" opacity="0.85"/>
+  <path class="dash" d="M 450 0 L 450 80" fill="none" stroke-width="4" stroke-linecap="round" stroke-dasharray="2 30" opacity="0.85"/>
+  <path d="M 450 0 L 450 200" fill="none" stroke="url(#ljr-prog)" stroke-width="12" stroke-linecap="round"/>
   <text class="sign-hint" x="300" y="44" text-anchor="end">TURN LEFT</text>
   <text class="sign-hint" x="600" y="44" text-anchor="start">TURN RIGHT</text>
-  <circle cx="450" cy="80" r="9" fill="#ffffff" opacity=".9"/>
+  <circle class="node" cx="450" cy="80" r="9" opacity=".9"/>
   <a class="signpost" href="https://www.cybercnslt.com/#cybersecurity"><g transform="translate(150,310)"><rect x="-135" y="-26" width="270" height="52" rx="13" fill="url(#ljr-cyber)" stroke="#ffffff" stroke-width="3"/><text class="sign-lbl" x="0" y="0" text-anchor="middle" dominant-baseline="central">CYBERSECURITY</text></g></a>
   <a class="signpost" href="https://www.cybercnslt.com/#business"><g transform="translate(450,310)"><rect x="-135" y="-26" width="270" height="52" rx="13" fill="url(#ljr-biz)" stroke="#ffffff" stroke-width="3"/><text class="sign-lbl" x="0" y="0" text-anchor="middle" dominant-baseline="central">BUSINESS</text></g></a>
   <a class="signpost" href="https://www.cybercnslt.com/#finances"><g transform="translate(750,310)"><rect x="-135" y="-26" width="270" height="52" rx="13" fill="url(#ljr-fin)" stroke="#ffffff" stroke-width="3"/><text class="sign-lbl" x="0" y="0" text-anchor="middle" dominant-baseline="central">FINANCES</text></g></a>
-  <g class="car" transform="translate(450,222)">
+  <g class="car">
     <circle r="48" fill="rgba(53,183,183,.22)"><animate attributeName="r" values="43;56;43" dur="1.6s" repeatCount="indefinite"/></circle>
     <circle r="41" fill="#0f151c"/>
     <image href="data:image/webp;base64,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" x="-40" y="-40" width="80" height="80" clip-path="url(#ljr-clip)"/>
@@ -70,9 +83,23 @@ html[data-theme="dark"] #lj-roads{--bg:#0e1621;--card:#16202c;--cardbd:#273543;-
     <circle r="43.5" fill="none" stroke="#35B7B7" stroke-width="3.5"/>
   </g>
 </svg></div>
-<div class="pick">
-  <a class="pcard cyber" href="https://www.cybercnslt.com/#cybersecurity"><div class="pic">&#128737;&#65039;</div><h3>Grow Your Career</h3><p>From a non-tech background to your first cyber role.</p><span class="pcta">Start Your Cyber Journey</span></a>
-  <a class="pcard biz" href="https://www.cybercnslt.com/#business"><div class="pic">&#128640;</div><h3>Grow Your Business</h3><p>Build income beside your 9-5, the strategic way.</p><span class="pcta">Start Your Business Journey</span></a>
-  <a class="pcard fin" href="https://www.cybercnslt.com/#finances"><div class="pic">&#128176;</div><h3>Grow Your Wealth</h3><p>See exactly how much money you actually keep.</p><span class="pcta">Start Your Finance Journey</span></a>
+<section class="pick">
+  <a class="pcard cyber" href="https://www.cybercnslt.com/#cybersecurity"><div class="pic">&#128737;&#65039;</div><h3>Grow Your Career</h3><p>From a non-tech background to your first cyber role.</p><span class="pcta"><span class="t-full">Start Your Cyber Journey</span><span class="t-short">Start Here</span></span></a>
+  <a class="pcard biz" href="https://www.cybercnslt.com/#business"><div class="pic">&#128640;</div><h3>Grow Your Business</h3><p>Build income beside your 9-5, the strategic way.</p><span class="pcta"><span class="t-full">Start Your Business Journey</span><span class="t-short">Start Here</span></span></a>
+  <a class="pcard fin" href="https://www.cybercnslt.com/#finances"><div class="pic">&#128176;</div><h3>Grow Your Wealth</h3><p>See exactly how much money you actually keep.</p><span class="pcta"><span class="t-full">Start Your Finance Journey</span><span class="t-short">Start Here</span></span></a>
+</section>
+</div></div>
 </div>
-</div>
+<script>
+/* scale the 900px road canvas to the available width, exactly like the journey website */
+(function(){
+  var root=document.getElementById('lj-roads'); if(!root) return;
+  var wrap=root.querySelector('.ljr-wrap'), c=root.querySelector('.ljr');
+  function fit(){
+    var w=wrap.clientWidth||900, z=Math.min(w/900,1);
+    c.style.zoom=z; c.classList.toggle('is-scaled', z<0.999);
+  }
+  fit(); window.addEventListener('resize',fit);
+  if(window.ResizeObserver) new ResizeObserver(fit).observe(wrap);
+})();
+</script>
