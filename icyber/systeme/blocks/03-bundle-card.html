@@ -26,6 +26,18 @@ html[data-theme="dark"] #lj-bundle .stop-badge.free{color:#6fcf9c;border-color:#
 #lj-bundle .mock img{display:block;width:100%;height:auto;border-radius:14px;box-shadow:0 16px 34px rgba(10,20,25,.16);}
 @keyframes ljbFloat{0%,100%{transform:translateY(0);}50%{transform:translateY(-8px);}}
 @media (prefers-reduced-motion:reduce){#lj-bundle .mock{animation:none;}}
+#lj-bundle .steps{margin:0 0 20px;padding:16px 18px;background:var(--soft);border:1px solid var(--cardbd);border-radius:14px;}
+#lj-bundle .steps .sh{display:block;font:800 11.5px/1.2 "Avenir Next",Arial;letter-spacing:1.6px;text-transform:uppercase;color:var(--turq);margin:0 0 12px;}
+#lj-bundle .steps ol{display:grid;grid-template-columns:1fr 1fr;gap:10px 18px;}
+#lj-bundle .steps li{display:flex;align-items:flex-start;gap:10px;font:700 14px/1.35 "Avenir Next",Arial;color:var(--head);padding:0;border:0;justify-content:flex-start;}
+#lj-bundle .steps li::before{content:none !important;}
+#lj-bundle .steps li span:first-child::before{content:none !important;margin:0 !important;}
+#lj-bundle .steps li span:last-child{white-space:normal !important;color:var(--head) !important;font-weight:700 !important;}
+#lj-bundle .steps li .nb{color:#fff !important;font-weight:800 !important;}
+#lj-bundle .steps li small{color:var(--mut) !important;font-weight:600 !important;}
+#lj-bundle .steps .nb{flex:none;width:24px;height:24px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font:800 12px/1 "Avenir Next",Arial;color:#fff;background:var(--c,#1A9E9E);margin-top:-2px;}
+#lj-bundle .steps li small{display:block;font:600 12.5px/1.35 "Avenir Next",Arial;color:var(--mut);margin-top:2px;}
+@media (max-width:560px){#lj-bundle .steps ol{grid-template-columns:1fr;}}
 #lj-bundle .price{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin:0 0 14px;}
 #lj-bundle .now{font:800 30px/1 "Avenir Next",Arial;color:var(--head);letter-spacing:-.5px;}
 #lj-bundle .was{font:600 16px/1 "Avenir Next",Arial;color:var(--mut);text-decoration:line-through;}
@@ -41,6 +53,7 @@ html[data-theme="dark"] #lj-bundle .stop-badge.free{color:#6fcf9c;border-color:#
 </style>
 <div class="stop">
   <div class="mock"><img src="PASTE-ROADMAP-IMAGE-URL" alt="The Wealth Roadmap on a laptop: seven stages from understanding how your 9-5 fuels your wealth to buying back your time" width="1518" height="935"></div>
+  <div class="steps"><span class="sh">Your 7 stages</span><ol><li><span class="nb" style="--c:#1A9E9E">1</span><span>Understand how your 9–5 fuels your wealth</span></li><li><span class="nb" style="--c:#8E1F45">2</span><span>Money mindset: know your salary &amp; the numbers</span></li><li><span class="nb" style="--c:#1B4D36">3</span><span>Clear your debts<small>Optional: your money still grows, just slower</small></span></li><li><span class="nb" style="--c:#1A9E9E">4</span><span>Build a safety net<small>Your emergency buffer</small></span></li><li><span class="nb" style="--c:#8E1F45">5</span><span>Build wealth with smart investing</span></li><li><span class="nb" style="--c:#1B4D36">6</span><span>Build multiple income streams</span></li><li><span class="nb" style="--c:#1A9E9E">7</span><span>Repeat, automate &amp; buy back time</span></li></ol></div>
   <div class="stop-top"><div class="stop-ic">&#128176;</div><span class="stop-badge paid">Early Bird Price</span></div>
   <span class="stop-sub">Paid bundle</span>
   <h3>The Wealth Roadmap + TRUST Tracker</h3>

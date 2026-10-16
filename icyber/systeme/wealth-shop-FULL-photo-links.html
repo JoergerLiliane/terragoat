@@ -131,6 +131,18 @@ html[data-theme="dark"] #lj-bundle .stop-badge.free{color:#6fcf9c;border-color:#
 #lj-bundle .mock img{display:block;width:100%;height:auto;border-radius:14px;box-shadow:0 16px 34px rgba(10,20,25,.16);}
 @keyframes ljbFloat{0%,100%{transform:translateY(0);}50%{transform:translateY(-8px);}}
 @media (prefers-reduced-motion:reduce){#lj-bundle .mock{animation:none;}}
+#lj-bundle .steps{margin:0 0 20px;padding:16px 18px;background:var(--soft);border:1px solid var(--cardbd);border-radius:14px;}
+#lj-bundle .steps .sh{display:block;font:800 11.5px/1.2 "Avenir Next",Arial;letter-spacing:1.6px;text-transform:uppercase;color:var(--turq);margin:0 0 12px;}
+#lj-bundle .steps ol{display:grid;grid-template-columns:1fr 1fr;gap:10px 18px;}
+#lj-bundle .steps li{display:flex;align-items:flex-start;gap:10px;font:700 14px/1.35 "Avenir Next",Arial;color:var(--head);padding:0;border:0;justify-content:flex-start;}
+#lj-bundle .steps li::before{content:none !important;}
+#lj-bundle .steps li span:first-child::before{content:none !important;margin:0 !important;}
+#lj-bundle .steps li span:last-child{white-space:normal !important;color:var(--head) !important;font-weight:700 !important;}
+#lj-bundle .steps li .nb{color:#fff !important;font-weight:800 !important;}
+#lj-bundle .steps li small{color:var(--mut) !important;font-weight:600 !important;}
+#lj-bundle .steps .nb{flex:none;width:24px;height:24px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font:800 12px/1 "Avenir Next",Arial;color:#fff;background:var(--c,#1A9E9E);margin-top:-2px;}
+#lj-bundle .steps li small{display:block;font:600 12.5px/1.35 "Avenir Next",Arial;color:var(--mut);margin-top:2px;}
+@media (max-width:560px){#lj-bundle .steps ol{grid-template-columns:1fr;}}
 #lj-bundle .price{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin:0 0 14px;}
 #lj-bundle .now{font:800 30px/1 "Avenir Next",Arial;color:var(--head);letter-spacing:-.5px;}
 #lj-bundle .was{font:600 16px/1 "Avenir Next",Arial;color:var(--mut);text-decoration:line-through;}
@@ -146,6 +158,7 @@ html[data-theme="dark"] #lj-bundle .stop-badge.free{color:#6fcf9c;border-color:#
 </style>
 <div class="stop">
   <div class="mock"><img src="PASTE-ROADMAP-IMAGE-URL" alt="The Wealth Roadmap on a laptop: seven stages from understanding how your 9-5 fuels your wealth to buying back your time" width="1518" height="935"></div>
+  <div class="steps"><span class="sh">Your 7 stages</span><ol><li><span class="nb" style="--c:#1A9E9E">1</span><span>Understand how your 9–5 fuels your wealth</span></li><li><span class="nb" style="--c:#8E1F45">2</span><span>Money mindset: know your salary &amp; the numbers</span></li><li><span class="nb" style="--c:#1B4D36">3</span><span>Clear your debts<small>Optional: your money still grows, just slower</small></span></li><li><span class="nb" style="--c:#1A9E9E">4</span><span>Build a safety net<small>Your emergency buffer</small></span></li><li><span class="nb" style="--c:#8E1F45">5</span><span>Build wealth with smart investing</span></li><li><span class="nb" style="--c:#1B4D36">6</span><span>Build multiple income streams</span></li><li><span class="nb" style="--c:#1A9E9E">7</span><span>Repeat, automate &amp; buy back time</span></li></ol></div>
   <div class="stop-top"><div class="stop-ic">&#128176;</div><span class="stop-badge paid">Early Bird Price</span></div>
   <span class="stop-sub">Paid bundle</span>
   <h3>The Wealth Roadmap + TRUST Tracker</h3>
@@ -187,6 +200,18 @@ html[data-theme="dark"] #lj-freecard .stop-badge.free{color:#6fcf9c;border-color
 #lj-freecard .stop-cta.free{background:linear-gradient(135deg,#245F46,#0F3324);box-shadow:0 8px 18px rgba(27,77,54,.28);}
 @media (max-width:420px){#lj-freecard .stop{padding:20px 18px;}#lj-freecard h3{font-size:18px;}}
 #lj-freecard .stop{border-top-color:var(--green);}
+#lj-freecard .steps{margin:0 0 20px;padding:16px 18px;background:var(--soft);border:1px solid var(--cardbd);border-radius:14px;}
+#lj-freecard .steps .sh{display:block;font:800 11.5px/1.2 "Avenir Next",Arial;letter-spacing:1.6px;text-transform:uppercase;color:var(--turq);margin:0 0 12px;}
+#lj-freecard .steps ol{display:grid;grid-template-columns:1fr 1fr;gap:10px 18px;}
+#lj-freecard .steps li{display:flex;align-items:flex-start;gap:10px;font:700 14px/1.35 "Avenir Next",Arial;color:var(--head);padding:0;border:0;justify-content:flex-start;}
+#lj-freecard .steps li::before{content:none !important;}
+#lj-freecard .steps li span:first-child::before{content:none !important;margin:0 !important;}
+#lj-freecard .steps li span:last-child{white-space:normal !important;color:var(--head) !important;font-weight:700 !important;}
+#lj-freecard .steps li .nb{color:#fff !important;font-weight:800 !important;}
+#lj-freecard .steps li small{color:var(--mut) !important;font-weight:600 !important;}
+#lj-freecard .steps .nb{flex:none;width:24px;height:24px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font:800 12px/1 "Avenir Next",Arial;color:#fff;background:var(--c,#1A9E9E);margin-top:-2px;}
+#lj-freecard .steps li small{display:block;font:600 12.5px/1.35 "Avenir Next",Arial;color:var(--mut);margin-top:2px;}
+@media (max-width:560px){#lj-freecard .steps ol{grid-template-columns:1fr;}}
 #lj-freecard .thumb{width:84px;height:84px;border-radius:16px;background:linear-gradient(150deg,#3A9A9A,#1F5E5E);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;box-shadow:0 8px 18px rgba(15,76,76,.25);}
 #lj-freecard .thumb b{display:block;font:800 19px/1 "Avenir Next",Arial;letter-spacing:1.5px;}
 #lj-freecard .thumb small{display:block;font:800 10.5px/1.15 "Avenir Next",Arial;letter-spacing:1.2px;margin-top:5px;}
@@ -200,6 +225,7 @@ html[data-theme="dark"] #lj-freecard .stop-badge.free{color:#6fcf9c;border-color
 </style>
 <div class="stop">
   <div class="mock"><img src="PASTE-TRUST-IMAGE-URL" alt="The TRUST Sheet on a laptop: what you keep every month and where your money goes" width="1518" height="935"></div>
+  <div class="steps"><span class="sh">What the sheet shows you</span><ol><li><span class="nb" style="--c:#1A9E9E">&#10003;</span><span>What you keep every month<small>Your real number, after every bill</small></span></li><li><span class="nb" style="--c:#8E1F45">&#10003;</span><span>Where your money goes<small>Needs, wants and what you keep</small></span></li><li><span class="nb" style="--c:#1B4D36">&#10003;</span><span>Your keep rate<small>The % of your income you hold on to</small></span></li><li><span class="nb" style="--c:#1A9E9E">&#10003;</span><span>Reclaimable money<small>Small leaks you can turn into savings</small></span></li><li><span class="nb" style="--c:#8E1F45">&#10003;</span><span>Debt to clear<small>Your total, so it stops hiding</small></span></li><li><span class="nb" style="--c:#1B4D36">&#10003;</span><span>What 1 hour of your time is worth<small>Spend with your real hourly value in mind</small></span></li><li><span class="nb" style="--c:#1A9E9E">&#10003;</span><span>Your next step<small>One clear action, every month</small></span></li></ol></div>
   <div class="stop-top"><div class="thumb"><b>TRUST</b><small>FREE<br>SHEET</small></div><span class="stop-badge free">Free</span></div>
   <span class="stop-sub">Start free</span>
   <h3>TRUST Sheet &#8211; Financial Tracker</h3>
