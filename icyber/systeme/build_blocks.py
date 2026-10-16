@@ -182,7 +182,7 @@ css = STOP.format(i=i) + f"""#{i} .stop{{border-top-color:var(--mag);}}
 #{i} .foot b{{color:#E6117F !important;-webkit-text-fill-color:#E6117F !important;}}
 html[data-theme="dark"] #{i} .now,html[data-theme="dark"] #{i} .foot b{{color:#ff62ad !important;-webkit-text-fill-color:#ff62ad !important;}}
 #{i} .was{{font:600 16px/1 "Avenir Next",Arial;color:var(--mut);text-decoration:line-through;}}
-#{i} .note{{font:700 12px/1.2 "Avenir Next",Arial;color:var(--magtxt,var(--mag));}}
+#{i} .note{{font:700 12px/1.2 "Avenir Next",Arial;color:var(--mut) !important;-webkit-text-fill-color:var(--mut) !important;}}
 #{i} ul{{background:var(--soft);border:1px solid var(--cardbd);border-radius:12px;padding:12px 14px;}}
 #{i} li{{display:flex;justify-content:space-between;gap:12px;font-size:13.5px;font-weight:600;color:var(--ink);padding:6px 0;border-bottom:1px dashed var(--cardbd);}}
 #{i} li:last-child{{border-bottom:0;}}
@@ -291,7 +291,7 @@ html = """<div class="stop">
     </div>
     <div class="buy">
       <div class="price"><span class="now">&#8364;39</span><span class="was">&#8364;59</span><span class="note">You save &#8364;20</span></div>
-      <a class="cta" href="https://www.cybercnslt.com/4dd2503b">Get the bundle &#8211; &#8364;39</a>
+      <a class="cta" href="https://www.cybercnslt.com/4dd2503b">Get The Roadmap</a>
       <span class="fine">Instant download &#183; PDF + Excel / Google Sheets</span>
     </div>
   </div>
@@ -313,7 +313,7 @@ html = """<div class="stop">
   </div>
   <div class="look"><div class="lh"><span class="pk">Look inside</span><h4>The Wealth Roadmap, stage by stage</h4><p>50+ pages · every stage with deep dives, real examples, a tool and a checklist</p></div>
     <div class="lkrow">"""+open('/tmp/claude-0/-home-user-terragoat/11c993cd-3a5f-5f3f-9b94-f763b4772daf/scratchpad/look_html.txt').read()+"""</div></div>
-  <div class="foot"><span>Total value <s>&#8364;88</s> &#183; today <b>&#8364;39</b></span><a class="cta" href="https://www.cybercnslt.com/4dd2503b">Get the bundle &#8211; &#8364;39</a></div>
+  <div class="foot"><span>Total value <s>&#8364;88</s> &#183; today <b>&#8364;39</b></span><a class="cta" href="https://www.cybercnslt.com/4dd2503b">Get The Roadmap</a></div>
 </div>"""
 files['03-bundle-card.html'] = block(i, 760, css, html, note='Bundle card · add your systeme.io "Get the bundle" button directly below it')
 
