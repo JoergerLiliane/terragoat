@@ -243,7 +243,7 @@ html[data-theme="dark"] #{i} .now,html[data-theme="dark"] #{i} .foot b{{color:#f
 #{i} summary{{cursor:pointer;font:800 13px/1.3 "Avenir Next",Arial;color:var(--turq);list-style:none;}}
 #{i} summary::-webkit-details-marker{{display:none;}}
 #{i} summary::before{{content:"+ ";}}
-#{i} details[open] summary::before{{content:"\2013  ";}}
+#{i} details[open] summary::before{{content:"\\2013  ";}}
 #{i} .more{{margin:8px 0 0;display:flex;flex-direction:column;gap:5px;}}
 #{i} .more li{{display:block;font:600 13px/1.4 "Avenir Next",Arial;color:var(--mut);padding:0;border:0;}}
 #{i} .more li::before,#{i} .more li span::before{{content:none !important;}}
