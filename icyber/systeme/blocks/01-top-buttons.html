@@ -7,6 +7,7 @@
 html[data-theme="dark"] #lj-shoptop{--bg:#0e1621;--card:#16202c;--cardbd:#273543;--ink:#c6d5d5;--head:#ffffff;--mut:#93a6a6;--soft:#1c2836;--hl:#2a1d27;--magtxt:#E0577F;}
 #lj-shoptop *,#lj-shoptop *::before,#lj-shoptop *::after{box-sizing:border-box;margin:0;padding:0;border:0;background:none;box-shadow:none;text-shadow:none;letter-spacing:normal;text-transform:none;list-style:none;}
 #lj-shoptop a{text-decoration:none;}
+#lj-shoptop{container-type:inline-size;width:100%;box-sizing:border-box;}
 #lj-shoptop .lj-topbar{display:flex;justify-content:space-between;align-items:center;gap:10px;max-width:900px;margin:0 auto;width:100%;padding:18px 10px 0;}
 #lj-shoptop .lj-back,#lj-shoptop .lj-amazon,#lj-shoptop .lj-free,#lj-shoptop .welcome-pill,#lj-shoptop .themebtn{display:inline-flex;align-items:center;justify-content:center;width:152px;height:29px;padding:0 8px;border-radius:15px;
   font:800 10px/1 "Avenir Next",Arial;letter-spacing:.3px;white-space:nowrap;cursor:pointer;
@@ -20,9 +21,14 @@ html[data-theme="dark"] #lj-shoptop .lj-amazon{color:#ffffff;}
 #lj-shoptop .themebtn .tb-ic{margin-right:5px;line-height:1;}
 #lj-shoptop .lj-back:hover,#lj-shoptop .lj-amazon:hover,#lj-shoptop .lj-free:hover,#lj-shoptop .welcome-pill:hover,#lj-shoptop .themebtn:hover{transform:translateY(-3px) scale(1.04);filter:brightness(1.05);}
 #lj-shoptop .lbl-short{display:none;}
-@media (max-width:640px){#lj-shoptop .lj-topbar{gap:6px;padding:14px 0 0;}
+@container (max-width:640px){#lj-shoptop .lj-topbar{gap:6px;padding:14px 0 0;}
   #lj-shoptop .lj-back,#lj-shoptop .lj-amazon,#lj-shoptop .lj-free,#lj-shoptop .welcome-pill,#lj-shoptop .themebtn{width:auto;flex:1 1 0;min-width:0;padding:0 4px;font-size:10px;}
   #lj-shoptop .lbl-full{display:none;}#lj-shoptop .lbl-short{display:inline;}}
+@container (max-width:460px){
+ #lj-shoptop .lj-topbar{gap:4px;}
+ #lj-shoptop .lj-back,#lj-shoptop .lj-amazon,#lj-shoptop .lj-free,#lj-shoptop .welcome-pill,#lj-shoptop .themebtn{padding:0 3px;font-size:9px;letter-spacing:0;height:27px;}
+ #lj-shoptop .welcome-pill{letter-spacing:.4px;} #lj-shoptop .themebtn .tb-ic{margin-right:2px;}
+}
 </style>
 <div class="lj-topbar">
   <a class="lj-back" href="https://www.cybercnslt.com/"><span class="lbl-full">Main Page</span><span class="lbl-short">Home</span></a>

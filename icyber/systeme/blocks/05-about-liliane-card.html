@@ -7,6 +7,7 @@
 html[data-theme="dark"] #lj-about{--bg:#0e1621;--card:#16202c;--cardbd:#273543;--ink:#c6d5d5;--head:#ffffff;--mut:#93a6a6;--soft:#1c2836;--hl:#2a1d27;--magtxt:#E0577F;}
 #lj-about *,#lj-about *::before,#lj-about *::after{box-sizing:border-box;margin:0;padding:0;border:0;background:none;box-shadow:none;text-shadow:none;letter-spacing:normal;text-transform:none;list-style:none;}
 #lj-about a{text-decoration:none;}
+#lj-about{container-type:inline-size;width:100%;box-sizing:border-box;}
 #lj-about .stop{background:var(--card);border:1px solid var(--cardbd);border-top:4px solid var(--turq);border-radius:18px;padding:24px 26px;box-shadow:0 8px 22px rgba(10,20,25,.08);}
 #lj-about .stop-top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px;}
 #lj-about .stop-ic{font-size:28px;line-height:1;}
@@ -20,7 +21,7 @@ html[data-theme="dark"] #lj-about .stop-badge.free{color:#6fcf9c;border-color:#6
 #lj-about .stop-cta{display:table;margin:4px auto 0;text-align:center;font:800 12.5px/1 "Avenir Next",Arial;padding:11px 18px;border-radius:10px;letter-spacing:.2px;color:#fff;transition:transform .22s cubic-bezier(.2,.75,.25,1),box-shadow .22s ease,filter .15s;}
 #lj-about .stop-cta:hover{transform:translateY(-3px) scale(1.04);}
 #lj-about .stop-cta.free{background:linear-gradient(135deg,#245F46,#0F3324);box-shadow:0 8px 18px rgba(27,77,54,.28);}
-@media (max-width:420px){#lj-about .stop{padding:20px 18px;}#lj-about h3{font-size:18px;}}
+@container (max-width:420px){#lj-about .stop{padding:20px 18px;}#lj-about h3{font-size:18px;}}
 #lj-about .stop{border-top-color:var(--mag);padding:30px 32px;}
 #lj-about .kick{display:block;font:800 12px/1.2 "Avenir Next",Arial;letter-spacing:2.4px;text-transform:uppercase;color:var(--mut);margin:0 0 8px;}
 #lj-about h2{font:800 30px/1.15 "Avenir Next",Arial;color:var(--head);letter-spacing:-.6px;margin:0;}
@@ -36,11 +37,11 @@ html[data-theme="dark"] #lj-about .tn span{color:#35B7B7;}
 #lj-about .tn span:first-child{left:27%;}#lj-about .tn span:last-child{left:73.5%;}
 #lj-about .tn small{display:block;margin-top:3px;font:600 13px/1.35 "Avenir Next",Arial;letter-spacing:.2px;text-transform:none;color:var(--mut);}
 #lj-about .jcap{margin:10px 0 0;text-align:center;font:600 13.5px/1.5 "Avenir Next",Arial;color:var(--mut);font-style:italic;}
-@media (max-width:480px){#lj-about .tn{height:52px;}#lj-about .tn span{font-size:11px;letter-spacing:1px;}#lj-about .tn small{font-size:11px;}}
+@container (max-width:480px){#lj-about .tn{height:52px;}#lj-about .tn span{font-size:11px;letter-spacing:1px;}#lj-about .tn small{font-size:11px;}}
 #lj-about p{font-size:15px;color:var(--ink);margin:0 0 12px;line-height:1.6;}
 #lj-about p b{color:var(--head);font-weight:800;}
 #lj-about .by{margin:18px 0 0;padding-top:14px;border-top:1px solid var(--cardbd);font:700 12.5px/1.5 "Avenir Next",Arial;color:var(--turq);}
-@media (max-width:420px){#lj-about .stop{padding:24px 20px;}#lj-about h2{font-size:26px;}#lj-about p,#lj-about .who p{font-size:14.5px;}}
+@container (max-width:420px){#lj-about .stop{padding:24px 20px;}#lj-about h2{font-size:26px;}#lj-about p,#lj-about .who p{font-size:14.5px;}}
 #lj-about .stop{background:none !important;border:0 !important;box-shadow:none !important;border-radius:0 !important;padding:0 !important;}
 </style>
 <div class="stop">

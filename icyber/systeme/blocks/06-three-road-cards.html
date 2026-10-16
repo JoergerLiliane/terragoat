@@ -7,9 +7,10 @@
 html[data-theme="dark"] #lj-roads{--bg:#0e1621;--card:#16202c;--cardbd:#273543;--ink:#c6d5d5;--head:#ffffff;--mut:#93a6a6;--soft:#1c2836;--hl:#2a1d27;--magtxt:#E0577F;}
 #lj-roads *,#lj-roads *::before,#lj-roads *::after{box-sizing:border-box;margin:0;padding:0;border:0;background:none;box-shadow:none;text-shadow:none;letter-spacing:normal;text-transform:none;list-style:none;}
 #lj-roads a{text-decoration:none;}
+#lj-roads{container-type:inline-size;width:100%;box-sizing:border-box;}
 #lj-roads{max-width:none;padding:0;}
 #lj-roads .ljr-wrap{width:100%;overflow:hidden;}
-#lj-roads .ljr{width:900px;margin:0 auto;}
+#lj-roads .ljr{width:100%;max-width:900px;margin:0 auto;}
 #lj-roads .startnote{text-align:center;padding:6px 24px 0;}
 #lj-roads .startnote p{margin:0 auto;max-width:620px;font-size:14px;line-height:1.55;color:var(--mut);font-weight:500;}
 #lj-roads .startnote p b{display:block;margin-bottom:4px;font:800 18px/1.3 "Avenir Next",Arial;color:var(--head);}
@@ -24,7 +25,7 @@ html[data-theme="dark"] #lj-roads .dash{stroke:#d3dce4;} html[data-theme="dark"]
 #lj-roads .car{animation:ljrBob 3s ease-in-out infinite;}
 @keyframes ljrBob{0%,100%{transform:translate(450px,205px);}50%{transform:translate(450px,197px);}}
 @media (prefers-reduced-motion:reduce){#lj-roads .car{animation:none;transform:translate(450px,205px);}}
-#lj-roads .pick{position:relative;z-index:3;width:900px;max-width:100%;margin:0 auto;padding:0 26px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;}
+#lj-roads .pick{position:relative;z-index:3;width:100%;max-width:900px;margin:0 auto;padding:0 2.9%;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;}
 #lj-roads .pcard{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--cardbd);border-top:5px solid var(--turq);border-radius:20px;padding:30px 24px 28px;
   text-align:center;box-shadow:0 8px 22px rgba(10,20,25,.08);transition:transform .5s cubic-bezier(.2,.75,.25,1),box-shadow .25s ease;}
 #lj-roads .pcard:hover{transform:translateY(-8px) scale(1.04);box-shadow:0 26px 54px rgba(10,20,25,.24);z-index:2;}
@@ -37,18 +38,20 @@ html[data-theme="dark"] #lj-roads .dash{stroke:#d3dce4;} html[data-theme="dark"]
 #lj-roads .biz .pcta{background:var(--mag);box-shadow:0 8px 18px rgba(142,31,69,.28);}
 #lj-roads .fin .pcta{background:var(--green);box-shadow:0 8px 18px rgba(27,77,54,.28);}
 #lj-roads .t-short{display:none;}
-/* phone / tablet: the 900px canvas is zoomed to fit, with the journey site's phone type sizes */
-#lj-roads .ljr.is-scaled .startnote p{font-size:19px;max-width:700px;}
-#lj-roads .ljr.is-scaled .startnote p b{font-size:22px;}
-#lj-roads .ljr.is-scaled .sign-lbl{font-size:22px;}
-#lj-roads .ljr.is-scaled .sign-hint{font-size:17px;}
-#lj-roads .ljr.is-scaled .pick{padding-left:56px;padding-right:56px;gap:14px;}
-#lj-roads .ljr.is-scaled .pcard{padding:20px 14px 16px;}
-#lj-roads .ljr.is-scaled .pic{font-size:46px;}
-#lj-roads .ljr.is-scaled h3{font-size:20px;line-height:1.2;min-height:2.4em;margin-bottom:8px;}
-#lj-roads .ljr.is-scaled p{font-size:14px;line-height:1.45;margin-bottom:18px;}
-#lj-roads .ljr.is-scaled .pcta{min-height:0;height:52px;font-size:16px;padding:0 10px;}
-#lj-roads .ljr.is-scaled .pcta .t-full{display:none;}#lj-roads .ljr.is-scaled .pcta .t-short{display:inline;}
+/* narrow screens: the road scales with its viewBox; labels and cards get compact sizes */
+@container (max-width:700px){
+ #lj-roads .sign-lbl{font-size:24px;letter-spacing:.4px;} #lj-roads .sign-hint{font-size:20px;}
+ #lj-roads .pick{gap:10px;} #lj-roads .pcard{padding:16px 8px 12px;border-radius:14px;}
+ #lj-roads .pic{font-size:26px;margin-bottom:6px;} #lj-roads h3{font-size:16px;min-height:2.4em;margin-bottom:6px;}
+ #lj-roads .pcard p{font-size:12.5px;margin-bottom:10px;}
+ #lj-roads .pcta{min-height:38px;font-size:12px;padding:8px 6px;border-radius:10px;}
+ #lj-roads .pcta .t-full{display:none;} #lj-roads .pcta .t-short{display:inline;}
+ #lj-roads .startnote p{font-size:14px;} #lj-roads .startnote p b{font-size:17px;}
+}
+@container (max-width:460px){
+ #lj-roads .sign-lbl{font-size:30px;letter-spacing:0;} #lj-roads .sign-hint{display:none;}
+ #lj-roads .pcard p{display:none;} #lj-roads h3{font-size:14.5px;} #lj-roads .sign-lbl{font-size:28px;}
+}
 </style>
 <div class="ljr-wrap"><div class="ljr">
 <section class="startnote"><p><b>Start Your Journey Today.</b>Pick the road that fits your personal journey &#8212;<br>you can always come back and try another one.</p></section>
@@ -90,16 +93,3 @@ html[data-theme="dark"] #lj-roads .dash{stroke:#d3dce4;} html[data-theme="dark"]
 </section>
 </div></div>
 </div>
-<script>
-/* scale the 900px road canvas to the available width, exactly like the journey website */
-(function(){
-  var root=document.getElementById('lj-roads'); if(!root) return;
-  var wrap=root.querySelector('.ljr-wrap'), c=root.querySelector('.ljr');
-  function fit(){
-    var w=wrap.clientWidth||900, z=Math.min(w/900,1);
-    c.style.zoom=z; c.classList.toggle('is-scaled', z<0.999);
-  }
-  fit(); window.addEventListener('resize',fit);
-  if(window.ResizeObserver) new ResizeObserver(fit).observe(wrap);
-})();
-</script>
