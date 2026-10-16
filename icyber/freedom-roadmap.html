@@ -22,7 +22,7 @@
   .rule{height:3px;width:70px;background:linear-gradient(90deg,var(--turq),var(--bord));border-radius:3px;margin:12px 0 18px;}
   .lead{font-size:16px;color:var(--body);}
   .watermark{position:absolute;right:-6px;bottom:-26px;font:italic 800 190px/1 var(--serif);color:rgba(26,158,158,.06);pointer-events:none;}
-  .pfoot{margin-top:auto;padding-top:22px;display:flex;justify-content:space-between;gap:12px;color:var(--mut);font-size:11px;letter-spacing:1px;text-transform:uppercase;}
+  .pfoot{margin-top:auto;padding-top:22px;display:flex;justify-content:space-between;gap:12px;color:var(--mut);font-size:12.5px;letter-spacing:1px;text-transform:uppercase;}
 
   /* COVER */
   .cover{background:radial-gradient(1100px 620px at 62% 22%, var(--navy), var(--dark));color:var(--white);align-items:center;text-align:center;padding:76px 60px 46px;}
@@ -52,7 +52,7 @@
     border-radius:0 14px 14px 0;font:italic 18px/1.45 var(--serif);color:var(--teal);}
   .letter .who{font-size:15px !important;color:var(--teal) !important;font-weight:600;line-height:1.6 !important;margin:0 0 14px;padding:14px 18px;background:var(--turq-tint);border-left:4px solid var(--turq);border-radius:0 12px 12px 0;}
   .letter .why{margin:16px 0 6px;padding:18px 22px;background:var(--bord-tint);border-left:5px solid var(--bord);border-radius:0 14px 14px 0;}
-  .letter .why .nl{font:800 11px/1 var(--sans);letter-spacing:1.5px;text-transform:uppercase;color:var(--bord-dk);margin:0 0 8px;}
+  .letter .why .nl{font:800 12px/1 var(--sans);letter-spacing:1.5px;text-transform:uppercase;color:var(--bord-dk);margin:0 0 8px;}
   .letter .why p{color:#2c3b43;}
   .letter .hook{font:italic 21px/1.4 var(--serif);color:var(--teal);margin:4px 0 8px;}
   .fits{list-style:none;padding:0;margin:4px 0 0;display:grid;gap:8px;}
@@ -66,20 +66,21 @@
   .trust span{font-size:13.6px;color:var(--body);line-height:1.45;}
   .trust em{font-style:normal;font-weight:800;color:var(--teal);margin-right:6px;}
   .cwrap{margin-top:16px;background:var(--white);border:1px solid var(--line);border-radius:14px;padding:16px 18px 10px;}
-  .cwrap .nl{font:800 11px/1.3 var(--sans);letter-spacing:1.5px;text-transform:uppercase;color:var(--bord-dk);margin:0 0 8px;}
+  .cwrap .nl{font:800 12px/1.3 var(--sans);letter-spacing:1.5px;text-transform:uppercase;color:var(--bord-dk);margin:0 0 8px;}
   .legend{display:flex;flex-wrap:wrap;gap:14px;font-size:12.5px;color:var(--body);margin-bottom:4px;}
   .legend i,.tip i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:-1px;}
   .cbox{position:relative;}
   .cchart{width:100%;height:auto;display:block;}
+  .cchart.cm{display:none;} .cchart .axm{font:12px var(--sans);fill:var(--mut);}
   .cchart .grid{stroke:#ECE9E4;stroke-width:1;}
-  .cchart .ax{font:11px var(--sans);fill:var(--mut);}
+  .cchart .ax{font:12px var(--sans);fill:var(--mut);}
   .cchart .lab{font:700 12px var(--sans);fill:var(--ink);}
   .cchart .val{font:12px var(--sans);fill:var(--mut);font-variant-numeric:tabular-nums;}
   .cchart .xh{stroke:#b9c6c6;stroke-width:1;stroke-dasharray:3 3;}
   .tip{position:absolute;top:8px;background:var(--white);border:1px solid var(--line);border-radius:10px;padding:8px 11px;font-size:12px;color:var(--ink);box-shadow:0 6px 18px rgba(0,0,0,.1);pointer-events:none;min-width:165px;}
   .tip div{display:flex;align-items:center;gap:2px;margin-top:3px;} .tip span{margin-left:auto;padding-left:10px;font-variant-numeric:tabular-nums;font-weight:700;}
   .ctab td:not(:first-child){font-variant-numeric:tabular-nums;}
-  .cnote{font-size:11.5px;color:var(--mut);line-height:1.5;margin-top:14px;}
+  .cnote{font-size:12.5px;color:var(--mut);line-height:1.5;margin-top:14px;}
   .mind{margin:6px 0 0 !important;padding-left:18px !important;}
   .mind li{font:italic 14px/1.45 var(--serif);color:var(--body);margin:7px 0 !important;}
   .laws{display:grid;gap:9px;margin-top:12px;}
@@ -87,7 +88,7 @@
   .laws b{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,var(--bord),var(--bord-dk));color:var(--white);font:800 14px/1 var(--sans);}
   .laws span{font-size:13.6px;color:var(--body);line-height:1.5;}
   .laws em{font-style:normal;font-weight:800;color:var(--teal);}
-  .laws small{display:inline-block;margin-left:8px;font:800 10px/1 var(--sans);letter-spacing:1px;text-transform:uppercase;color:var(--bord-dk);background:var(--bord-tint);padding:4px 8px;border-radius:10px;}
+  .laws small{display:inline-block;margin-left:8px;font:800 11.5px/1 var(--sans);letter-spacing:1px;text-transform:uppercase;color:var(--bord-dk);background:var(--bord-tint);padding:4px 8px;border-radius:10px;}
   .sign{margin-top:18px;font:italic 19px/1.4 var(--serif);color:var(--teal);}
 
   /* JOURNEY */
@@ -97,12 +98,12 @@
   .jrow .n{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font:800 15px/1 var(--sans);color:var(--white);background:linear-gradient(135deg,var(--turq),var(--teal));}
   .jrow b{display:block;color:var(--teal);font-size:15px;}
   .jrow small{color:var(--mut);font-size:12.5px;line-height:1.4;display:block;}
-  .jrow .tab{font:800 10.5px/1.2 var(--sans);letter-spacing:1px;text-transform:uppercase;color:var(--bord-dk);background:var(--bord-tint);padding:7px 10px;border-radius:14px;text-align:center;white-space:nowrap;}
+  .jrow .tab{font:800 11.5px/1.2 var(--sans);letter-spacing:1px;text-transform:uppercase;color:var(--bord-dk);background:var(--bord-tint);padding:7px 10px;border-radius:14px;text-align:center;white-space:nowrap;}
   .jrow.end .n{background:linear-gradient(135deg,var(--bord),var(--bord-dk));}
 
   /* LADDER */
   .ladder{display:flex;flex-direction:column-reverse;gap:8px;margin-top:20px;}
-  .rung{display:grid;grid-template-columns:120px 1fr;gap:16px;align-items:center;border-radius:12px;padding:12px 18px;background:var(--paper);border:1px solid var(--line);}
+  .rung{display:grid;grid-template-columns:175px minmax(0,1fr);gap:16px;align-items:center;border-radius:12px;padding:12px 18px;background:var(--paper);border:1px solid var(--line);}
   .rung .lv{font:800 12px/1.2 var(--sans);letter-spacing:1.5px;text-transform:uppercase;color:var(--turq);}
   .rung .lv b{display:block;font:700 19px/1.2 var(--serif);letter-spacing:0;text-transform:none;color:var(--teal);margin-top:3px;}
   .rung p{margin:0;font-size:13.4px;color:var(--body);line-height:1.5;}
@@ -114,12 +115,12 @@
   .two{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:20px;}
   .box{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:18px 20px;min-width:0;}
   .box h3{margin:0 0 4px;color:var(--teal);font-size:20px;}
-  .box .when{font:800 11px/1 var(--sans);letter-spacing:1.5px;text-transform:uppercase;color:var(--bord-dk);margin-bottom:10px;}
+  .box .when{font:800 12px/1 var(--sans);letter-spacing:1.5px;text-transform:uppercase;color:var(--bord-dk);margin-bottom:10px;}
   .box ol{margin:8px 0 0;padding-left:20px;font-size:13.6px;color:var(--body);}
   .box ol li{margin:6px 0;}
   .box.heavy{background:var(--bord-tint);border-color:#ecc9da;}
   .budget{margin-top:18px;width:100%;border-collapse:collapse;font-size:13.5px;}
-  .budget th{text-align:left;font:800 11px/1.2 var(--sans);letter-spacing:1px;text-transform:uppercase;color:var(--white);background:var(--teal);padding:10px 12px;}
+  .budget th{text-align:left;font:800 12px/1.2 var(--sans);letter-spacing:1px;text-transform:uppercase;color:var(--white);background:var(--teal);padding:10px 12px;}
   .budget td{padding:10px 12px;border-bottom:1px solid var(--line);color:var(--body);vertical-align:top;}
   .budget td:first-child{font-weight:700;color:var(--teal);white-space:nowrap;}
   .tablewrap{overflow-x:auto;}
@@ -127,48 +128,49 @@
   /* STAGE PAGES */
   .stagehead{display:flex;flex-wrap:wrap;gap:10px;align-items:center;}
   .badge{font:800 13px/1 var(--sans);letter-spacing:2px;text-transform:uppercase;color:var(--white);background:linear-gradient(135deg,var(--turq),var(--teal));padding:9px 18px;border-radius:24px;box-shadow:0 6px 16px rgba(19,78,78,.25);}
-  .chip{font:800 11px/1 var(--sans);letter-spacing:1.2px;text-transform:uppercase;padding:8px 13px;border-radius:20px;}
+  .chip{font:800 12px/1 var(--sans);letter-spacing:1.2px;text-transform:uppercase;padding:8px 13px;border-radius:20px;}
   .chip.time{color:var(--teal);background:var(--turq-tint);border:1.5px solid var(--turq);}
   .chip.lvl{color:var(--bord-dk);background:var(--bord-tint);}
   .stitle{font-size:38px;color:var(--teal);margin:16px 0 0;line-height:1.1;}
   .pillar{font:italic 16px/1.4 var(--serif);color:var(--bord-dk);margin-top:6px;}
   .steps{list-style:none;padding:0;margin:20px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:12px;counter-reset:s;}
   .steps li{position:relative;background:var(--paper);border:1px solid var(--line);border-top:3px solid var(--turq);border-radius:13px;padding:13px 16px 14px 16px;box-shadow:0 5px 16px rgba(0,0,0,.05);min-width:0;}
-  .steps li::before{counter-increment:s;content:counter(s,decimal-leading-zero);font:800 11px/1 var(--sans);letter-spacing:1px;color:var(--turq);display:block;margin-bottom:6px;}
+  .steps li::before{counter-increment:s;content:counter(s,decimal-leading-zero);font:800 12px/1 var(--sans);letter-spacing:1px;color:var(--turq);display:block;margin-bottom:6px;}
   .steps li b{display:block;font:800 13px/1.3 var(--sans);letter-spacing:.4px;text-transform:uppercase;color:var(--teal);margin-bottom:5px;}
   .steps li span{display:block;font-size:13px;color:var(--mut);line-height:1.5;}
   .stagefoot{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px;}
   .note{border-radius:13px;padding:14px 18px;min-width:0;}
-  .note .nl{font:800 11px/1 var(--sans);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:7px;}
+  .note .nl{font:800 12px/1 var(--sans);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:7px;}
   .note p{margin:0;font-size:13.4px;line-height:1.5;color:#2c3b43;}
   .note.heavy{background:var(--bord-tint);border-left:4px solid var(--bord);} .note.heavy .nl{color:var(--bord-dk);}
   .note.tracker{background:var(--turq-tint);border-left:4px solid var(--turq);} .note.tracker .nl{color:var(--teal);}
   .quickwin{margin-top:12px;background:linear-gradient(135deg,var(--turq-tint),var(--white));border:1.5px solid var(--turq);border-radius:14px;padding:14px 20px;}
-  .quickwin .nl{font:800 11px/1 var(--sans);letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);margin-bottom:6px;}
+  .quickwin .nl{font:800 12px/1 var(--sans);letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);margin-bottom:6px;}
   .quickwin p{margin:0;font-size:14px;color:#2c3b43;}
   .quickwin p::before{content:"✓ ";color:var(--turq);font-weight:800;}
 
   /* example calc */
   .calc{margin-top:16px;background:var(--white);border:1px solid var(--line);border-radius:14px;padding:16px 20px;}
-  .calc .nl{font:800 11px/1 var(--sans);letter-spacing:1.5px;text-transform:uppercase;color:var(--bord-dk);margin-bottom:10px;}
+  .calc .nl{font:800 12px/1 var(--sans);letter-spacing:1.5px;text-transform:uppercase;color:var(--bord-dk);margin-bottom:10px;}
   .calc .bars{display:grid;gap:8px;}
   .bar{display:grid;grid-template-columns:150px 1fr 90px;gap:10px;align-items:center;font-size:12.5px;color:var(--body);}
   .bar i{display:block;height:14px;border-radius:7px;background:var(--turq);}
   .bar i.paid{background:#b9c6c6;} .bar i.fee{background:var(--bord);}
   .bar b{text-align:right;font-variant-numeric:tabular-nums;color:var(--teal);}
-  .calc small{display:block;margin-top:10px;color:var(--mut);font-size:11.5px;line-height:1.5;}
+  .calc small{display:block;margin-top:10px;color:var(--mut);font-size:12.5px;line-height:1.5;}
 
   /* streams matrix */
   .matrix{width:100%;border-collapse:collapse;font-size:12.6px;margin-top:14px;}
-  .matrix th{font:800 10.5px/1.2 var(--sans);letter-spacing:1px;text-transform:uppercase;color:var(--white);background:var(--teal);padding:9px 10px;text-align:left;}
+  .matrix th{font:800 11.5px/1.2 var(--sans);letter-spacing:1px;text-transform:uppercase;color:var(--white);background:var(--teal);padding:9px 10px;text-align:left;}
   .matrix td{padding:9px 10px;border-bottom:1px solid var(--line);color:var(--body);vertical-align:top;}
   .matrix td:first-child{font-weight:700;color:var(--teal);}
+  .matrix td.dots{color:var(--turq);}
   .dots{letter-spacing:2px;color:var(--turq);white-space:nowrap;} .dots s{color:#cfd8d8;text-decoration:none;}
 
   /* 12 months */
   .months{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:20px;}
   .mo{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px 14px;min-width:0;}
-  .mo .m{font:800 11px/1 var(--sans);letter-spacing:1.5px;text-transform:uppercase;color:var(--turq);}
+  .mo .m{font:800 12px/1 var(--sans);letter-spacing:1.5px;text-transform:uppercase;color:var(--turq);}
   .mo b{display:block;color:var(--teal);font-size:14px;margin:5px 0 4px;}
   .mo span{display:block;font-size:12.3px;color:var(--mut);line-height:1.45;}
   .mo.hl{border-color:var(--bord);background:var(--bord-tint);} .mo.hl .m{color:var(--bord-dk);}
@@ -178,7 +180,7 @@
   .trap{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--paper);}
   .trap div{padding:14px 18px;min-width:0;}
   .trap .t{background:var(--bord-tint);}
-  .trap .nl{font:800 10.5px/1 var(--sans);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:6px;}
+  .trap .nl{font:800 11.5px/1 var(--sans);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:6px;}
   .trap .t .nl{color:var(--bord-dk);} .trap .f .nl{color:var(--teal);}
   .trap p{margin:0;font-size:13.3px;color:var(--body);line-height:1.5;}
   .trap p b{color:var(--ink);}
@@ -191,7 +193,7 @@
   .checklist li{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:12px 16px 12px 42px;position:relative;font-size:14px;color:var(--body);}
   .checklist li::before{content:"";position:absolute;left:15px;top:15px;width:15px;height:15px;border:2px solid var(--turq);border-radius:4px;}
   .contact{max-width:600px;margin:22px auto 0;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:16px 20px;text-align:left;}
-  .contact .nl{font:800 11px/1 var(--sans);letter-spacing:1.5px;text-transform:uppercase;color:var(--bord-dk);margin-bottom:8px;}
+  .contact .nl{font:800 12px/1 var(--sans);letter-spacing:1.5px;text-transform:uppercase;color:var(--bord-dk);margin-bottom:8px;}
   .contact p{margin:0;font-size:13.4px;color:var(--body);}
   .contact b{color:var(--teal);}
   .disc{max-width:640px;margin:22px auto 0;font-size:11.8px;color:var(--mut);line-height:1.6;text-align:left;}
@@ -212,6 +214,22 @@
     .bar{grid-template-columns:1fr 70px;} .bar i{grid-column:1/-1;grid-row:2;}
     .mono{width:190px;height:190px;}
     .watermark{font-size:120px;}
+  }
+  @media (max-width:700px){
+    .budget th,.budget td,.matrix th,.matrix td{padding:8px 6px;font-size:12.5px;}
+    .budget td:first-child{white-space:normal;}
+    .laws small{display:block;margin:6px 0 0;width:max-content;}
+  }
+  @media (max-width:520px){
+    .matrix tr:first-child,.ctab tr:first-child{display:none;}
+    .matrix tr,.ctab tr{display:grid;grid-template-columns:1fr 1fr;gap:2px 12px;padding:10px 0;border-bottom:1px solid var(--line);}
+    .matrix td,.ctab td{border:none !important;padding:3px 0 !important;}
+    .matrix td:first-child,.ctab td:first-child{grid-column:1/-1;font-size:14px;}
+    .matrix td:last-child{grid-column:1/-1;}
+    .matrix td:not(:first-child)::before,.ctab td:not(:first-child)::before{content:attr(data-l);display:block;font:800 11.5px/1.3 var(--sans);letter-spacing:.8px;text-transform:uppercase;color:var(--mut);}
+    .ctab td:first-child::before{content:"Start at ";}
+    .cchart{display:none;} .cchart.cm{display:block;}
+    .cbox .tip{display:none;}
   }
   @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;}}
 </style>
@@ -517,14 +535,14 @@
   <div class="cwrap">
     <p class="nl">€100 a month, 5% a year, value at each age until 65</p>
     <div class="legend"><span><i style="background:#1A9E9E"></i>Start at 25</span><span><i style="background:#9E1B5E"></i>Start at 35</span><span><i style="background:#C99A2E"></i>Start at 45</span></div>
-    <div class="cbox"><svg class="cchart" viewBox="0 0 700 380" role="img" aria-label="Value of €100 a month invested at 5% a year, by age, for starting at 25, 35 and 45"><line x1="62" x2="550" y1="336.0" y2="336.0" class="grid"/><text x="52" y="340.0" text-anchor="end" class="ax">€0k</text><line x1="62" x2="550" y1="257.0" y2="257.0" class="grid"/><text x="52" y="261.0" text-anchor="end" class="ax">€40k</text><line x1="62" x2="550" y1="178.0" y2="178.0" class="grid"/><text x="52" y="182.0" text-anchor="end" class="ax">€80k</text><line x1="62" x2="550" y1="99.0" y2="99.0" class="grid"/><text x="52" y="103.0" text-anchor="end" class="ax">€120k</text><line x1="62" x2="550" y1="20.0" y2="20.0" class="grid"/><text x="52" y="24.0" text-anchor="end" class="ax">€160k</text><text x="62.0" y="358" text-anchor="middle" class="ax">25</text><text x="123.0" y="358" text-anchor="middle" class="ax">30</text><text x="184.0" y="358" text-anchor="middle" class="ax">35</text><text x="245.0" y="358" text-anchor="middle" class="ax">40</text><text x="306.0" y="358" text-anchor="middle" class="ax">45</text><text x="367.0" y="358" text-anchor="middle" class="ax">50</text><text x="428.0" y="358" text-anchor="middle" class="ax">55</text><text x="489.0" y="358" text-anchor="middle" class="ax">60</text><text x="550.0" y="358" text-anchor="middle" class="ax">65</text><text x="306.0" y="376" text-anchor="middle" class="ax">Age</text><polyline points="62.0,336.0 74.2,333.6 86.4,331.0 98.6,328.3 110.8,325.5 123.0,322.6 135.2,319.5 147.4,316.2 159.6,312.7 171.8,309.1 184.0,305.3 196.2,301.3 208.4,297.1 220.6,292.7 232.8,288.1 245.0,283.2 257.2,278.1 269.4,272.7 281.6,267.0 293.8,261.1 306.0,254.8 318.2,248.2 330.4,241.3 342.6,234.1 354.8,226.4 367.0,218.4 379.2,209.9 391.4,201.1 403.6,191.7 415.8,181.9 428.0,171.6 440.2,160.8 452.4,149.4 464.6,137.4 476.8,124.8 489.0,111.6 501.2,97.7 513.4,83.1 525.6,67.7 537.8,51.6 550.0,34.6" fill="none" stroke="#1A9E9E" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="550.0" cy="34.6" r="5" fill="#1A9E9E" stroke="#FBFAF7" stroke-width="2"/><polyline points="184.0,336.0 196.2,333.6 208.4,331.0 220.6,328.3 232.8,325.5 245.0,322.6 257.2,319.5 269.4,316.2 281.6,312.7 293.8,309.1 306.0,305.3 318.2,301.3 330.4,297.1 342.6,292.7 354.8,288.1 367.0,283.2 379.2,278.1 391.4,272.7 403.6,267.0 415.8,261.1 428.0,254.8 440.2,248.2 452.4,241.3 464.6,234.1 476.8,226.4 489.0,218.4 501.2,209.9 513.4,201.1 525.6,191.7 537.8,181.9 550.0,171.6" fill="none" stroke="#9E1B5E" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="550.0" cy="171.6" r="5" fill="#9E1B5E" stroke="#FBFAF7" stroke-width="2"/><polyline points="306.0,336.0 318.2,333.6 330.4,331.0 342.6,328.3 354.8,325.5 367.0,322.6 379.2,319.5 391.4,316.2 403.6,312.7 415.8,309.1 428.0,305.3 440.2,301.3 452.4,297.1 464.6,292.7 476.8,288.1 489.0,283.2 501.2,278.1 513.4,272.7 525.6,267.0 537.8,261.1 550.0,254.8" fill="none" stroke="#C99A2E" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="550.0" cy="254.8" r="5" fill="#C99A2E" stroke="#FBFAF7" stroke-width="2"/><text x="562.0" y="32.6" class="lab">Start at 25</text><text x="562.0" y="48.6" class="val">€152,600</text><text x="562.0" y="169.6" class="lab">Start at 35</text><text x="562.0" y="185.6" class="val">€83,200</text><text x="562.0" y="252.8" class="lab">Start at 45</text><text x="562.0" y="268.8" class="val">€41,100</text><line class="xh" x1="0" x2="0" y1="20" y2="336" style="display:none"/><rect class="hit" x="62" y="20" width="488" height="316" fill="transparent"/></svg><div class="tip" hidden></div></div>
+    <div class="cbox"><svg class="cchart" viewBox="0 0 700 380" role="img" aria-label="Value of €100 a month invested at 5% a year, by age, for starting at 25, 35 and 45"><line x1="62" x2="550" y1="336.0" y2="336.0" class="grid"/><text x="52" y="340.0" text-anchor="end" class="ax">€0k</text><line x1="62" x2="550" y1="257.0" y2="257.0" class="grid"/><text x="52" y="261.0" text-anchor="end" class="ax">€40k</text><line x1="62" x2="550" y1="178.0" y2="178.0" class="grid"/><text x="52" y="182.0" text-anchor="end" class="ax">€80k</text><line x1="62" x2="550" y1="99.0" y2="99.0" class="grid"/><text x="52" y="103.0" text-anchor="end" class="ax">€120k</text><line x1="62" x2="550" y1="20.0" y2="20.0" class="grid"/><text x="52" y="24.0" text-anchor="end" class="ax">€160k</text><text x="62.0" y="358" text-anchor="middle" class="ax">25</text><text x="123.0" y="358" text-anchor="middle" class="ax">30</text><text x="184.0" y="358" text-anchor="middle" class="ax">35</text><text x="245.0" y="358" text-anchor="middle" class="ax">40</text><text x="306.0" y="358" text-anchor="middle" class="ax">45</text><text x="367.0" y="358" text-anchor="middle" class="ax">50</text><text x="428.0" y="358" text-anchor="middle" class="ax">55</text><text x="489.0" y="358" text-anchor="middle" class="ax">60</text><text x="550.0" y="358" text-anchor="middle" class="ax">65</text><text x="306.0" y="376" text-anchor="middle" class="ax axt">Age</text><polyline points="62.0,336.0 74.2,333.6 86.4,331.0 98.6,328.3 110.8,325.5 123.0,322.6 135.2,319.5 147.4,316.2 159.6,312.7 171.8,309.1 184.0,305.3 196.2,301.3 208.4,297.1 220.6,292.7 232.8,288.1 245.0,283.2 257.2,278.1 269.4,272.7 281.6,267.0 293.8,261.1 306.0,254.8 318.2,248.2 330.4,241.3 342.6,234.1 354.8,226.4 367.0,218.4 379.2,209.9 391.4,201.1 403.6,191.7 415.8,181.9 428.0,171.6 440.2,160.8 452.4,149.4 464.6,137.4 476.8,124.8 489.0,111.6 501.2,97.7 513.4,83.1 525.6,67.7 537.8,51.6 550.0,34.6" fill="none" stroke="#1A9E9E" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="550.0" cy="34.6" r="5" fill="#1A9E9E" stroke="#FBFAF7" stroke-width="2"/><polyline points="184.0,336.0 196.2,333.6 208.4,331.0 220.6,328.3 232.8,325.5 245.0,322.6 257.2,319.5 269.4,316.2 281.6,312.7 293.8,309.1 306.0,305.3 318.2,301.3 330.4,297.1 342.6,292.7 354.8,288.1 367.0,283.2 379.2,278.1 391.4,272.7 403.6,267.0 415.8,261.1 428.0,254.8 440.2,248.2 452.4,241.3 464.6,234.1 476.8,226.4 489.0,218.4 501.2,209.9 513.4,201.1 525.6,191.7 537.8,181.9 550.0,171.6" fill="none" stroke="#9E1B5E" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="550.0" cy="171.6" r="5" fill="#9E1B5E" stroke="#FBFAF7" stroke-width="2"/><polyline points="306.0,336.0 318.2,333.6 330.4,331.0 342.6,328.3 354.8,325.5 367.0,322.6 379.2,319.5 391.4,316.2 403.6,312.7 415.8,309.1 428.0,305.3 440.2,301.3 452.4,297.1 464.6,292.7 476.8,288.1 489.0,283.2 501.2,278.1 513.4,272.7 525.6,267.0 537.8,261.1 550.0,254.8" fill="none" stroke="#C99A2E" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="550.0" cy="254.8" r="5" fill="#C99A2E" stroke="#FBFAF7" stroke-width="2"/><text x="562.0" y="32.6" class="lab">Start at 25</text><text x="562.0" y="48.6" class="val">€152,600</text><text x="562.0" y="169.6" class="lab">Start at 35</text><text x="562.0" y="185.6" class="val">€83,200</text><text x="562.0" y="252.8" class="lab">Start at 45</text><text x="562.0" y="268.8" class="val">€41,100</text><line class="xh" x1="0" x2="0" y1="20" y2="336" style="display:none"/><rect class="hit" x="62" y="20" width="488" height="316" fill="transparent"/></svg><svg class="cchart cm" viewBox="0 0 340 270" role="img" aria-label="Value of €100 a month at 5% a year by age, starting at 25, 35 and 45"><line x1="46" x2="326" y1="240.0" y2="240.0" class="grid"/><text x="39" y="244.0" text-anchor="end" class="axm">€0k</text><line x1="46" x2="326" y1="183.0" y2="183.0" class="grid"/><text x="39" y="187.0" text-anchor="end" class="axm">€40k</text><line x1="46" x2="326" y1="126.0" y2="126.0" class="grid"/><text x="39" y="130.0" text-anchor="end" class="axm">€80k</text><line x1="46" x2="326" y1="69.0" y2="69.0" class="grid"/><text x="39" y="73.0" text-anchor="end" class="axm">€120k</text><line x1="46" x2="326" y1="12.0" y2="12.0" class="grid"/><text x="39" y="16.0" text-anchor="end" class="axm">€160k</text><text x="46.0" y="259" text-anchor="middle" class="axm">25</text><text x="116.0" y="259" text-anchor="middle" class="axm">35</text><text x="186.0" y="259" text-anchor="middle" class="axm">45</text><text x="256.0" y="259" text-anchor="middle" class="axm">55</text><text x="326.0" y="259" text-anchor="middle" class="axm">65</text><polyline points="46.0,240.0 53.0,238.3 60.0,236.4 67.0,234.5 74.0,232.4 81.0,230.3 88.0,228.1 95.0,225.7 102.0,223.2 109.0,220.6 116.0,217.9 123.0,215.0 130.0,212.0 137.0,208.8 144.0,205.4 151.0,201.9 158.0,198.2 165.0,194.3 172.0,190.2 179.0,185.9 186.0,181.4 193.0,176.7 200.0,171.7 207.0,166.4 214.0,160.9 221.0,155.1 228.0,149.0 235.0,142.6 242.0,135.9 249.0,128.8 256.0,121.4 263.0,113.6 270.0,105.4 277.0,96.7 284.0,87.7 291.0,78.1 298.0,68.1 305.0,57.5 312.0,46.4 319.0,34.8 326.0,22.5" fill="none" stroke="#1A9E9E" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="326.0" cy="22.5" r="4.5" fill="#1A9E9E" stroke="#FFFFFF" stroke-width="2"/><polyline points="116.0,240.0 123.0,238.3 130.0,236.4 137.0,234.5 144.0,232.4 151.0,230.3 158.0,228.1 165.0,225.7 172.0,223.2 179.0,220.6 186.0,217.9 193.0,215.0 200.0,212.0 207.0,208.8 214.0,205.4 221.0,201.9 228.0,198.2 235.0,194.3 242.0,190.2 249.0,185.9 256.0,181.4 263.0,176.7 270.0,171.7 277.0,166.4 284.0,160.9 291.0,155.1 298.0,149.0 305.0,142.6 312.0,135.9 319.0,128.8 326.0,121.4" fill="none" stroke="#9E1B5E" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="326.0" cy="121.4" r="4.5" fill="#9E1B5E" stroke="#FFFFFF" stroke-width="2"/><polyline points="186.0,240.0 193.0,238.3 200.0,236.4 207.0,234.5 214.0,232.4 221.0,230.3 228.0,228.1 235.0,225.7 242.0,223.2 249.0,220.6 256.0,217.9 263.0,215.0 270.0,212.0 277.0,208.8 284.0,205.4 291.0,201.9 298.0,198.2 305.0,194.3 312.0,190.2 319.0,185.9 326.0,181.4" fill="none" stroke="#C99A2E" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="326.0" cy="181.4" r="4.5" fill="#C99A2E" stroke="#FFFFFF" stroke-width="2"/></svg><div class="tip" hidden></div></div>
   </div>
   <div class="tablewrap">
   <table class="budget ctab">
     <tr><th>You start at</th><th>Years investing</th><th>You pay in</th><th>Value at 65</th><th>Growth on top</th></tr>
-    <tr><td>25</td><td>40</td><td>€48,000</td><td>€152,600</td><td>€104,600</td></tr>
-    <tr><td>35</td><td>30</td><td>€36,000</td><td>€83,200</td><td>€47,200</td></tr>
-    <tr><td>45</td><td>20</td><td>€24,000</td><td>€41,100</td><td>€17,100</td></tr>
+    <tr><td data-l="You start at">25</td><td data-l="Years investing">40</td><td data-l="You pay in">€48,000</td><td data-l="Value at 65">€152,600</td><td data-l="Growth on top">€104,600</td></tr>
+    <tr><td data-l="You start at">35</td><td data-l="Years investing">30</td><td data-l="You pay in">€36,000</td><td data-l="Value at 65">€83,200</td><td data-l="Growth on top">€47,200</td></tr>
+    <tr><td data-l="You start at">45</td><td data-l="Years investing">20</td><td data-l="You pay in">€24,000</td><td data-l="Value at 65">€41,100</td><td data-l="Growth on top">€17,100</td></tr>
   </table>
   </div>
   <div class="two">
@@ -557,14 +575,14 @@
   <div class="tablewrap">
   <table class="matrix">
     <tr><th>Stream</th><th>Time to first €</th><th>Hours it needs</th><th>Grows without you</th><th>Good fit if you…</th></tr>
-    <tr><td>Freelance / consulting</td><td class="dots">●●●</td><td class="dots">●●●</td><td class="dots">●<s>●●</s></td><td>have a skill people already pay your employer for</td></tr>
-    <tr><td>UGC</td><td class="dots">●●<s>●</s></td><td class="dots">●●<s>●</s></td><td class="dots">●<s>●●</s></td><td>can film short videos in small pockets of time</td></tr>
-    <tr><td>Digital products</td><td class="dots">●<s>●●</s></td><td class="dots">●●<s>●</s></td><td class="dots">●●●</td><td>solve one problem well and can write it down</td></tr>
-    <tr><td>YouTube / content</td><td class="dots">●<s>●●</s></td><td class="dots">●●●</td><td class="dots">●●●</td><td>enjoy teaching and can be patient for a year</td></tr>
-    <tr><td>Brand deals & affiliate</td><td class="dots">●<s>●●</s></td><td class="dots">●<s>●●</s></td><td class="dots">●●<s>●</s></td><td>already have an engaged audience, even a small one</td></tr>
+    <tr><td data-l="Stream">Freelance / consulting</td><td class="dots" data-l="Time to first €">●●●</td><td class="dots" data-l="Hours it needs">●●●</td><td class="dots" data-l="Grows without you">●<s>●●</s></td><td data-l="Good fit if you…">have a skill people already pay your employer for</td></tr>
+    <tr><td data-l="Stream">UGC</td><td class="dots" data-l="Time to first €">●●<s>●</s></td><td class="dots" data-l="Hours it needs">●●<s>●</s></td><td class="dots" data-l="Grows without you">●<s>●●</s></td><td data-l="Good fit if you…">can film short videos in small pockets of time</td></tr>
+    <tr><td data-l="Stream">Digital products</td><td class="dots" data-l="Time to first €">●<s>●●</s></td><td class="dots" data-l="Hours it needs">●●<s>●</s></td><td class="dots" data-l="Grows without you">●●●</td><td data-l="Good fit if you…">solve one problem well and can write it down</td></tr>
+    <tr><td data-l="Stream">YouTube / content</td><td class="dots" data-l="Time to first €">●<s>●●</s></td><td class="dots" data-l="Hours it needs">●●●</td><td class="dots" data-l="Grows without you">●●●</td><td data-l="Good fit if you…">enjoy teaching and can be patient for a year</td></tr>
+    <tr><td data-l="Stream">Brand deals & affiliate</td><td class="dots" data-l="Time to first €">●<s>●●</s></td><td class="dots" data-l="Hours it needs">●<s>●●</s></td><td class="dots" data-l="Grows without you">●●<s>●</s></td><td data-l="Good fit if you…">already have an engaged audience, even a small one</td></tr>
   </table>
   </div>
-  <p style="font-size:11.5px;color:var(--mut);margin:6px 0 0">●●● = fast / a lot / strongly. Rough guide only; your results depend on your skills, niche and time.</p>
+  <p style="font-size:12.5px;color:var(--mut);margin:6px 0 0">●●● = fast / a lot / strongly. Rough guide only; your results depend on your skills, niche and time.</p>
   <ol class="steps">
     <li><b>Check the rules first</b><span>Read your employment contract on side work and conflicts of interest. Check how to register and pay tax on side income where you live.</span></li>
     <li><b>Pick one stream</b><span>Use the table. Choose what you could start this month with the skills and hours you have now.</span></li>
