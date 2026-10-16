@@ -1,0 +1,223 @@
+<!-- iCyber Wealth Shop · paste into ONE systeme.io "Raw HTML" element -->
+<div class="ic-shop">
+<style>
+.ic-shop{
+    color-scheme:light;
+    --turq:#1A9E9E; --turq-br:#35B7B7; --teal:#134E4E; --teal-dk:#0e3b3b; --turq-tint:#E7F5F5; --ring:#1A9E9E;
+    --bord:#9E1B5E; --bord-dk:#6B1440; --bord-tint:#F7E7EF; --pink:#ff86c4;
+    --ink:#20303a; --body:#3f4d55; --cream:#F5F4EF; --paper:#FBFAF7; --mut:#54636b; --line:#E4E0DA;
+    --dark:#101722; --navy:#223042; --white:#ffffff;
+    --serif:Georgia,"Times New Roman",ui-serif,serif;
+    --sans:"Helvetica Neue",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+  }
+.ic-shop,.ic-shop *{box-sizing:border-box;}
+.ic-shop{margin:0;background:var(--cream);color:var(--ink);font:15px/1.6 var(--sans);}
+.ic-shop h1,.ic-shop h2,.ic-shop h3{font-family:var(--serif);text-wrap:balance;margin:0;}
+.ic-shop .wrap{max-width:560px;margin:0 auto;padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px));}
+.ic-shop a{color:inherit;}
+.ic-shop :focus-visible{outline:3px solid var(--turq-br);outline-offset:3px;border-radius:6px;}
+.ic-shop .hero{background:radial-gradient(700px 420px at 60% 10%, var(--navy), var(--dark));color:var(--white);text-align:center;padding-block:40px 34px;}
+.ic-shop .avatar{width:150px;height:150px;border-radius:50%;object-fit:cover;display:block;margin:0 auto;border:7px solid transparent;padding:5px;
+    background:linear-gradient(var(--white),var(--white)) padding-box,linear-gradient(160deg,var(--bord-dk),var(--bord) 35%,var(--ring)) border-box;box-shadow:0 18px 40px rgba(0,0,0,.45);}
+.ic-shop .hero h1{font-size:34px;line-height:1.1;margin-top:20px;}
+.ic-shop .hero h1 em{color:var(--pink);}
+.ic-shop .hero .who{margin:10px 0 0;color:var(--turq-br);font:700 12px/1.5 var(--sans);letter-spacing:2px;text-transform:uppercase;}
+.ic-shop .hero .sub{margin:12px auto 0;max-width:420px;color:#dfeceb;font-size:15px;}
+.ic-shop .handle{display:inline-flex;align-items:center;gap:8px;margin-top:16px;padding:8px 16px;border:1.5px solid rgba(53,183,183,.55);border-radius:22px;text-decoration:none;font:700 13px/1 var(--sans);color:var(--white);}
+.ic-shop .handle svg{width:16px;height:16px;}
+.ic-shop .start{text-align:center;font:800 14px/1.3 var(--sans);letter-spacing:2px;text-transform:uppercase;color:var(--teal);margin:30px 0 14px;}
+.ic-shop .cards{display:grid;gap:14px;}
+.ic-shop .card{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:0 10px 28px rgba(19,78,78,.08);}
+.ic-shop .card.paid{border:2px solid var(--bord);}
+.ic-shop .crow{display:grid;grid-template-columns:96px minmax(0,1fr);gap:14px;align-items:center;}
+.ic-shop .thumb{width:96px;height:96px;border-radius:14px;display:grid;place-items:center;text-align:center;padding:8px;font:700 13px/1.2 var(--serif);color:var(--white);}
+.ic-shop .thumb.p{background:linear-gradient(150deg,#2C4A66,#1E3550);}
+.ic-shop .thumb.p span{display:block;color:var(--pink);font-style:italic;font-size:15px;}
+.ic-shop .thumb.f{background:linear-gradient(150deg,var(--turq),var(--teal));font-family:var(--sans);font-weight:800;letter-spacing:1.5px;font-size:16px;}
+.ic-shop .thumb.f small{display:block;font-size:11.5px;letter-spacing:1px;margin-top:3px;}
+.ic-shop .card h2{font-size:19px;line-height:1.2;color:var(--teal);}
+.ic-shop .card p{margin:5px 0 0;font-size:13.6px;color:var(--mut);line-height:1.45;}
+.ic-shop .price{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;margin-top:8px;}
+.ic-shop .price b{font:800 22px/1 var(--sans);color:var(--ink);}
+.ic-shop .price s{color:var(--mut);font-size:16px;font-weight:700;}
+.ic-shop .tag{font:800 11.5px/1 var(--sans);letter-spacing:1px;text-transform:uppercase;padding:6px 9px;border-radius:12px;}
+.ic-shop .tag.f{background:var(--bord-tint);color:var(--bord-dk);}
+.ic-shop .tag.g{background:var(--turq-tint);color:var(--teal);}
+.ic-shop .btn{display:block;margin-top:14px;text-align:center;text-decoration:none;font:800 15px/1 var(--sans);letter-spacing:.6px;padding:16px;border-radius:12px;}
+.ic-shop .btn.p{background:var(--bord);color:var(--white);box-shadow:0 8px 20px rgba(158,27,94,.28);}
+.ic-shop .btn.s{background:var(--white);color:var(--teal);border:2px solid var(--turq);}
+.ic-shop section.blk{margin-top:34px;}
+.ic-shop .kick{font:800 12px/1 var(--sans);letter-spacing:2px;text-transform:uppercase;color:var(--bord-dk);margin:0 0 8px;}
+.ic-shop section.blk h2{font-size:27px;line-height:1.15;color:var(--teal);}
+.ic-shop .rule{height:3px;width:60px;background:linear-gradient(90deg,var(--turq),var(--bord));border-radius:3px;margin:12px 0 14px;}
+.ic-shop section.blk p{color:var(--body);font-size:14.8px;margin:8px 0;}
+.ic-shop .story{background:var(--bord-tint);border-left:5px solid var(--bord);border-radius:0 14px 14px 0;padding:16px 18px;}
+.ic-shop .story p{margin:6px 0;color:#2c3b43;}
+.ic-shop .quote{margin-top:14px;padding:14px 18px;border-left:5px solid var(--turq);background:var(--turq-tint);border-radius:0 14px 14px 0;font:italic 16.5px/1.45 var(--serif);color:var(--teal);}
+.ic-shop .fits{list-style:none;padding:0;margin:10px 0 0;display:grid;gap:8px;}
+.ic-shop .fits li{position:relative;padding:11px 14px 11px 40px;background:var(--white);border:1px solid var(--line);border-radius:12px;font-size:14px;color:var(--body);}
+.ic-shop .fits li::before{content:"✓";position:absolute;left:15px;top:10px;font-weight:800;color:var(--turq);}
+.ic-shop .notfor{font-size:13.4px !important;font-style:italic;color:var(--mut) !important;}
+.ic-shop .stack{display:grid;gap:10px;margin-top:12px;}
+.ic-shop .item{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;align-items:start;background:var(--white);border:1px solid var(--line);border-radius:14px;padding:14px 16px;}
+.ic-shop .item b{display:block;color:var(--teal);font-size:15px;}
+.ic-shop .item span{display:block;font-size:13.4px;color:var(--mut);line-height:1.45;margin-top:3px;}
+.ic-shop .item em{font-style:normal;font:800 14px/1.2 var(--sans);color:var(--ink);white-space:nowrap;font-variant-numeric:tabular-nums;}
+.ic-shop .total{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px 12px;margin-top:10px;background:linear-gradient(135deg,var(--teal),var(--teal-dk));color:var(--white);border-radius:14px;padding:16px 18px;align-items:center;}
+.ic-shop .total span{font-size:14px;color:#dceeed;}
+.ic-shop .total s{font-weight:700;color:#bcd9d7;font-variant-numeric:tabular-nums;}
+.ic-shop .total b{font:700 18px/1.2 var(--serif);}
+.ic-shop .total strong{font:800 26px/1 var(--sans);color:var(--pink);}
+.ic-shop .ladder{display:grid;gap:6px;margin-top:12px;}
+.ic-shop .rung{display:grid;grid-template-columns:34px minmax(0,1fr);gap:12px;align-items:center;background:var(--white);border:1px solid var(--line);border-radius:12px;padding:9px 14px;font-size:13.6px;color:var(--body);}
+.ic-shop .rung b{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:var(--turq-tint);color:var(--teal);font:800 13px/1 var(--sans);}
+.ic-shop .rung.top{background:linear-gradient(135deg,var(--teal),var(--teal-dk));color:#e0f0f0;border-color:var(--teal);}
+.ic-shop .rung.top b{background:var(--pink);color:var(--dark);}
+.ic-shop details{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin-top:8px;}
+.ic-shop summary{cursor:pointer;font-weight:700;color:var(--teal);font-size:14.6px;}
+.ic-shop details p{font-size:14px !important;margin:8px 0 2px !important;}
+.ic-shop .free{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:20px;}
+.ic-shop .free ul{margin:10px 0 0;padding-left:20px;color:var(--body);font-size:14px;}
+.ic-shop .free li{margin:5px 0;}
+.ic-shop .disc{margin:34px 0 0;font-size:12.5px;color:var(--mut);line-height:1.6;}
+.ic-shop footer{margin:26px 0 0;padding-block:20px 40px;border-top:1px solid var(--line);text-align:center;font-size:12.5px;color:var(--mut);}
+.ic-shop footer b{color:var(--teal);}
+@media (prefers-reduced-motion:reduce){.ic-shop,.ic-shop *{transition:none!important;}}
+.ic-shop{margin:0;font:15px/1.6 var(--sans);overflow-x:hidden;} .ic-shop h1,.ic-shop h2,.ic-shop h3{color:inherit;font-weight:700;letter-spacing:0;text-transform:none;} .ic-shop .hero h1{color:var(--white);font-size:34px;} .ic-shop .card h2{color:var(--teal);font-size:19px;} .ic-shop section.blk h2{color:var(--teal);font-size:27px;} .ic-shop ul,.ic-shop ol{list-style-position:outside;} .ic-shop a{text-decoration:none;} .ic-shop footer a{color:var(--teal);text-decoration:underline;} .ic-shop img{max-width:100%;}
+</style>
+<header class="hero">
+  <div class="wrap">
+    <img class="avatar" src="PASTE-YOUR-PHOTO-URL-HERE" alt="Liliane">
+    <h1>Build Your <em>Wealth</em> Without Quitting Your 9–5</h1>
+    <p class="who">Liliane · Cybersecurity consultant · Financial sector</p>
+    <p class="sub">I help busy professionals and caregivers take control of their money, grow their wealth and win back time with the people they love.</p>
+    <a class="handle" href="https://www.instagram.com/cyber_cnslt/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>@cyber_cnslt</a>
+  </div>
+</header>
+
+<main class="wrap">
+  <p class="start">↓ Start here ↓</p>
+  <div class="cards">
+    <article class="card paid">
+      <div class="crow">
+        <div class="thumb p" aria-hidden="true"><div>The <span>Wealth</span> Roadmap + Tracker</div></div>
+        <div>
+          <h2>The Wealth Roadmap + TRUST Tracker</h2>
+          <p>The complete step-by-step system to build wealth beside your career, in 15 minutes a week.</p>
+          <div class="price"><b>€39</b><s>€59</s><span class="tag f">Founding price</span></div>
+        </div>
+      </div>
+      <a class="btn p" href="#ic-bundle">Get the bundle →</a>
+    </article>
+    <article class="card">
+      <div class="crow">
+        <div class="thumb f" aria-hidden="true"><div>TRUST<small>FREE SHEET</small></div></div>
+        <div>
+          <h2>The Free TRUST Sheet</h2>
+          <p>You work hard for your money. Know where it goes, and how much you actually keep.</p>
+          <div class="price"><b>€0</b><span class="tag g">Free</span></div>
+        </div>
+      </div>
+      <a class="btn s" href="https://www.cybercnslt.com/trust-sheet">Get it free →</a>
+    </article>
+  </div>
+
+  <!-- BUNDLE -->
+  <section class="blk" id="ic-bundle">
+    <p class="kick">The Wealth Roadmap + TRUST Tracker</p>
+    <h2>You work hard for your money. Is it creating the life you're working for?</h2>
+    <div class="rule"></div>
+    <p>You have a demanding career, bills to pay and people who depend on you. You earn a respectable income, and yet you don't always feel as financially secure or independent as you thought you would.</p>
+    <p>This bundle gives you a clear, honest system to change that, step by step, without quitting your job and without giving up more time with the people you love.</p>
+    <div class="quote">Financial freedom isn't about quitting your 9–5. It's about using your career as the engine to fuel your financial independence, build multiple income streams, and create the freedom to spend more time with the people you love.</div>
+  </section>
+
+  <section class="blk">
+    <p class="kick">Why I built this</p>
+    <h2>Hey, I'm <span style="color:var(--bord)">Liliane</span>.</h2>
+    <div class="rule"></div>
+    <div class="story">
+      <p>I'm a full-time cybersecurity consultant at a Big Four firm, working in the financial sector. Alongside my 9–5, I support my mum, who is 83 and receives care at home after her cerebral haemorrhage.</p>
+      <p>In my 20s I took out loans for my study fees, made financial decisions I'd make very differently today, traded without really understanding it, and even fell for an online scam. I paid off €30,000 of debt, not by first earning more, but by understanding my finances and making deliberate changes.</p>
+      <p>Most financial advice told me to quit my job, hustle harder or get rich fast. None of it was made for someone with a demanding career and a mum who needs them. So I decided to build the plan I wish I'd had, step by step.</p>
+    </div>
+  </section>
+
+  <section class="blk">
+    <p class="kick">Is this for you?</p>
+    <h2>Who this is for</h2>
+    <div class="rule"></div>
+    <ul class="fits">
+      <li>Your financial progress doesn't reflect the effort you put into your career.</li>
+      <li>You balance work with family or caregiving, and need a system that fits your limited time.</li>
+      <li>You earn a decent income and want clarity on what you keep, spend, save and owe.</li>
+      <li>You want a strong foundation before investing or building extra income.</li>
+      <li>You want financial independence for a reason: more choices and more time with the people you love.</li>
+    </ul>
+    <p class="notfor">Not for anyone looking for overnight wealth or guaranteed returns.</p>
+  </section>
+
+  <section class="blk">
+    <p class="kick">What's inside</p>
+    <h2>Everything you need, in one system</h2>
+    <div class="rule"></div>
+    <div class="stack">
+      <div class="item"><div><b>The Wealth Roadmap · 25 pages</b><span>Six clear stages, from seeing your money to buying back your time. Research-backed, with charts, a 12-month plan and a heavy-week version of every step.</span></div><em>€49</em></div>
+      <div class="item"><div><b>The TRUST Tracker · Freedom Edition</b><span>10 tabs for Excel or Google Sheets. It calculates your Freedom Level and tells you the one next step that matters now.</span></div><em>€39</em></div>
+      <div class="item"><div><b>Scripts &amp; templates</b><span>The call to cut your bills, a salary conversation structure, a weekly win file, if-then rules and an automated payday plan.</span></div><em>included</em></div>
+      <div class="item"><div><b>The 90-day income stream test</b><span>A week-by-week plan to test one extra income stream in 2–4 hours a week, and decide with real numbers.</span></div><em>included</em></div>
+    </div>
+    <div class="total"><span>Total value</span><s>€88</s><b>Founding price today</b><strong>€39</strong></div>
+    <a class="btn p" href="https://www.cybercnslt.com/wealth-roadmap-checkout">Get the bundle for €39 →</a>
+  </section>
+
+  <section class="blk">
+    <p class="kick">Where it takes you</p>
+    <h2>The Freedom Ladder</h2>
+    <div class="rule"></div>
+    <p>Your tracker shows which level you're on and what to work on next.</p>
+    <div class="ladder">
+      <div class="rung top"><b>6</b><span><strong>Free to choose</strong> · extra income covers your needs</span></div>
+      <div class="rung"><b>5</b><span><strong>Flexible</strong> · extra income covers 25% of your needs</span></div>
+      <div class="rung"><b>4</b><span><strong>Secure</strong> · full emergency fund</span></div>
+      <div class="rung"><b>3</b><span><strong>Debt-free</strong> · consumer debt cleared</span></div>
+      <div class="rung"><b>2</b><span><strong>Buffered</strong> · one month of needs saved</span></div>
+      <div class="rung"><b>1</b><span><strong>Stable</strong> · you keep €0 or more each month</span></div>
+      <div class="rung"><b>0</b><span><strong>Overwhelmed</strong> · more goes out than comes in</span></div>
+    </div>
+  </section>
+
+  <section class="blk">
+    <p class="kick">Questions</p>
+    <h2>Before you buy</h2>
+    <div class="rule"></div>
+    <details><summary>How much time do I need?</summary><p>About 2 hours to set up, then 15 minutes a week. Later stages use 2–4 protected hours a week. Every step has a heavy-week version for the weeks when life takes everything.</p></details>
+    <details><summary>Does it work with Google Sheets?</summary><p>Yes. The tracker is an Excel file that also opens in Google Sheets (File → Import) and Numbers.</p></details>
+    <details><summary>Will you tell me what to invest in?</summary><p>No. The roadmap teaches how investing works: time, risk, fees and red flags. It doesn't recommend specific products, so you can make informed decisions yourself or ask a regulated adviser better questions.</p></details>
+    <details><summary>I'm over 35. Is it too late?</summary><p>No. The roadmap shows exactly why the best time to start was earlier and the second best is now. Starting at 35 still more than doubles what you pay in over 30 years (illustration at 5% a year).</p></details>
+    <details><summary>How do I receive it?</summary><p>Instantly after purchase: the roadmap as a PDF and the tracker as a spreadsheet file.</p></details>
+  </section>
+
+  <!-- FREE -->
+  <section class="blk" id="ic-free">
+    <p class="kick">Not ready yet? Start with the free TRUST Sheet</p>
+    <h2>You Work Hard for Your Money. Know Where It Goes.</h2>
+    <div class="rule"></div>
+    <div class="free">
+      <p>Good salary, still broke? The free TRUST Sheet shows you exactly where your money goes each month, and how to keep more of what you already earn. It takes about 20 minutes.</p>
+      <ul>
+        <li><b>T</b>rack: what comes in and what goes out</li>
+        <li><b>R</b>eclaim: the money slipping away</li>
+        <li><b>U</b>nderstand: your real numbers</li>
+        <li><b>S</b>ave: your first buffer</li>
+        <li><b>T</b>ime: what your money costs in hours</li>
+      </ul>
+      <a class="btn s" href="https://www.cybercnslt.com/trust-sheet">Send me the free sheet →</a>
+      <p style="font-size:12.5px;color:var(--mut);margin-top:10px;text-align:center">On Instagram? Comment TRUST and I'll send it to you.</p>
+    </div>
+  </section>
+
+  <p class="disc"><b>Important.</b> The Wealth Roadmap, the TRUST Tracker and the TRUST Sheet are for education only. They are not financial, investment, tax or legal advice and don't recommend specific products. Figures are illustrations, not forecasts. Investments can go down as well as up. For decisions about your own situation, speak to a regulated adviser.</p>
+  <footer><b>iCyber</b> · cybercnslt.com · @cyber_cnslt<br><a href="https://www.cybercnslt.com/impressum">Impressum</a> · <a href="https://www.cybercnslt.com/datenschutz">Datenschutz</a><br>© Liliane · All rights reserved</footer>
+</main>
+</div>
