@@ -1,0 +1,57 @@
+<!-- iCyber · Top buttons (Amazon · Tools · All journeys · Dark/White mode) · put this FIRST on the page · paste into a systeme.io "Custom HTML/CSS/JS" element -->
+<div id="lj-shoptop">
+<style>
+#lj-shoptop{--bg:#EDF3F2;--card:#ffffff;--cardbd:#E3ECEB;--ink:#3c4f50;--head:#0F4C4C;--mut:#64777a;--turq:#1A9E9E;--turqbr:#35B7B7;--green:#1B4D36;--mag:#8E1F45;--magdk:#5E1530;--soft:#F6F9F9;--hl:#F7E6EE;
+  font-family:"Avenir Next","Segoe UI","Helvetica Neue",-apple-system,Arial,sans-serif;-webkit-font-smoothing:antialiased;
+  max-width:900px;margin:0 auto;padding:0 2px;color:var(--ink);line-height:1.5;text-align:left;}
+html[data-theme="dark"] #lj-shoptop{--bg:#0e1621;--card:#16202c;--cardbd:#273543;--ink:#c6d5d5;--head:#ffffff;--mut:#93a6a6;--soft:#1c2836;--hl:#2a1d27;--magtxt:#E0577F;}
+#lj-shoptop *,#lj-shoptop *::before,#lj-shoptop *::after{box-sizing:border-box;margin:0;padding:0;border:0;background:none;box-shadow:none;text-shadow:none;letter-spacing:normal;text-transform:none;list-style:none;}
+#lj-shoptop a{text-decoration:none;}
+#lj-shoptop .lj-topbar{display:flex;justify-content:space-between;align-items:center;gap:10px;width:100%;padding:18px 10px 0;}
+#lj-shoptop .lj-amazon,#lj-shoptop .lj-free,#lj-shoptop .welcome-pill,#lj-shoptop .themebtn{display:inline-flex;align-items:center;justify-content:center;width:152px;height:29px;padding:0 8px;border-radius:15px;
+  font:800 10px/1 "Avenir Next",Arial;letter-spacing:.3px;white-space:nowrap;cursor:pointer;
+  transition:transform .22s cubic-bezier(.2,.75,.25,1),box-shadow .22s ease,filter .15s;}
+#lj-shoptop .lj-amazon{color:#131A22;background:linear-gradient(135deg,#FEBD69,#FF9900);border:1.5px solid #E88A00;box-shadow:0 6px 16px rgba(0,0,0,.20);}
+html[data-theme="dark"] #lj-shoptop .lj-amazon{color:#ffffff;}
+#lj-shoptop .lj-free{color:#fff;background:linear-gradient(135deg,#245F46,#0F3324);border:1.5px solid #0F3324;box-shadow:0 6px 16px rgba(15,51,36,.30);}
+#lj-shoptop .welcome-pill{color:#fff;letter-spacing:1.4px;text-transform:uppercase;background:linear-gradient(135deg,#8E1F45,#5E1530);box-shadow:0 6px 16px rgba(94,21,48,.28);}
+#lj-shoptop .themebtn{color:var(--head);background:var(--card);border:1.5px solid var(--cardbd);box-shadow:0 6px 18px rgba(0,0,0,.18);}
+#lj-shoptop .themebtn .tb-ic{margin-right:5px;line-height:1;}
+#lj-shoptop .lj-amazon:hover,#lj-shoptop .lj-free:hover,#lj-shoptop .welcome-pill:hover,#lj-shoptop .themebtn:hover{transform:translateY(-3px) scale(1.04);filter:brightness(1.05);}
+#lj-shoptop .lbl-short{display:none;}
+@media (max-width:640px){#lj-shoptop .lj-topbar{gap:6px;padding:14px 0 0;}
+  #lj-shoptop .lj-amazon,#lj-shoptop .lj-free,#lj-shoptop .welcome-pill,#lj-shoptop .themebtn{width:auto;flex:1 1 0;min-width:0;padding:0 6px;font-size:10px;}
+  #lj-shoptop .lbl-full{display:none;}#lj-shoptop .lbl-short{display:inline;}}
+</style>
+<div class="lj-topbar">
+  <a class="lj-amazon" href="https://amzn.to/3QzHB0n" target="_blank" rel="noopener nofollow">&#128722;&nbsp;<span class="lbl-full">My Amazon Store</span><span class="lbl-short">Amazon</span></a>
+  <a class="lj-free" href="PASTE-YOUR-JOURNEY-PAGE-URL#tools"><span class="lbl-full">Tools and Resources</span><span class="lbl-short">Tools</span></a>
+  <a class="welcome-pill" href="PASTE-YOUR-JOURNEY-PAGE-URL#journeys"><span class="lbl-full">All journeys</span><span class="lbl-short">Journeys</span></a>
+  <button class="themebtn" type="button" onclick="toggleTheme()" title="Dark Mode / White Mode" aria-label="Switch dark or white mode"><span class="tb-ic">&#127769;</span><span class="lbl-full">Dark Mode</span><span class="lbl-short">Dark</span></button>
+</div>
+</div>
+<script>
+/* Light / dark mode, same switch and same saved choice ('lj-theme') as the journey website */
+(function(){
+  var r=document.documentElement;
+  try{ if(localStorage.getItem('lj-theme')==='dark') r.setAttribute('data-theme','dark'); }catch(e){}
+  if(!document.getElementById('lj-pagebg')){
+    var s=document.createElement('style');s.id='lj-pagebg';
+    s.textContent='html,body{background:#EDF3F2 !important;transition:background .3s ease;}html[data-theme="dark"],html[data-theme="dark"] body{background:#0e1621 !important;}';
+    document.head.appendChild(s);
+  }
+  window.ljLabel=function(){
+    var dark=r.getAttribute('data-theme')==='dark';
+    document.querySelectorAll('.themebtn').forEach(function(b){
+      b.innerHTML=dark?'<span class="tb-ic">&#9728;&#65039;</span><span class="lbl-full">White Mode</span><span class="lbl-short">White</span>'
+                      :'<span class="tb-ic">&#127769;</span><span class="lbl-full">Dark Mode</span><span class="lbl-short">Dark</span>';
+    });
+  };
+  window.toggleTheme=function(){
+    if(r.getAttribute('data-theme')==='dark'){r.removeAttribute('data-theme');try{localStorage.setItem('lj-theme','light');}catch(e){}}
+    else{r.setAttribute('data-theme','dark');try{localStorage.setItem('lj-theme','dark');}catch(e){}}
+    window.ljLabel();
+  };
+  window.ljLabel();
+})();
+</script>
