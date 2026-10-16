@@ -2,7 +2,7 @@
 
 Paste each file into its own **Custom HTML/CSS/JS** element, in this order. Set every section and row background to **Clear** and padding to 0, so the light/dark page background shows through.
 
-1. `01-top-buttons.html`: My Amazon Store · Tools and Resources · All journeys · Dark/White mode
+1. `01-top-buttons.html`: ← Main Page · My Amazon Store · Tools and Resources · All journeys · Dark/White mode
 2. `02-hero-portrait.html`: upload `liliane-portrait.png`, then replace `PASTE-YOUR-PHOTO-URL-HERE` with its link
 3. `03-bundle-card.html`: then add your systeme.io **"Get the bundle"** button right below it (bordeaux `#8E1F45`)
 4. `04-free-trust-sheet-card.html`: TRUST Sheet – Financial Tracker (links to /free-financial-trust-sheet)
@@ -14,6 +14,7 @@ Paste each file into its own **Custom HTML/CSS/JS** element, in this order. Set 
 ## Links (already filled in)
 | Button | Goes to |
 |---|---|
+| ← Main Page | https://www.cybercnslt.com/ |
 | My Amazon Store | https://amzn.to/3QzHB0n |
 | Tools and Resources | https://www.cybercnslt.com/#tools |
 | All journeys | https://www.cybercnslt.com/#journeys |
