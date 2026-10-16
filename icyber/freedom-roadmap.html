@@ -45,6 +45,17 @@
   .letter p{font-size:14.6px;color:var(--body);line-height:1.7;}
   .pull{margin:18px 0 6px;padding:18px 24px;border-left:5px solid var(--turq);background:linear-gradient(135deg,var(--turq-tint),transparent);
     border-radius:0 14px 14px 0;font:italic 18px/1.45 var(--serif);color:var(--teal);}
+  .letter .hook{font:italic 21px/1.4 var(--serif);color:var(--teal);margin:4px 0 8px;}
+  .fits{list-style:none;padding:0;margin:4px 0 0;display:grid;gap:8px;}
+  .fits li{position:relative;padding:10px 14px 10px 40px;background:var(--paper);border:1px solid var(--line);border-radius:11px;font-size:13.8px;color:var(--body);line-height:1.5;}
+  .fits li::before{content:"✓";position:absolute;left:14px;top:9px;font-weight:800;color:var(--turq);}
+  .notfor{font-size:13px !important;font-style:italic;color:var(--mut) !important;}
+  .mhead{font-size:22px;color:var(--teal);margin:18px 0 0;}
+  .trust{display:grid;gap:7px;margin:10px 0 4px;}
+  .trust div{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:center;}
+  .trust b{width:34px;height:34px;border-radius:9px;display:grid;place-items:center;background:var(--bord);color:var(--white);font:800 16px/1 var(--serif);}
+  .trust span{font-size:13.6px;color:var(--body);line-height:1.45;}
+  .trust em{font-style:normal;font-weight:800;color:var(--teal);margin-right:6px;}
   .sign{margin-top:18px;font:italic 19px/1.4 var(--serif);color:var(--teal);}
 
   /* JOURNEY */
@@ -177,7 +188,7 @@
 <section class="page cover">
   <p class="ey">The iCyber Freedom Roadmap · by Liliane Jörger</p>
   <h1>Financial Freedom<br><em>Without</em> Quitting<br>Your 9–5</h1>
-  <p class="tag">Build your career. Build your wealth. Build your options.</p>
+  <p class="tag">Know your money. Build your wealth. Reclaim your time.</p>
   <p class="sub">The step-by-step plan for busy professionals and caregivers who want more money, more choices and more time with the people they love, without walking away from the job that pays the bills.</p>
   <div class="mono" aria-hidden="true">LJ</div>
   <div class="facts"><span><b>6</b> stages</span><span><b>12</b> months</span><span><b>15</b> minutes a week</span><span>+ TRUST Tracker</span></div>
@@ -188,16 +199,48 @@
 <!-- LETTER -->
 <section class="page letter">
   <p class="kick">Before you start</p>
-  <h2>You don't need to quit. You need options.</h2>
+  <h2>Hey, I'm Liliane. 👋</h2>
   <div class="rule"></div>
-  <p>Hello, I'm Liliane. I'm a cybersecurity consultant at a Big Four firm. Before that I was a flight attendant. And alongside my career, I help care for my mum.</p>
-  <p>For a long time I had a good salary and still felt broke. I cleared €20,000 of debt once I finally got honest with my numbers. Then I hit the next wall: I had money under control, but no time. Every "how to get rich" plan I found started with <em>quit your job</em>. That isn't an option when people depend on you, and I genuinely like my work.</p>
-  <p>So I built a different plan. It runs beside a demanding career, in small blocks of time, and it starts with the money you already earn. That's what this roadmap is: the order I follow myself, written down so you don't have to work it out alone.</p>
-  <div class="pull">“The point of building wealth isn't more money. It's more control over your life, and more time for the people who matter most.”</div>
-  <p><b>How this works.</b> The roadmap tells you <em>what</em> to do and in which order. The TRUST Tracker (included) does the maths and tells you which Freedom Level you're on. Each stage tells you which tracker tab to open. Do the stages in order: each one makes the next one safe.</p>
-  <p><b>What this is not.</b> It isn't a get-rich-quick scheme and it isn't personal financial advice. I won't tell you which fund or product to buy. I'll teach you how the pieces work, so you can make your own decisions or ask a professional better questions.</p>
-  <p class="sign">Let's build your options, one small hour at a time.<br>— Liliane</p>
+  <p class="hook">You work hard for your money. But is it creating the life you're working so hard for?</p>
+  <p>You have a demanding career. Bills to pay. People who depend on you. Responsibilities that don't simply disappear when your workday ends.</p>
+  <p>You're ambitious. You earn a respectable income. Yet somehow, despite everything you do, you don't always feel as financially secure or independent as you thought you would.</p>
+  <p>You might wonder where your salary goes each month. Whether you're saving enough. How to manage debt, build wealth or create additional income without sacrificing the little free time you have left.</p>
+  <p>And underneath all those questions is something much more important:</p>
+  <div class="pull">How do I build a financially secure future without missing out on the people and moments that matter most today?</div>
+  <p><b>I know that feeling.</b> I started my career as a flight attendant, working toward my dream of becoming a pilot, until COVID changed those plans. I rebuilt my professional path in cybersecurity consulting, a demanding, traditionally male-dominated industry.</p>
+  <p>But even as my career progressed and my income grew, financial security didn't automatically follow. I was earning more, yet I wasn't intentional enough about what I kept, where it went, or what it could help me build. I eventually paid off €20,000 in debt, not by first increasing my income, but by understanding my finances and making deliberate changes.</p>
+  <p>That experience changed how I think about money. Financial freedom isn't simply about earning more. It's about understanding what you have, making intentional decisions, building resilience, growing your money over time, and creating options that give you more control over your life.</p>
+  <p>That's why I created the TRUST Sheet, and this roadmap that takes you beyond it. No judgment. No unrealistic promises. No complicated jargon. Just a practical path for making your money work toward the life you actually want.</p>
   <div class="pfoot"><span>iCyber Freedom Roadmap</span><span>02</span></div>
+</section>
+
+<!-- WHO + METHOD -->
+<section class="page letter">
+  <p class="kick">Is this for you?</p>
+  <h2>Who this is for</h2>
+  <div class="rule"></div>
+  <ul class="fits">
+    <li>You're building a demanding career, but your financial progress doesn't always reflect the effort you're putting in.</li>
+    <li>You're balancing work, family or caregiving, and you need a financial system that works with your limited time, not another task that overwhelms you.</li>
+    <li>You earn a reasonable or even substantial income, yet want more clarity about what you keep, spend, save and owe.</li>
+    <li>You want to move beyond paycheck to paycheck, build resilience and make more informed decisions about growing your wealth.</li>
+    <li>You're interested in additional income streams, but want a strong foundation before taking unnecessary risks.</li>
+    <li>You want financial independence for a reason: more flexibility, more choices and more meaningful time with the people you love.</li>
+  </ul>
+  <p class="notfor">This isn't for anyone looking for overnight wealth or guaranteed returns. It's for people ready to build lasting habits and make deliberate progress.</p>
+  <h3 class="mhead">The method · KEEP + TRUST</h3>
+  <p><b>KEEP = Know your Earnings to Escape your Paycheck.</b> Your salary can be the foundation of your financial future, but it doesn't have to define your limits.</p>
+  <div class="trust">
+    <div><b>T</b><span><em>Track</em> Know your numbers: income, expenses and what you actually keep.</span></div>
+    <div><b>R</b><span><em>Reclaim</em> Find where money slips away and redirect it toward what matters to you.</span></div>
+    <div><b>U</b><span><em>Understand</em> See your position clearly and decide from facts, not assumptions.</span></div>
+    <div><b>S</b><span><em>Save</em> Build resilience, set priorities and prepare for your future.</span></div>
+    <div><b>T</b><span><em>Time</em> See how money and time connect, and why independence is really about choices.</span></div>
+  </div>
+  <p>Knowing your numbers is the beginning, not the goal. The TRUST Sheet gives you clarity. This roadmap takes you from there through debt, wealth building and additional income, all the way to more time. The TRUST Tracker (included) does the maths and tells you which Freedom Level you're on. Do the stages in order: each one makes the next one safe.</p>
+  <div class="pull">You work hard to build a better life. Your money should help you live it, not just keep you working for it.</div>
+  <p class="sign">Know your money. Build your wealth. Reclaim your time.<br>— Liliane</p>
+  <div class="pfoot"><span>iCyber Freedom Roadmap</span><span>03</span></div>
 </section>
 
 <!-- JOURNEY -->
@@ -214,8 +257,8 @@
     <div class="jrow"><span class="n">5</span><div><b>Add one income stream</b><small>One stream, one 90-day test, built in the hours you can truly protect.</small></div><span class="tab">Income Streams</span></div>
     <div class="jrow end"><span class="n">6</span><div><b>Buy back your time</b><small>Turn money into time: less overtime, flexible hours, a 4-day week, real presence at home.</small></div><span class="tab">T · Time</span></div>
   </div>
-  <p style="margin-top:20px;font-size:13.6px;color:var(--mut)">Running underneath every stage: the <b style="color:var(--teal)">15-minute weekly money check</b> and the <b style="color:var(--teal)">monthly review</b> (page 05).</p>
-  <div class="pfoot"><span>iCyber Freedom Roadmap</span><span>03</span></div>
+  <p style="margin-top:20px;font-size:13.6px;color:var(--mut)">Running underneath every stage: the <b style="color:var(--teal)">15-minute weekly money check</b> and the <b style="color:var(--teal)">monthly review</b> (page 06).</p>
+  <div class="pfoot"><span>iCyber Freedom Roadmap</span><span>04</span></div>
   <span class="watermark">map</span>
 </section>
 
@@ -234,7 +277,7 @@
     <div class="rung"><div class="lv">Level 5<b>Flexible</b></div><p>Extra income covers at least 25% of your needs. You could drop overtime or ask for a shorter week. <b>Work on:</b> time.</p></div>
     <div class="rung top"><div class="lv">Level 6<b>Free to choose</b></div><p>Extra income covers all of your needs. Work becomes a choice you make on your own terms.</p></div>
   </div>
-  <div class="pfoot"><span>iCyber Freedom Roadmap</span><span>04</span></div>
+  <div class="pfoot"><span>iCyber Freedom Roadmap</span><span>05</span></div>
 </section>
 
 <!-- RHYTHM -->
@@ -278,7 +321,7 @@
     <tr><td>Stages 5–6</td><td>2–4 protected hours a week, in two blocks. Never taken from sleep or family time first.</td></tr>
   </table>
   </div>
-  <div class="pfoot"><span>iCyber Freedom Roadmap</span><span>05</span></div>
+  <div class="pfoot"><span>iCyber Freedom Roadmap</span><span>06</span></div>
 </section>
 
 <!-- STAGE 1 -->
@@ -302,7 +345,7 @@
     <div class="note tracker"><p class="nl">In your tracker</p><p>T · Track, R · Reclaim, U · Understand. Done when the KEEP dashboard shows your keep rate.</p></div>
   </div>
   <div class="quickwin"><p class="nl">10-minute quick win</p><p>Search your banking app for the word “subscription” or “abo” and cancel the first one you don't use.</p></div>
-  <div class="pfoot"><span>iCyber Freedom Roadmap</span><span>06</span></div>
+  <div class="pfoot"><span>iCyber Freedom Roadmap</span><span>07</span></div>
 </section>
 
 <!-- STAGE 2 -->
@@ -326,7 +369,7 @@
     <div class="note tracker"><p class="nl">In your tracker</p><p>S · Save (buffer, goal pots) and U · Understand (priority, months to clear, interest per year).</p></div>
   </div>
   <div class="quickwin"><p class="nl">10-minute quick win</p><p>Look at “Interest you pay / year” on the KEEP dashboard. Write that number on a sticky note. That's what Stage 2 wins back.</p></div>
-  <div class="pfoot"><span>iCyber Freedom Roadmap</span><span>07</span></div>
+  <div class="pfoot"><span>iCyber Freedom Roadmap</span><span>08</span></div>
 </section>
 
 <!-- STAGE 3 -->
@@ -350,7 +393,7 @@
     <div class="note tracker"><p class="nl">In your tracker</p><p>Income Streams (type: Career). Update your net salary on T · Track when the raise lands.</p></div>
   </div>
   <div class="quickwin"><p class="nl">10-minute quick win</p><p>Start your win file now. Write down three things you did well in the last three months, with a number for each.</p></div>
-  <div class="pfoot"><span>iCyber Freedom Roadmap</span><span>08</span></div>
+  <div class="pfoot"><span>iCyber Freedom Roadmap</span><span>09</span></div>
 </section>
 
 <!-- STAGE 4 -->
@@ -382,7 +425,7 @@
     <div class="note heavy"><p class="nl">Heavy-week version</p><p>Read one page or watch one video on a single concept from step 3. Learning counts as progress.</p></div>
     <div class="note tracker"><p class="nl">In your tracker</p><p>S · Save: full fund progress and months to go. The KEEP dashboard turns to Level 4 when it's full.</p></div>
   </div>
-  <div class="pfoot"><span>iCyber Freedom Roadmap</span><span>09</span></div>
+  <div class="pfoot"><span>iCyber Freedom Roadmap</span><span>10</span></div>
 </section>
 
 <!-- STAGE 5 -->
@@ -414,7 +457,7 @@
     <div class="note heavy"><p class="nl">Heavy-week version</p><p>Cancel the block, don't feel guilty, and write down one idea for next week. Paused isn't failed.</p></div>
     <div class="note tracker"><p class="nl">In your tracker</p><p>Income Streams: status, hours, € per hour, share of needs covered. Level 5 lights up at 25%.</p></div>
   </div>
-  <div class="pfoot"><span>iCyber Freedom Roadmap</span><span>10</span></div>
+  <div class="pfoot"><span>iCyber Freedom Roadmap</span><span>11</span></div>
 </section>
 
 <!-- STAGE 6 -->
@@ -438,7 +481,7 @@
     <div class="note tracker"><p class="nl">In your tracker</p><p>T · Time: unplanned hours, family time gained per year, value of the work hours you want back.</p></div>
   </div>
   <div class="quickwin"><p class="nl">10-minute quick win</p><p>Look at “Family time gained / year” in T · Time. Write down what you'll do with the first of those hours.</p></div>
-  <div class="pfoot"><span>iCyber Freedom Roadmap</span><span>11</span></div>
+  <div class="pfoot"><span>iCyber Freedom Roadmap</span><span>12</span></div>
 </section>
 
 <!-- 12 MONTHS -->
@@ -461,7 +504,7 @@
     <div class="mo"><span class="m">Month 11</span><b>Day-90 decision</b><span>Keep, change or stop the stream. Track € per hour.</span></div>
     <div class="mo hl"><span class="m">Month 12</span><b>Time map</b><span>Real week vs goal week. Price the gap. Plan year two.</span></div>
   </div>
-  <div class="pfoot"><span>iCyber Freedom Roadmap</span><span>12</span></div>
+  <div class="pfoot"><span>iCyber Freedom Roadmap</span><span>13</span></div>
 </section>
 
 <!-- TRAPS -->
@@ -476,7 +519,7 @@
     <div class="trap"><div class="t"><p class="nl">Trap</p><p><b>Lifestyle creep.</b> The raise or first side income vanishes into nicer everyday spending.</p></div><div class="f"><p class="nl">Fix</p><p>Give every new euro a job the day it arrives: buffer, debt, investing or time.</p></div></div>
     <div class="trap"><div class="t"><p class="nl">Trap</p><p><b>Trading family time for “future freedom”.</b> You build the life and miss the people it was for.</p></div><div class="f"><p class="nl">Fix</p><p>Family hours are planned first, side hours second. T · Time keeps you honest.</p></div></div>
   </div>
-  <div class="pfoot"><span>iCyber Freedom Roadmap</span><span>13</span></div>
+  <div class="pfoot"><span>iCyber Freedom Roadmap</span><span>14</span></div>
 </section>
 
 <!-- CTA -->
