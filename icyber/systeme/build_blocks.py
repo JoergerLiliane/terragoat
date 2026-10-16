@@ -182,7 +182,7 @@ css = STOP.format(i=i) + f"""#{i} .stop{{border-top-color:var(--mag);}}
 #{i} .foot b{{color:#E6117F !important;-webkit-text-fill-color:#E6117F !important;}}
 html[data-theme="dark"] #{i} .now,html[data-theme="dark"] #{i} .foot b{{color:#ff62ad !important;-webkit-text-fill-color:#ff62ad !important;}}
 #{i} .was{{font:600 16px/1 "Avenir Next",Arial;color:var(--mut);text-decoration:line-through;}}
-#{i} .note{{font:700 12px/1.2 "Avenir Next",Arial;color:var(--mut) !important;-webkit-text-fill-color:var(--mut) !important;}}
+#{i} .note{{font:600 10.5px/1.2 "Avenir Next",Arial;color:var(--mut) !important;-webkit-text-fill-color:var(--mut) !important;font-size:10.5px !important;font-weight:600 !important;}}
 #{i} ul{{background:var(--soft);border:1px solid var(--cardbd);border-radius:12px;padding:12px 14px;}}
 #{i} li{{display:flex;justify-content:space-between;gap:12px;font-size:13.5px;font-weight:600;color:var(--ink);padding:6px 0;border-bottom:1px dashed var(--cardbd);}}
 #{i} li:last-child{{border-bottom:0;}}
