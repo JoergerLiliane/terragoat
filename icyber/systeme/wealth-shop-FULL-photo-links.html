@@ -127,6 +127,10 @@ html[data-theme="dark"] #lj-bundle .stop-badge.free{color:#6fcf9c;border-color:#
 #lj-bundle .stop-cta.free{background:linear-gradient(135deg,#245F46,#0F3324);box-shadow:0 8px 18px rgba(27,77,54,.28);}
 @media (max-width:420px){#lj-bundle .stop{padding:20px 18px;}#lj-bundle h3{font-size:18px;}}
 #lj-bundle .stop{border-top-color:var(--mag);}
+#lj-bundle .mock{margin:0 0 18px;animation:ljbFloat 5.5s ease-in-out infinite;}
+#lj-bundle .mock img{display:block;width:100%;height:auto;border-radius:14px;box-shadow:0 16px 34px rgba(10,20,25,.16);}
+@keyframes ljbFloat{0%,100%{transform:translateY(0);}50%{transform:translateY(-8px);}}
+@media (prefers-reduced-motion:reduce){#lj-bundle .mock{animation:none;}}
 #lj-bundle .price{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin:0 0 14px;}
 #lj-bundle .now{font:800 30px/1 "Avenir Next",Arial;color:var(--head);letter-spacing:-.5px;}
 #lj-bundle .was{font:600 16px/1 "Avenir Next",Arial;color:var(--mut);text-decoration:line-through;}
@@ -141,6 +145,7 @@ html[data-theme="dark"] #lj-bundle .stop-badge.free{color:#6fcf9c;border-color:#
 #lj-bundle .fine{margin:12px 0 0;font-size:12px;color:var(--mut);text-align:center;}
 </style>
 <div class="stop">
+  <div class="mock"><img src="PASTE-ROADMAP-IMAGE-URL" alt="The Wealth Roadmap cover on a laptop" width="1518" height="935"></div>
   <div class="stop-top"><div class="stop-ic">&#128176;</div><span class="stop-badge paid">Early Bird Price</span></div>
   <span class="stop-sub">Paid bundle</span>
   <h3>The Wealth Roadmap + TRUST Tracker</h3>
