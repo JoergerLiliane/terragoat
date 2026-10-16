@@ -5,7 +5,7 @@ Paste each file into its own **Custom HTML/CSS/JS** element, in this order. Set 
 1. `01-top-buttons.html`: Main Page · My Amazon Store · Tools and Resources · All journeys · Dark/White mode
 2. `02-hero-portrait.html`: upload `liliane-portrait.png`, then replace `PASTE-YOUR-PHOTO-URL-HERE` with its link
 3. `03-bundle-card.html`: then add your systeme.io **"Get the bundle"** button right below it (bordeaux `#8E1F45`)
-4. `04-free-trust-sheet-card.html`: TRUST Sheet – Financial Tracker (links to /free-financial-trust-sheet)
+4. `04-free-trust-sheet-card.html`: TRUST Sheet – Financial Tracker (links to /free-financial-trust-sheet). Upload `trust-sheet-laptop.webp` and replace `PASTE-TRUST-IMAGE-URL` with its link
 5. `05-about-liliane-card.html`: "Hey, I'm Liliane"
    (Upload `liliane-journey.webp` and put its link where block 5 says `PASTE-JOURNEY-IMAGE-URL`.)
 6. `06-three-road-cards.html`: Start Your Journey Today, the fork road and Career · Business · Wealth (same layout as your journey hub)
