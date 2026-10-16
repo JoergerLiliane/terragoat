@@ -1,0 +1,256 @@
+<title>Wealth Roadmap Store Kit</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,600;0,700;1,600&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,800&display=swap">
+<style>
+/* Layout: one reading column; review first, then the store tabs in the order systeme.io shows them, each field a copy block */
+:root{
+  --bg:#F3F7F6; --surface:#FFFFFF; --ink:#1E3236; --mut:#5E7174; --line:#DCE7E5;
+  --teal:#0F4C4C; --turq:#1A9E9E; --bord:#8E1F45; --soft:#E8F3F2; --pink:#F7E6EE;
+  --display:"Gelasio",Georgia,"Times New Roman",serif;
+  --body:"Nunito Sans","Avenir Next","Segoe UI",Arial,sans-serif;
+  --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0E1621; --surface:#16202C; --ink:#DCE8E7; --mut:#9AB0B0; --line:#273543;
+  --teal:#BFE6E3; --turq:#4CC3C3; --bord:#E58AA9; --soft:#18303A; --pink:#2A1D27; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0E1621; --surface:#16202C; --ink:#DCE8E7; --mut:#9AB0B0; --line:#273543;
+  --teal:#BFE6E3; --turq:#4CC3C3; --bord:#E58AA9; --soft:#18303A; --pink:#2A1D27; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:16px/1.6 var(--body);}
+.wrap{max-width:820px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:40px 80px;display:flex;flex-direction:column;gap:44px}
+header .ey{font:800 12px/1.2 var(--body);letter-spacing:2.4px;text-transform:uppercase;color:var(--turq);margin:0 0 10px}
+h1{font:700 clamp(30px,6vw,44px)/1.1 var(--display);color:var(--teal);margin:0;text-wrap:balance}
+h1 em{color:var(--bord)}
+.lede{color:var(--mut);margin:12px 0 0;max-width:62ch}
+nav{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+nav a{font:800 13px/1 var(--body);color:var(--teal);text-decoration:none;border:1.5px solid var(--line);background:var(--surface);padding:9px 13px;border-radius:20px}
+nav a:hover,nav a:focus-visible{border-color:var(--turq);outline:none}
+section{display:flex;flex-direction:column;gap:16px}
+h2{font:700 clamp(23px,4vw,29px)/1.2 var(--display);color:var(--teal);margin:0;text-wrap:balance}
+h2 small{display:block;font:800 12px/1.2 var(--body);letter-spacing:2px;text-transform:uppercase;color:var(--bord);margin-bottom:6px}
+h3{font:800 17px/1.3 var(--body);color:var(--ink);margin:0}
+p{margin:0;max-width:66ch}
+.mut{color:var(--mut)}
+.verdict{background:var(--surface);border:1px solid var(--line);border-left:5px solid var(--turq);border-radius:0 14px 14px 0;padding:18px 20px;display:flex;flex-direction:column;gap:10px}
+.verdict.b{border-left-color:var(--bord)}
+.verdict b{color:var(--teal)}
+table{width:100%;border-collapse:collapse;font-size:15px;min-width:560px}
+.tbl{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:14px}
+th,td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font:800 12px/1.2 var(--body);letter-spacing:1.4px;text-transform:uppercase;color:var(--mut);background:var(--soft)}
+tr:last-child td{border-bottom:0}
+td .n{display:inline-flex;width:24px;height:24px;border-radius:50%;align-items:center;justify-content:center;font:800 12px/1 var(--body);color:#fff;background:#1A9E9E;margin-right:8px;font-variant-numeric:tabular-nums}
+td .n.m{background:#8E1F45} td .n.g{background:#1B4D36}
+.pages td:last-child,.pages th:last-child{text-align:right;font-variant-numeric:tabular-nums}
+.pages tfoot td{font-weight:800;color:var(--teal);background:var(--soft)}
+ul.plain{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px;max-width:66ch}
+.tab{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:16px}
+.tab>h3{display:flex;align-items:center;gap:10px}
+.tab>h3 span{font:800 11px/1 var(--body);letter-spacing:1.4px;text-transform:uppercase;color:var(--turq);border:1.5px solid var(--turq);border-radius:12px;padding:5px 9px}
+.field{display:flex;flex-direction:column;gap:6px}
+.fh{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.fh label{font:800 13px/1.2 var(--body);color:var(--mut);letter-spacing:.4px}
+.fh button{font:800 13px/1 var(--body);color:#fff;background:#0F4C4C;border:0;border-radius:9px;padding:9px 14px;cursor:pointer;flex:none}
+.fh button.ok{background:#1B4D36}
+.fh button:focus-visible{outline:3px solid var(--turq);outline-offset:2px}
+.copy{margin:0;white-space:pre-wrap;word-break:break-word;font:15px/1.55 var(--body);background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:12px 14px;color:var(--ink);min-width:0}
+.note{font-size:14px;color:var(--mut);background:var(--pink);border-radius:10px;padding:10px 14px}
+.note b{color:var(--bord)}
+.todo{display:flex;flex-direction:column;gap:10px;counter-reset:t;padding:0;margin:0;list-style:none}
+.todo li{display:flex;gap:12px;align-items:flex-start;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.todo li::before{counter-increment:t;content:counter(t);flex:none;width:26px;height:26px;border-radius:50%;background:var(--bord);color:#fff;font:800 13px/26px var(--body);text-align:center}
+@media (prefers-reduced-motion:no-preference){.fh button{transition:background .2s}}
+</style>
+
+<div class="wrap">
+<header>
+  <p class="ey">iCyber · systeme.io store</p>
+  <h1>The <em>Wealth Roadmap</em> store kit</h1>
+  <p class="lede">My review of the bundle first, then every field of your "Sell a digital download" product in the order systeme.io shows it. Tap <b>Copy</b> next to a field and paste it straight into the store.</p>
+  <nav aria-label="Sections">
+    <a href="#review">Review</a><a href="#pages">50 pages</a><a href="#extras">The 3 extras</a><a href="#thumbnail">Thumbnail</a><a href="#download">Digital download</a><a href="#checkout">Checkout page</a><a href="#thankyou">Thank you page</a><a href="#email">Email</a><a href="#todo">Still open</a>
+  </nav>
+</header>
+
+<section id="review">
+  <h2><small>Review</small>Put the 7 stages at the centre of everything</h2>
+  <p>Right now the card sells four separate things: a roadmap, a tracker with a technical name, "raise scripts" and a "90-day income test". A buyer can't tell how they connect, and you noticed the same thing. The fix is simple: <b>the 7 stages are the product</b>. The tracker and every script or template should belong to a stage, so the offer reads as one system.</p>
+  <div class="verdict">
+    <h3>Two things I'd change in the stages</h3>
+    <p><b>Stage 1 and 2 overlap.</b> "Understand how your 9–5 fuels your wealth" and "Money mindset: know your salary &amp; the numbers" both talk about mindset. I'd make stage 1 the mindset stage and stage 2 the numbers stage: <b>1 · Money mindset: your 9–5 is your wealth engine</b> and <b>2 · Know your salary &amp; your numbers</b>.</p>
+    <p><b>Debt before the safety net is risky.</b> If someone throws every spare euro at debt with no buffer, the first broken washing machine goes straight back on the credit card. Most guidance suggests a small starter buffer first. Keep your order, but open stage 3 with "first save a starter buffer of one month of needs", and build the full safety net in stage 4.</p>
+  </div>
+  <div class="verdict b">
+    <h3>Rename "TRUST Tracker, Freedom Edition"</h3>
+    <p>"Freedom Edition" means nothing to a buyer. Your journey site already uses <b>TRUST Sheet Pro</b> for the paid waitlist, and the free version is the <b>TRUST Sheet</b>. Calling the paid one <b>TRUST Sheet Pro</b> makes free vs paid instantly clear and matches your existing links.</p>
+  </div>
+</section>
+
+<section id="pages">
+  <h2><small>Is 50 pages realistic?</small>Yes, if every page has a job</h2>
+  <p>50 pages is realistic and justifies a regular price of €59. A buyer values 50 useful pages; they resent 50 padded ones. So plan it per stage: <b>6 pages × 7 stages = 42</b>, plus the opening and the plan around them.</p>
+  <div class="tbl"><table class="pages">
+    <thead><tr><th>Part</th><th>What goes in</th><th>Pages</th></tr></thead>
+    <tbody>
+      <tr><td>Opening</td><td>Cover, your story ("Hey, I'm Liliane"), who it's for, how to use it in 15 minutes a week</td><td>4</td></tr>
+      <tr><td>Each of the 7 stages</td><td>1 · why it matters (with a study or number) · 2 · a chart or example · 3–4 · step-by-step actions · 5 · the stage tool (script, template or checklist) · 6 · the heavy-week version + "done when…" checklist</td><td>42</td></tr>
+      <tr><td>Closing</td><td>Your 12-month plan, common traps, next step and disclaimer</td><td>4</td></tr>
+    </tbody>
+    <tfoot><tr><td>Total</td><td></td><td>50</td></tr></tfoot>
+  </table></div>
+  <p class="mut">Your current 25 pages already cover most of the "why" and "chart" pages. The new work is mainly the actions, the tools and the checklists for each stage.</p>
+</section>
+
+<section id="extras">
+  <h2><small>The 3 extras on the card</small>What they are, and where they belong</h2>
+  <p>All three already exist in the roadmap and tracker I built for you. They just aren't explained on the card:</p>
+  <ul class="plain">
+    <li><b>TRUST Tracker, Freedom Edition</b> is the paid Excel / Google Sheets file: tabs for Track, Reclaim, Understand, Save and Time, plus Income Streams, a KEEP dashboard with your keep rate and next step, and a monthly review. It's the bigger version of your free TRUST Sheet.</li>
+    <li><b>Raise scripts &amp; templates</b> are in the career stage: how to prepare and run a salary conversation, a weekly "win file" to collect proof of your results, plus a script for calling providers to cut your bills.</li>
+    <li><b>The 90-day income test</b> is in the income-stream stage: a week-by-week plan to test one extra income stream in 2–4 hours a week, then decide with real numbers whether to keep it.</li>
+  </ul>
+  <p>Instead of listing them as random bonuses, give <b>every stage its own tool</b>. Then the extras stop looking like filler and become proof that each stage is practical:</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Stage</th><th>Tool inside that stage</th></tr></thead>
+    <tbody>
+      <tr><td><span class="n">1</span>Money mindset: your 9–5 is your wealth engine</td><td>Your real hourly value + the 5 laws of money worksheet</td></tr>
+      <tr><td><span class="n m">2</span>Know your salary &amp; your numbers</td><td>TRUST Sheet Pro set-up · salary &amp; raise script · weekly win file</td></tr>
+      <tr><td><span class="n g">3</span>Clear your debts (optional)</td><td>Starter buffer + debt payoff plan (snowball or avalanche) · bill-cutting call script</td></tr>
+      <tr><td><span class="n">4</span>Build a safety net</td><td>Emergency buffer calculator: how many months you need</td></tr>
+      <tr><td><span class="n m">5</span>Build wealth with smart investing</td><td>Investing basics checklist · scam red flags · "only invest in what you understand" test</td></tr>
+      <tr><td><span class="n g">6</span>Build multiple income streams</td><td>The 90-day income-stream test</td></tr>
+      <tr><td><span class="n">7</span>Repeat, automate &amp; buy back time</td><td>Automated payday plan · 15-minute monthly review · buy-back-time list</td></tr>
+    </tbody>
+  </table></div>
+  <div class="verdict">
+    <h3>New value list for the card</h3>
+    <p>The Wealth Roadmap · 50 pages, 7 stages <b>€49</b><br>TRUST Sheet Pro · Excel &amp; Google Sheets <b>€39</b><br>7 stage tools · scripts, templates &amp; checklists <b>included</b><br>Total value <b>€88</b> · early bird price <b>€39</b></p>
+    <p class="mut">Tell me when you're happy with this and I'll update the bundle card, the laptop image and the whole-page code to match.</p>
+  </div>
+</section>
+
+<section id="thumbnail">
+  <h2><small>Tab 1</small>Thumbnail</h2>
+  <div class="tab">
+    <div class="note"><b>Image:</b> upload <b>store-thumbnail-wealth-roadmap.png</b> (sent in the chat). It's your laptop image zoomed in on the title and the road, so it stays readable at the small size the store shows.</div>
+    <div class="field"><div class="fh"><label for="f1">Title</label><button type="button" data-copy="f1">Copy</button></div><pre class="copy" id="f1">The Wealth Roadmap + TRUST Sheet Pro</pre></div>
+    <div class="field"><div class="fh"><label for="f2">Button</label><button type="button" data-copy="f2">Copy</button></div><pre class="copy" id="f2">Get it for €39</pre></div>
+    <div class="field"><div class="fh"><label for="f3">Subtitle</label><button type="button" data-copy="f3">Copy</button></div><pre class="copy" id="f3">Build wealth without quitting your 9–5. 7 clear stages, a 50-page roadmap and the tracker that shows what you really keep. Early bird price.</pre></div>
+  </div>
+</section>
+
+<section id="download">
+  <h2><small>Tab 2</small>Digital download</h2>
+  <div class="tab">
+    <div class="field"><div class="fh"><label for="f4">Digital product name</label><button type="button" data-copy="f4">Copy</button></div><pre class="copy" id="f4">The Wealth Roadmap + TRUST Sheet Pro</pre></div>
+    <div class="note"><b>Check the upload box:</b> in your screenshot it says "Accepts JPG and PNG, max. 5 MB". Your roadmap is a PDF and the tracker is an .xlsx, so they may not upload here. If systeme.io refuses them, upload the files to your systeme.io file library (or Google Drive, set to "anyone with the link") and put the download links in the thank you page and confirmation email below.</div>
+  </div>
+</section>
+
+<section id="checkout">
+  <h2><small>Tab 3</small>Checkout page</h2>
+  <div class="tab">
+    <div class="note"><b>Image:</b> upload <b>wealth-roadmap-laptop-HD.png</b>. Its wide shape fits the checkout banner, and the stages are readable there.</div>
+    <div class="field"><div class="fh"><label for="f5">Title</label><button type="button" data-copy="f5">Copy</button></div><pre class="copy" id="f5">Build your wealth without quitting your 9–5</pre></div>
+    <div class="field"><div class="fh"><label for="f6">Button</label><button type="button" data-copy="f6">Copy</button></div><pre class="copy" id="f6">GET INSTANT ACCESS – €39</pre></div>
+    <div class="field"><div class="fh"><label for="f7">Body</label><button type="button" data-copy="f7">Copy</button></div><pre class="copy" id="f7">You work hard, carry real responsibilities and earn a decent income, yet you still feel stretched for money and time. The Wealth Roadmap gives you a clear, honest plan to change that, step by step, beside your career and without giving up the hours that belong to the people you love.
+
+Your 7 stages:
+1. Money mindset: your 9–5 is your wealth engine
+2. Know your salary and your numbers
+3. Clear your debts (optional: your money still grows, just slower)
+4. Build a safety net
+5. Build wealth with smart investing
+6. Build multiple income streams
+7. Repeat, automate and buy back time
+
+What you get:
+• The Wealth Roadmap (50-page PDF): every stage explained with real examples, charts, step-by-step actions and a version for heavy weeks
+• TRUST Sheet Pro (Excel and Google Sheets): what you keep every month, your keep rate and your one next step, in 15 minutes a week
+• A practical tool in every stage: salary and raise scripts, a debt payoff plan, a safety-net calculator, the 90-day income-stream test and more
+
+Instant download after purchase.
+Early bird price: €39 (regular price €59).
+
+This is financial education, not personal financial or investment advice.</pre></div>
+    <h3>Collect info</h3>
+    <p class="mut">Keep Email, First name and Country as required. Country is needed for EU VAT, so don't delete it.</p>
+    <h3>Price plan</h3>
+    <div class="field"><div class="fh"><label for="f8">Price plan name</label><button type="button" data-copy="f8">Copy</button></div><pre class="copy" id="f8">Early bird</pre></div>
+    <p class="mut">Type: <b>one-time payment</b> · Amount: <b>39</b> · Currency: <b>EUR</b>. Check your VAT setting so the price your EU buyers see already includes VAT. Later, when early bird ends, change only this amount to 59.</p>
+    <h3>Payment methods</h3>
+    <p class="mut">Connect Stripe (cards, Apple Pay, Google Pay) and PayPal if you have it. Then do one test purchase in test mode before you share the link.</p>
+  </div>
+</section>
+
+<section id="thankyou">
+  <h2><small>Tab 4</small>Thank you page</h2>
+  <div class="tab">
+    <div class="field"><div class="fh"><label for="f9">Title</label><button type="button" data-copy="f9">Copy</button></div><pre class="copy" id="f9">You're in. Welcome to The Wealth Roadmap!</pre></div>
+    <div class="field"><div class="fh"><label for="f10">Body</label><button type="button" data-copy="f10">Copy</button></div><pre class="copy" id="f10">Thank you for trusting me with your next step.
+
+Your downloads:
+• The Wealth Roadmap (PDF): [paste your roadmap link]
+• TRUST Sheet Pro (Excel / Google Sheets): [paste your tracker link]
+
+The same links are in your inbox, so you can come back to them any time.
+
+Start today with Stage 1: block 15 minutes this week, open the roadmap and the tracker, and fill in your first numbers. Small steps add up.
+
+Liliane
+@cyber_cnslt</pre></div>
+    <div class="field"><div class="fh"><label for="f11">Button</label><button type="button" data-copy="f11">Copy</button></div><pre class="copy" id="f11">Download the roadmap</pre></div>
+  </div>
+</section>
+
+<section id="email">
+  <h2><small>Confirmation email</small>"Edit confirmation email"</h2>
+  <div class="tab">
+    <div class="field"><div class="fh"><label for="f12">Subject</label><button type="button" data-copy="f12">Copy</button></div><pre class="copy" id="f12">Your Wealth Roadmap + TRUST Sheet Pro are here</pre></div>
+    <div class="field"><div class="fh"><label for="f13">Email body</label><button type="button" data-copy="f13">Copy</button></div><pre class="copy" id="f13">Hi [first name],
+
+thank you for getting The Wealth Roadmap. Here are your files:
+
+The Wealth Roadmap (PDF): [paste your roadmap link]
+TRUST Sheet Pro (Excel / Google Sheets): [paste your tracker link]
+
+How to start:
+1. Save both files somewhere you'll find them again.
+2. Block 15 minutes this week in your calendar.
+3. Begin with Stage 1 and fill in your first numbers in the tracker.
+
+You don't need a perfect month to start. You only need your real numbers.
+
+If anything doesn't open, just reply to this email.
+
+Liliane
+cybersecurity consultant, solo-preneur, daughter, creator
+@cyber_cnslt · cybercnslt.com
+
+This is financial education, not personal financial or investment advice.</pre></div>
+    <p class="mut">Replace [first name] with systeme.io's first-name tag if the email editor offers one.</p>
+  </div>
+</section>
+
+<section id="todo">
+  <h2><small>Still open</small>What I need from you</h2>
+  <ol class="todo">
+    <li><span><b>Your store link.</b> Once the product is saved, send me its link and I'll point every "Get the bundle" button on your page to it.</span></li>
+    <li><span><b>Yes or no on the review.</b> The stage names, "TRUST Sheet Pro" and the new value list. Then I update the card, laptop image and page code to match.</span></li>
+    <li><span><b>The 50-page roadmap.</b> When you're ready, I can expand the roadmap from 25 to 50 pages using the plan above.</span></li>
+  </ol>
+</section>
+</div>
+
+<script>
+document.querySelectorAll('button[data-copy]').forEach(function(b){
+  b.addEventListener('click',function(){
+    var el=document.getElementById(b.dataset.copy),txt=el.textContent;
+    var done=function(){b.textContent='Copied';b.classList.add('ok');setTimeout(function(){b.textContent='Copy';b.classList.remove('ok')},1800)};
+    var sel=function(){var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand('copy');done()}catch(e){b.textContent='Selected'}};
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(txt).then(done,sel)}else sel();
+  });
+});
+</script>
