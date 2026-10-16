@@ -357,6 +357,7 @@ css = STOP.format(i=i) + f"""#{i} .stop{{border-top-color:var(--green);}}
 #{i} .steps{{max-width:760px;margin:0 auto 22px;}}
 #{i} .price{{justify-content:center !important;}}
 #{i} .stop-cta{{display:block;width:250px;max-width:100%;margin:4px auto 0;padding:14px 16px;font-size:15px;border-radius:12px;}}
+#{i} .stop-cta.free{{background:linear-gradient(135deg,#1FB0B0,#147F7F) !important;box-shadow:0 8px 18px rgba(26,158,158,.32) !important;}}
 @container (max-width:520px){{#{i} .fhero h3{{font-size:20px;}} #{i} .fhero p{{font-size:13.5px;}} #{i} .stop-cta{{width:220px;font-size:14px;padding:12px 14px;}}}}
 """
 html = """<div class="stop">
@@ -366,7 +367,7 @@ html = """<div class="stop">
   <h3>TRUST Sheet &#8211; Financial Tracker</h3>
   <p>You work hard for your money. Know where it goes, and how much you actually keep.</p></div>
   <div class="steps"><span class="sh">What the TRUST Sheet shows you</span><ol><li><span class="nb" style="--c:#1A9E9E">&#10003;</span><span>What you keep every month<small>Your real number, after every bill</small></span></li><li><span class="nb" style="--c:#8E1F45">&#10003;</span><span>Where your money goes<small>Needs, wants and what you keep</small></span></li><li><span class="nb" style="--c:#1B4D36">&#10003;</span><span>Your keep rate<small>The % of your income you hold on to</small></span></li><li><span class="nb" style="--c:#1A9E9E">&#10003;</span><span>Reclaimable money<small>Small leaks you can turn into savings</small></span></li><li><span class="nb" style="--c:#8E1F45">&#10003;</span><span>Debt to clear<small>Your total, so it stops hiding</small></span></li><li><span class="nb" style="--c:#1B4D36">&#10003;</span><span>What 1 hour of your time is worth<small>Spend with your real hourly value in mind</small></span></li><li><span class="nb" style="--c:#1A9E9E">&#10003;</span><span>Your next step<small>One clear action, every month</small></span></li></ol></div>
-  <div class="price"><span class="now">&#8364;0</span><span class="note">Google Sheets &amp; Excel</span></div>
+  <div class="price"><span class="note">Google Sheets &amp; Excel</span></div>
   <a class="stop-cta free" href="https://www.cybercnslt.com/free-financial-trust-sheet">Get the free sheet</a>
 </div>"""
 files['04-free-trust-sheet-card.html'] = block(i, 760, css, html, note='Free TRUST Sheet – Financial Tracker card')
