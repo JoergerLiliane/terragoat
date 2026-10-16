@@ -11,7 +11,9 @@ html[data-theme="dark"] #lj-roads{--bg:#0e1621;--card:#16202c;--cardbd:#273543;-
   background:linear-gradient(135deg,#1A9E9E,#0F4C4C);color:#fff;}
 #lj-roads .sb-t{display:block;font:800 22px/1.1 "Avenir Next",Arial;letter-spacing:-.3px;color:#fff;}
 #lj-roads .sb-s{display:block;font-size:13px;opacity:.94;margin-top:4px;font-weight:600;color:#fff;}
-#lj-roads .pick{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:28px;}
+#lj-roads{container-type:inline-size;}
+#lj-roads .pick{display:grid;grid-template-columns:1fr;gap:24px;max-width:440px;margin:0 auto;}
+@container (min-width:760px){#lj-roads .pick{grid-template-columns:repeat(3,1fr);max-width:none;gap:28px;}}
 #lj-roads .pcard{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--cardbd);border-top:5px solid var(--turq);border-radius:20px;padding:30px 24px 28px;
   text-align:center;box-shadow:0 8px 22px rgba(10,20,25,.08);transition:transform .5s cubic-bezier(.2,.75,.25,1),box-shadow .25s ease;}
 #lj-roads .pcard:hover{transform:translateY(-8px) scale(1.04);box-shadow:0 26px 54px rgba(10,20,25,.24);}
@@ -23,7 +25,7 @@ html[data-theme="dark"] #lj-roads{--bg:#0e1621;--card:#16202c;--cardbd:#273543;-
 #lj-roads .cyber .pcta{background:linear-gradient(135deg,#1A9E9E,#0F4C4C);box-shadow:0 8px 18px rgba(26,158,158,.30);}
 #lj-roads .biz .pcta{background:var(--mag);box-shadow:0 8px 18px rgba(142,31,69,.28);}
 #lj-roads .fin .pcta{background:var(--green);box-shadow:0 8px 18px rgba(27,77,54,.28);}
-@media (max-width:420px){#lj-roads .secband{padding:12px 20px;}#lj-roads .sb-t{font-size:20px;}#lj-roads .pick{gap:20px;}}
+@media (max-width:420px){#lj-roads .secband{padding:12px 20px;}#lj-roads .sb-t{font-size:20px;}}
 </style>
 <div class="secband"><span class="sb-t">Pick your road</span><span class="sb-s">Career, business or wealth: start where you are.</span></div>
 <div class="pick">
