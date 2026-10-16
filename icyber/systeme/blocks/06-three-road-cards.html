@@ -75,9 +75,9 @@ html[data-theme="dark"] #lj-roads .dash{stroke:#d3dce4;} html[data-theme="dark"]
   <text class="sign-hint" x="300" y="44" text-anchor="end">TURN LEFT</text>
   <text class="sign-hint" x="600" y="44" text-anchor="start">TURN RIGHT</text>
   <circle class="node" cx="450" cy="80" r="9" opacity=".9"/>
-  <a class="signpost" href="https://www.cybercnslt.com/#cybersecurity"><g transform="translate(150,310)"><rect x="-135" y="-26" width="270" height="52" rx="13" fill="url(#ljr-cyber)" stroke="#ffffff" stroke-width="3"/><text class="sign-lbl" x="0" y="0" text-anchor="middle" dominant-baseline="central">CYBERSECURITY</text></g></a>
-  <a class="signpost" href="https://www.cybercnslt.com/#business"><g transform="translate(450,310)"><rect x="-135" y="-26" width="270" height="52" rx="13" fill="url(#ljr-biz)" stroke="#ffffff" stroke-width="3"/><text class="sign-lbl" x="0" y="0" text-anchor="middle" dominant-baseline="central">BUSINESS</text></g></a>
-  <a class="signpost" href="https://www.cybercnslt.com/#finances"><g transform="translate(750,310)"><rect x="-135" y="-26" width="270" height="52" rx="13" fill="url(#ljr-fin)" stroke="#ffffff" stroke-width="3"/><text class="sign-lbl" x="0" y="0" text-anchor="middle" dominant-baseline="central">FINANCES</text></g></a>
+  <a class="signpost" href="https://www.cybercnslt.com/#cybersecurity" target="_top" data-ljnav="1"><g transform="translate(150,310)"><rect x="-135" y="-26" width="270" height="52" rx="13" fill="url(#ljr-cyber)" stroke="#ffffff" stroke-width="3"/><text class="sign-lbl" x="0" y="0" text-anchor="middle" dominant-baseline="central">CYBERSECURITY</text></g></a>
+  <a class="signpost" href="https://www.cybercnslt.com/#business" target="_top" data-ljnav="1"><g transform="translate(450,310)"><rect x="-135" y="-26" width="270" height="52" rx="13" fill="url(#ljr-biz)" stroke="#ffffff" stroke-width="3"/><text class="sign-lbl" x="0" y="0" text-anchor="middle" dominant-baseline="central">BUSINESS</text></g></a>
+  <a class="signpost" href="https://www.cybercnslt.com/#finances" target="_top" data-ljnav="1"><g transform="translate(750,310)"><rect x="-135" y="-26" width="270" height="52" rx="13" fill="url(#ljr-fin)" stroke="#ffffff" stroke-width="3"/><text class="sign-lbl" x="0" y="0" text-anchor="middle" dominant-baseline="central">FINANCES</text></g></a>
   <g class="car">
     <circle r="48" fill="rgba(53,183,183,.22)"><animate attributeName="r" values="43;56;43" dur="1.6s" repeatCount="indefinite"/></circle>
     <circle r="41" fill="#0f151c"/>
@@ -87,9 +87,29 @@ html[data-theme="dark"] #lj-roads .dash{stroke:#d3dce4;} html[data-theme="dark"]
   </g>
 </svg></div>
 <section class="pick">
-  <a class="pcard cyber" href="https://www.cybercnslt.com/#cybersecurity"><div class="pic">&#128737;&#65039;</div><h3>Grow Your Career</h3><p>From a non-tech background to your first cyber role.</p><span class="pcta"><span class="t-full">Start Your Cyber Journey</span><span class="t-short">Start Here</span></span></a>
-  <a class="pcard biz" href="https://www.cybercnslt.com/#business"><div class="pic">&#128640;</div><h3>Grow Your Business</h3><p>Build income beside your 9-5, the strategic way.</p><span class="pcta"><span class="t-full">Start Your Business Journey</span><span class="t-short">Start Here</span></span></a>
-  <a class="pcard fin" href="https://www.cybercnslt.com/#finances"><div class="pic">&#128176;</div><h3>Grow Your Wealth</h3><p>See exactly how much money you actually keep.</p><span class="pcta"><span class="t-full">Start Your Finance Journey</span><span class="t-short">Start Here</span></span></a>
+  <a class="pcard cyber" href="https://www.cybercnslt.com/#cybersecurity" target="_top" data-ljnav="1"><div class="pic">&#128737;&#65039;</div><h3>Grow Your Career</h3><p>From a non-tech background to your first cyber role.</p><span class="pcta"><span class="t-full">Start Your Cyber Journey</span><span class="t-short">Start Here</span></span></a>
+  <a class="pcard biz" href="https://www.cybercnslt.com/#business" target="_top" data-ljnav="1"><div class="pic">&#128640;</div><h3>Grow Your Business</h3><p>Build income beside your 9-5, the strategic way.</p><span class="pcta"><span class="t-full">Start Your Business Journey</span><span class="t-short">Start Here</span></span></a>
+  <a class="pcard fin" href="https://www.cybercnslt.com/#finances" target="_top" data-ljnav="1"><div class="pic">&#128176;</div><h3>Grow Your Wealth</h3><p>See exactly how much money you actually keep.</p><span class="pcta"><span class="t-full">Start Your Finance Journey</span><span class="t-short">Start Here</span></span></a>
 </section>
 </div></div>
 </div>
+<script>
+/* Website links: same-page journeys/tools links switch the view instead of doing nothing */
+(function(){
+  if(window.ljNavReady) return; window.ljNavReady=true;
+  document.addEventListener('click',function(e){
+    var a=e.target&&e.target.closest?e.target.closest('a[data-ljnav]'):null;
+    if(!a||e.defaultPrevented||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey||e.button) return;
+    var href=a.getAttribute('href')||'', u; try{u=new URL(href,location.href);}catch(x){return;}
+    var w=window; try{ if(window.top!==window && window.top.location.host) w=window.top; }catch(x){ w=null; }
+    if(!w){ e.preventDefault(); try{window.open(href,'_top');}catch(x){location.href=href;} return; }
+    var same=w.location.host.replace(/^www\./,'')===u.host.replace(/^www\./,'') && w.location.pathname===u.pathname;
+    e.preventDefault();
+    if(same && u.hash){
+      if(w.location.hash===u.hash){ try{w.dispatchEvent(new HashChangeEvent('hashchange'));}catch(x){} }
+      else { w.location.hash=u.hash; }
+      try{ w.scrollTo(0,0); }catch(x){}
+    } else { w.location.href=u.href; }
+  },true);
+})();
+</script>

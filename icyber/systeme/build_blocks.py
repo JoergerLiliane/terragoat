@@ -37,9 +37,35 @@ def block(id_, maxw, css, html, script='', note=''):
     css = css.replace('{#'+id_+'{padding-top:32px;}', '{')
     css = '#'+id_+'{container-type:inline-size;width:100%;box-sizing:border-box;}\n' + css
     s = f'<!-- iCyber · {note} · paste into a systeme.io "Custom HTML/CSS/JS" element -->\n<div id="{id_}">\n<style>\n{base(id_, maxw)}{css}</style>\n{html}\n</div>\n'
+    # own class name for boxes, so the journey website's global ".stop{position:absolute}" can't leak in
+    s = _re.sub(r'\.stop(?![\w-])', '.ljstop', s)
+    s = _re.sub(r'class="([^"]*)"', lambda m: 'class="' + ' '.join('ljstop' if t == 'stop' else t for t in m.group(1).split(' ')) + '"', s)
+    # every link to the website opens in the whole window (systeme.io can wrap custom code in a frame)
+    s = _re.sub(r'<a ([^>]*?)href="(https://www\.cybercnslt\.com[^"]*)"', lambda m: m.group(0) if 'target=' in m.group(1) else '<a ' + m.group(1) + 'href="' + m.group(2) + '" target="_top" data-ljnav="1"', s)
+    if 'data-ljnav' in s:
+        script = (script + '\n' if script else '') + NAV
     if script:
         s += f'<script>\n{script}\n</script>\n'
     return s
+
+NAV = r'''/* Website links: same-page journeys/tools links switch the view instead of doing nothing */
+(function(){
+  if(window.ljNavReady) return; window.ljNavReady=true;
+  document.addEventListener('click',function(e){
+    var a=e.target&&e.target.closest?e.target.closest('a[data-ljnav]'):null;
+    if(!a||e.defaultPrevented||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey||e.button) return;
+    var href=a.getAttribute('href')||'', u; try{u=new URL(href,location.href);}catch(x){return;}
+    var w=window; try{ if(window.top!==window && window.top.location.host) w=window.top; }catch(x){ w=null; }
+    if(!w){ e.preventDefault(); try{window.open(href,'_top');}catch(x){location.href=href;} return; }
+    var same=w.location.host.replace(/^www\./,'')===u.host.replace(/^www\./,'') && w.location.pathname===u.pathname;
+    e.preventDefault();
+    if(same && u.hash){
+      if(w.location.hash===u.hash){ try{w.dispatchEvent(new HashChangeEvent('hashchange'));}catch(x){} }
+      else { w.location.hash=u.hash; }
+      try{ w.scrollTo(0,0); }catch(x){}
+    } else { w.location.href=u.href; }
+  },true);
+})();'''
 
 files = {}
 KART = open('/tmp/claude-0/-home-user-terragoat/11c993cd-3a5f-5f3f-9b94-f763b4772daf/scratchpad/kart.uri').read()

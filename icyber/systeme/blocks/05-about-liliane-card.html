@@ -8,7 +8,7 @@ html[data-theme="dark"] #lj-about{--bg:#0e1621;--card:#16202c;--cardbd:#273543;-
 #lj-about *,#lj-about *::before,#lj-about *::after{box-sizing:border-box;margin:0;padding:0;border:0;background:none;box-shadow:none;text-shadow:none;letter-spacing:normal;text-transform:none;list-style:none;}
 #lj-about a{text-decoration:none;}
 #lj-about{container-type:inline-size;width:100%;box-sizing:border-box;}
-#lj-about .stop{background:var(--card);border:1px solid var(--cardbd);border-top:4px solid var(--turq);border-radius:18px;padding:24px 26px;box-shadow:0 8px 22px rgba(10,20,25,.08);}
+#lj-about .ljstop{background:var(--card);border:1px solid var(--cardbd);border-top:4px solid var(--turq);border-radius:18px;padding:24px 26px;box-shadow:0 8px 22px rgba(10,20,25,.08);}
 #lj-about .stop-top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px;}
 #lj-about .stop-ic{font-size:28px;line-height:1;}
 #lj-about .stop-badge{display:inline-block;font:800 10.5px/1 "Avenir Next",Arial;letter-spacing:1px;text-transform:uppercase;padding:6px 12px;border-radius:20px;}
@@ -21,8 +21,8 @@ html[data-theme="dark"] #lj-about .stop-badge.free{color:#6fcf9c;border-color:#6
 #lj-about .stop-cta{display:table;margin:4px auto 0;text-align:center;font:800 12.5px/1 "Avenir Next",Arial;padding:11px 18px;border-radius:10px;letter-spacing:.2px;color:#fff;transition:transform .22s cubic-bezier(.2,.75,.25,1),box-shadow .22s ease,filter .15s;}
 #lj-about .stop-cta:hover{transform:translateY(-3px) scale(1.04);}
 #lj-about .stop-cta.free{background:linear-gradient(135deg,#245F46,#0F3324);box-shadow:0 8px 18px rgba(27,77,54,.28);}
-@container (max-width:420px){#lj-about .stop{padding:20px 18px;}#lj-about h3{font-size:18px;}}
-#lj-about .stop{border-top-color:var(--mag);padding:30px 32px;}
+@container (max-width:420px){#lj-about .ljstop{padding:20px 18px;}#lj-about h3{font-size:18px;}}
+#lj-about .ljstop{border-top-color:var(--mag);padding:30px 32px;}
 #lj-about .kick{display:block;font:800 12px/1.2 "Avenir Next",Arial;letter-spacing:2.4px;text-transform:uppercase;color:var(--mut);margin:0 0 8px;}
 #lj-about h2{font:800 24px/1.2 "Avenir Next",Arial;color:var(--head);letter-spacing:-.6px;margin:0;}
 #lj-about h2 .nm{color:var(--magtxt,var(--mag));}
@@ -42,10 +42,10 @@ html[data-theme="dark"] #lj-about .tn span{color:#35B7B7;}
 #lj-about p{font-size:15px;color:var(--ink);margin:0 0 12px;line-height:1.6;}
 #lj-about p b{color:var(--head);font-weight:800;}
 #lj-about .by{margin:18px 0 0;padding-top:14px;border-top:1px solid var(--cardbd);font:700 12.5px/1.5 "Avenir Next",Arial;color:var(--turq);}
-@container (max-width:420px){#lj-about .stop{padding:24px 20px;}#lj-about h2{font-size:20px;}#lj-about p,#lj-about .who p{font-size:14px;}}
-#lj-about .stop{background:none !important;border:0 !important;box-shadow:none !important;border-radius:0 !important;padding:0 !important;}
+@container (max-width:420px){#lj-about .ljstop{padding:24px 20px;}#lj-about h2{font-size:20px;}#lj-about p,#lj-about .who p{font-size:14px;}}
+#lj-about .ljstop{background:none !important;border:0 !important;box-shadow:none !important;border-radius:0 !important;padding:0 !important;}
 </style>
-<div class="stop">
+<div class="ljstop">
   <span class="kick" style="text-align:center;margin-bottom:16px">Who I am &amp; why I built this</span>
   <figure class="jimg"><img src="PASTE-JOURNEY-IMAGE-URL" alt="Liliane then as a flight attendant, and now as a cybersecurity consultant" width="1920" height="1080">
     <div class="tn"><span>Then<small>Flight attendant wanting<br>to become a pilot</small></span><span>Now<small>Cybersecurity consultant<br>in the financial sector</small></span></div>

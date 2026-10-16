@@ -8,7 +8,7 @@ html[data-theme="dark"] #lj-freecard{--bg:#0e1621;--card:#16202c;--cardbd:#27354
 #lj-freecard *,#lj-freecard *::before,#lj-freecard *::after{box-sizing:border-box;margin:0;padding:0;border:0;background:none;box-shadow:none;text-shadow:none;letter-spacing:normal;text-transform:none;list-style:none;}
 #lj-freecard a{text-decoration:none;}
 #lj-freecard{container-type:inline-size;width:100%;box-sizing:border-box;}
-#lj-freecard .stop{background:var(--card);border:1px solid var(--cardbd);border-top:4px solid var(--turq);border-radius:18px;padding:24px 26px;box-shadow:0 8px 22px rgba(10,20,25,.08);}
+#lj-freecard .ljstop{background:var(--card);border:1px solid var(--cardbd);border-top:4px solid var(--turq);border-radius:18px;padding:24px 26px;box-shadow:0 8px 22px rgba(10,20,25,.08);}
 #lj-freecard .stop-top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px;}
 #lj-freecard .stop-ic{font-size:28px;line-height:1;}
 #lj-freecard .stop-badge{display:inline-block;font:800 10.5px/1 "Avenir Next",Arial;letter-spacing:1px;text-transform:uppercase;padding:6px 12px;border-radius:20px;}
@@ -21,8 +21,8 @@ html[data-theme="dark"] #lj-freecard .stop-badge.free{color:#6fcf9c;border-color
 #lj-freecard .stop-cta{display:table;margin:4px auto 0;text-align:center;font:800 12.5px/1 "Avenir Next",Arial;padding:11px 18px;border-radius:10px;letter-spacing:.2px;color:#fff;transition:transform .22s cubic-bezier(.2,.75,.25,1),box-shadow .22s ease,filter .15s;}
 #lj-freecard .stop-cta:hover{transform:translateY(-3px) scale(1.04);}
 #lj-freecard .stop-cta.free{background:linear-gradient(135deg,#245F46,#0F3324);box-shadow:0 8px 18px rgba(27,77,54,.28);}
-@container (max-width:420px){#lj-freecard .stop{padding:20px 18px;}#lj-freecard h3{font-size:18px;}}
-#lj-freecard .stop{border-top-color:var(--green);}
+@container (max-width:420px){#lj-freecard .ljstop{padding:20px 18px;}#lj-freecard h3{font-size:18px;}}
+#lj-freecard .ljstop{border-top-color:var(--green);}
 #lj-freecard .steps{margin:0 0 20px;padding:16px 18px;background:var(--soft);border:1px solid var(--cardbd);border-radius:14px;}
 #lj-freecard .steps .sh{display:block;font:800 11.5px/1.2 "Avenir Next",Arial;letter-spacing:1.6px;text-transform:uppercase;color:var(--turq);margin:0 0 12px;}
 #lj-freecard .steps ol{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:repeat(4,auto);grid-auto-flow:column;gap:10px 18px;align-content:start;}
@@ -45,7 +45,7 @@ html[data-theme="dark"] #lj-freecard .stop-badge.free{color:#6fcf9c;border-color
 #lj-freecard .price{display:flex;align-items:baseline;gap:10px;margin:0 0 14px;}
 #lj-freecard .now{font:800 30px/1 "Avenir Next",Arial;color:var(--head);letter-spacing:-.5px;}
 #lj-freecard .note{font:700 12px/1.2 "Avenir Next",Arial;color:var(--mut);}
-#lj-freecard .stop{background:none !important;border:0 !important;box-shadow:none !important;border-radius:0 !important;padding:0 !important;}
+#lj-freecard .ljstop{background:none !important;border:0 !important;box-shadow:none !important;border-radius:0 !important;padding:0 !important;}
 @container (max-width:520px){
  #lj-freecard .steps{padding:12px;} #lj-freecard .steps li{font-size:12.5px !important;gap:8px;} #lj-freecard .steps li small{font-size:11.5px !important;}
  #lj-freecard .steps .nb{width:20px;height:20px;font-size:10px;} #lj-freecard .stop-cta{font-size:13px;padding:10px 16px;}
@@ -54,7 +54,7 @@ html[data-theme="dark"] #lj-freecard .stop-badge.free{color:#6fcf9c;border-color
 #lj-freecard .mark{display:flex;justify-content:center;margin:0 0 20px;}
 #lj-freecard .mark .thumb{width:72px;height:72px;border-radius:14px;}
 #lj-freecard .mark .thumb b{font-size:16px;} #lj-freecard .mark .thumb small{font-size:9.5px;}
-#lj-freecard .stop>.mock{max-width:780px;margin:0 auto 26px;}
+#lj-freecard .ljstop>.mock{max-width:780px;margin:0 auto 26px;}
 #lj-freecard .fhero{text-align:center;max-width:620px;margin:0 auto 22px;}
 #lj-freecard .fhero h3{font-size:24px;} #lj-freecard .fhero p{margin:0;font-size:14.5px;}
 #lj-freecard .steps{max-width:760px;margin:0 auto 22px;}
@@ -63,7 +63,7 @@ html[data-theme="dark"] #lj-freecard .stop-badge.free{color:#6fcf9c;border-color
 #lj-freecard .stop-cta.free{background:linear-gradient(135deg,#1FB0B0,#147F7F) !important;box-shadow:0 8px 18px rgba(26,158,158,.32) !important;}
 @container (max-width:520px){#lj-freecard .fhero h3{font-size:20px;} #lj-freecard .fhero p{font-size:13.5px;} #lj-freecard .stop-cta{width:220px;font-size:14px;padding:12px 14px;}}
 </style>
-<div class="stop">
+<div class="ljstop">
   <div class="mark"><div class="thumb"><b>TRUST</b><small>FREE<br>SHEET</small></div></div>
   <div class="mock"><img src="PASTE-TRUST-IMAGE-URL" alt="The TRUST Sheet on a laptop: what you keep every month and where your money goes" width="1518" height="935"></div>
   <div class="fhero"><span class="stop-sub">Free</span>
@@ -71,6 +71,26 @@ html[data-theme="dark"] #lj-freecard .stop-badge.free{color:#6fcf9c;border-color
   <p>You work hard for your money. Know where it goes, and how much you actually keep.</p></div>
   <div class="steps"><span class="sh">What the TRUST Sheet shows you</span><ol><li><span class="nb" style="--c:#1A9E9E">&#10003;</span><span>What you keep every month<small>Your real number, after every bill</small></span></li><li><span class="nb" style="--c:#8E1F45">&#10003;</span><span>Where your money goes<small>Needs, wants and what you keep</small></span></li><li><span class="nb" style="--c:#1B4D36">&#10003;</span><span>Your keep rate<small>The % of your income you hold on to</small></span></li><li><span class="nb" style="--c:#1A9E9E">&#10003;</span><span>Reclaimable money<small>Small leaks you can turn into savings</small></span></li><li><span class="nb" style="--c:#8E1F45">&#10003;</span><span>Debt to clear<small>Your total, so it stops hiding</small></span></li><li><span class="nb" style="--c:#1B4D36">&#10003;</span><span>What 1 hour of your time is worth<small>Spend with your real hourly value in mind</small></span></li><li><span class="nb" style="--c:#1A9E9E">&#10003;</span><span>Your next step<small>One clear action, every month</small></span></li></ol></div>
   <div class="price"><span class="note">Google Sheets &amp; Excel</span></div>
-  <a class="stop-cta free" href="https://www.cybercnslt.com/free-financial-trust-sheet">Get the free sheet</a>
+  <a class="stop-cta free" href="https://www.cybercnslt.com/free-financial-trust-sheet" target="_top" data-ljnav="1">Get the free sheet</a>
 </div>
 </div>
+<script>
+/* Website links: same-page journeys/tools links switch the view instead of doing nothing */
+(function(){
+  if(window.ljNavReady) return; window.ljNavReady=true;
+  document.addEventListener('click',function(e){
+    var a=e.target&&e.target.closest?e.target.closest('a[data-ljnav]'):null;
+    if(!a||e.defaultPrevented||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey||e.button) return;
+    var href=a.getAttribute('href')||'', u; try{u=new URL(href,location.href);}catch(x){return;}
+    var w=window; try{ if(window.top!==window && window.top.location.host) w=window.top; }catch(x){ w=null; }
+    if(!w){ e.preventDefault(); try{window.open(href,'_top');}catch(x){location.href=href;} return; }
+    var same=w.location.host.replace(/^www\./,'')===u.host.replace(/^www\./,'') && w.location.pathname===u.pathname;
+    e.preventDefault();
+    if(same && u.hash){
+      if(w.location.hash===u.hash){ try{w.dispatchEvent(new HashChangeEvent('hashchange'));}catch(x){} }
+      else { w.location.hash=u.hash; }
+      try{ w.scrollTo(0,0); }catch(x){}
+    } else { w.location.href=u.href; }
+  },true);
+})();
+</script>
