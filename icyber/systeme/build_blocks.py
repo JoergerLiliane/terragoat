@@ -178,7 +178,8 @@ css = STOP.format(i=i) + f"""#{i} .stop{{border-top-color:var(--mag);}}
 #{i} .pfmt{{margin:0;font-size:13.5px;color:var(--mut);}}
 @media (max-width:560px){{#{i} .pimg{{width:100%;}}#{i} .prod{{padding:14px;}}#{i} h4{{font-size:18px;}}}}
 #{i} .price{{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin:0 0 14px;}}
-#{i} .now{{font:800 30px/1 "Avenir Next",Arial;color:var(--head);letter-spacing:-.5px;}}
+#{i} .now{{font:800 30px/1 "Avenir Next",Arial;color:#E6117F;letter-spacing:-.5px;}}
+html[data-theme="dark"] #{i} .now{{color:#ff62ad;}}
 #{i} .was{{font:600 16px/1 "Avenir Next",Arial;color:var(--mut);text-decoration:line-through;}}
 #{i} .note{{font:700 12px/1.2 "Avenir Next",Arial;color:var(--magtxt,var(--mag));}}
 #{i} ul{{background:var(--soft);border:1px solid var(--cardbd);border-radius:12px;padding:12px 14px;}}
